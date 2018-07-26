@@ -1,0 +1,19 @@
+﻿body {
+    background-image: url(bg-login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+	padding: 1px 15px;
+	color: #A0A0A0;
+}
+
+.logog5 {
+	margin: 0 auto 10px;
+	display: block;
+}

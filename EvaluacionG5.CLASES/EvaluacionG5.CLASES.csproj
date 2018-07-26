@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C87E0A79-61C8-4593-B325-E7A8DE6B18FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EvaluacionG5.CLASES</RootNamespace>
+    <AssemblyName>EvaluacionG5.CLASES</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\DLACCION.cs" />
+    <Compile Include="DAL\DLACCIONList.cs" />
+    <Compile Include="DAL\DLAREA.cs" />
+    <Compile Include="DAL\DLAREAList.cs" />
+    <Compile Include="DAL\DLAREA_CURSO.cs" />
+    <Compile Include="DAL\DLAREA_CURSOList.cs" />
+    <Compile Include="DAL\DLBase.cs" />
+    <Compile Include="DAL\DLBITACORA.cs" />
+    <Compile Include="DAL\DLBITACORAList.cs" />
+    <Compile Include="DAL\DLCARGO.cs" />
+    <Compile Include="DAL\DLCARGOList.cs" />
+    <Compile Include="DAL\DLCARGO_INSTRUMENTO.cs" />
+    <Compile Include="DAL\DLCARGO_INSTRUMENTOList.cs" />
+    <Compile Include="DAL\DLCATEGORIA.cs" />
+    <Compile Include="DAL\DLCATEGORIAESCALA.cs" />
+    <Compile Include="DAL\DLCATEGORIAESCALAList.cs" />
+    <Compile Include="DAL\DLCATEGORIAList.cs" />
+    <Compile Include="DAL\DLCENTRO_COSTO.cs" />
+    <Compile Include="DAL\DLCENTRO_COSTOList.cs" />
+    <Compile Include="DAL\DLCLASIFICADOR_1.cs" />
+    <Compile Include="DAL\DLCLASIFICADOR_1List.cs" />
+    <Compile Include="DAL\DLCLASIFICADOR_2.cs" />
+    <Compile Include="DAL\DLCLASIFICADOR_2List.cs" />
+    <Compile Include="DAL\DLCOMUNA.cs" />
+    <Compile Include="DAL\DLCOMUNAList.cs" />
+    <Compile Include="DAL\DLCORREO.cs" />
+    <Compile Include="DAL\DLCORREOList.cs" />
+    <Compile Include="DAL\DLCURSO.cs" />
+    <Compile Include="DAL\DLCURSOList.cs" />
+    <Compile Include="DAL\DLCURSO_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="DAL\DLCURSO_INSTRUMENTO_EMPLEADOList.cs" />
+    <Compile Include="DAL\DLDIRECCION.cs" />
+    <Compile Include="DAL\DLDIRECCIONList.cs" />
+    <Compile Include="DAL\DLEMPLEADO.cs" />
+    <Compile Include="DAL\DLEMPLEADOList.cs" />
+    <Compile Include="DAL\DLEMPRESA.cs" />
+    <Compile Include="DAL\DLEMPRESAList.cs" />
+    <Compile Include="DAL\DLESCALA.cs" />
+    <Compile Include="DAL\DLESCALAList.cs" />
+    <Compile Include="DAL\DLESTADO_INSTRUMENTO.cs" />
+    <Compile Include="DAL\DLESTADO_INSTRUMENTOList.cs" />
+    <Compile Include="DAL\DLFAMILIA_CARGO.cs" />
+    <Compile Include="DAL\DLFAMILIA_CARGOList.cs" />
+    <Compile Include="DAL\DLGenericBaseList.cs" />
+    <Compile Include="DAL\DLGERENCIA.cs" />
+    <Compile Include="DAL\DLGERENCIAList.cs" />
+    <Compile Include="DAL\DLGRADO.cs" />
+    <Compile Include="DAL\DLGRADOList.cs" />
+    <Compile Include="DAL\DLHOJA_DE_VIDA.cs" />
+    <Compile Include="DAL\DLHOJA_DE_VIDAList.cs" />
+    <Compile Include="DAL\DLINSTRUMENTO.cs" />
+    <Compile Include="DAL\DLINSTRUMENTOList.cs" />
+    <Compile Include="DAL\DLINSTRUMENTO_CURSO.cs" />
+    <Compile Include="DAL\DLINSTRUMENTO_CURSOList.cs" />
+    <Compile Include="DAL\DLINSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="DAL\DLINSTRUMENTO_EMPLEADOList.cs" />
+    <Compile Include="DAL\DLMODALIDAD.cs" />
+    <Compile Include="DAL\DLMODALIDADList.cs" />
+    <Compile Include="DAL\DLNIVEL_EDUCACIONAL.cs" />
+    <Compile Include="DAL\DLNIVEL_EDUCACIONALList.cs" />
+    <Compile Include="DAL\DLNIVEL_OCUPACIONAL.cs" />
+    <Compile Include="DAL\DLNIVEL_OCUPACIONALList.cs" />
+    <Compile Include="DAL\DLPARAMETROS_GENERALES.cs" />
+    <Compile Include="DAL\DLPARAMETROS_GENERALESList.cs" />
+    <Compile Include="DAL\DLPERFIL.cs" />
+    <Compile Include="DAL\DLPERFILList.cs" />
+    <Compile Include="DAL\DLPERFIL_USUARIO.cs" />
+    <Compile Include="DAL\DLPERFIL_USUARIOList.cs" />
+    <Compile Include="DAL\DLPREGUNTA.cs" />
+    <Compile Include="DAL\DLPREGUNTAList.cs" />
+    <Compile Include="DAL\DLPREGUNTA_EMPLEADO.cs" />
+    <Compile Include="DAL\DLPREGUNTA_EMPLEADOList.cs" />
+    <Compile Include="DAL\DLPREGUNTA_SECCION.cs" />
+    <Compile Include="DAL\DLPREGUNTA_SECCIONList.cs" />
+    <Compile Include="DAL\DLPREGUNTA_SECCION_EMPLEADO.cs" />
+    <Compile Include="DAL\DLPREGUNTA_SECCION_EMPLEADOList.cs" />
+    <Compile Include="DAL\DLRANGO.cs" />
+    <Compile Include="DAL\DLRANGOList.cs" />
+    <Compile Include="DAL\DLREGION.cs" />
+    <Compile Include="DAL\DLREGIONList.cs" />
+    <Compile Include="DAL\DLROL.cs" />
+    <Compile Include="DAL\DLROLList.cs" />
+    <Compile Include="DAL\DLSECCION.cs" />
+    <Compile Include="DAL\DLSECCIONList.cs" />
+    <Compile Include="DAL\DLSECCION_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="DAL\DLSECCION_INSTRUMENTO_EMPLEADOList.cs" />
+    <Compile Include="DAL\DLSESSIONUSUARIO.cs" />
+    <Compile Include="DAL\DLSEXO.cs" />
+    <Compile Include="DAL\DLSEXOList.cs" />
+    <Compile Include="DAL\DLSUCURSAL.cs" />
+    <Compile Include="DAL\DLSUCURSALList.cs" />
+    <Compile Include="DAL\DLTIPO_EVALUACION.cs" />
+    <Compile Include="DAL\DLTIPO_EVALUACIONList.cs" />
+    <Compile Include="DAL\DLTIPO_SECCION.cs" />
+    <Compile Include="DAL\DLTIPO_SECCIONList.cs" />
+    <Compile Include="DAL\DLUNIDAD.cs" />
+    <Compile Include="DAL\DLUNIDADList.cs" />
+    <Compile Include="DAL\DLUSUARIO.cs" />
+    <Compile Include="DAL\DLUSUARIOList.cs" />
+    <Compile Include="DAL\MapperRegistry.cs" />
+    <Compile Include="DAO\DomainObject.cs" />
+    <Compile Include="DAO\EACCION.cs" />
+    <Compile Include="DAO\EAREA.cs" />
+    <Compile Include="DAO\EAREA_CURSO.cs" />
+    <Compile Include="DAO\EBITACORA.cs" />
+    <Compile Include="DAO\ECARGO.cs" />
+    <Compile Include="DAO\ECARGO_INSTRUMENTO.cs" />
+    <Compile Include="DAO\ECATEGORIA.cs" />
+    <Compile Include="DAO\ECATEGORIAESCALA.cs" />
+    <Compile Include="DAO\ECENTRO_COSTO.cs" />
+    <Compile Include="DAO\ECLASIFICADOR_1.cs" />
+    <Compile Include="DAO\ECLASIFICADOR_2.cs" />
+    <Compile Include="DAO\ECOMUNA.cs" />
+    <Compile Include="DAO\ECORREO.cs" />
+    <Compile Include="DAO\ECURSO.cs" />
+    <Compile Include="DAO\ECURSO_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="DAO\EDETALLE.cs" />
+    <Compile Include="DAO\EDIRECCION.cs" />
+    <Compile Include="DAO\EEMPLEADO.cs" />
+    <Compile Include="DAO\EEMPRESA.cs" />
+    <Compile Include="DAO\EESCALA.cs" />
+    <Compile Include="DAO\EESTADO_INSTRUMENTO.cs" />
+    <Compile Include="DAO\EFAMILIA_CARGO.cs" />
+    <Compile Include="DAO\EGERENCIA.cs" />
+    <Compile Include="DAO\EGRADO.cs" />
+    <Compile Include="DAO\EHOJA_DE_VIDA.cs" />
+    <Compile Include="DAO\EINSTRUMENTO.cs" />
+    <Compile Include="DAO\EINSTRUMENTO_CURSO.cs" />
+    <Compile Include="DAO\EINSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="DAO\EMODALIDAD.cs" />
+    <Compile Include="DAO\ENIVEL_EDUCACIONAL.cs" />
+    <Compile Include="DAO\ENIVEL_OCUPACIONAL.cs" />
+    <Compile Include="DAO\EPARAMETROS_GENERALES.cs" />
+    <Compile Include="DAO\EPERFIL.cs" />
+    <Compile Include="DAO\EPERFIL_USUARIO.cs" />
+    <Compile Include="DAO\EPREGUNTA.cs" />
+    <Compile Include="DAO\EPREGUNTA_EMPLEADO.cs" />
+    <Compile Include="DAO\EPREGUNTA_SECCION.cs" />
+    <Compile Include="DAO\EPREGUNTA_SECCION_EMPLEADO.cs" />
+    <Compile Include="DAO\ERANGO.cs" />
+    <Compile Include="DAO\EREGION.cs" />
+    <Compile Include="DAO\EROL.cs" />
+    <Compile Include="DAO\ESECCION.cs" />
+    <Compile Include="DAO\ESECCION_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="DAO\ESESSIONUSUARIO.cs" />
+    <Compile Include="DAO\ESEXO.cs" />
+    <Compile Include="DAO\ESUCURSAL.cs" />
+    <Compile Include="DAO\ETIPO_EVALUACION.cs" />
+    <Compile Include="DAO\ETIPO_SECCION.cs" />
+    <Compile Include="DAO\EUNIDAD.cs" />
+    <Compile Include="DAO\EUSUARIO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EvaluacionG5.COMMON\EvaluacionG5.COMMON.csproj">
+      <Project>{f930d82b-54b7-4166-a88a-1a42257dd2e0}</Project>
+      <Name>EvaluacionG5.COMMON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EvaluacionG5.DATAACCESS\EvaluacionG5.DATAACCESS.csproj">
+      <Project>{51bb5c01-068d-4fff-8f1e-53b55364a59f}</Project>
+      <Name>EvaluacionG5.DATAACCESS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

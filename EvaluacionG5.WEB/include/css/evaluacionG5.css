@@ -1,0 +1,397 @@
+﻿
+input, label, span, a, select, option, textarea, ul, li
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+td, th
+{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.ContenedorLogin
+{
+    width: 1291px;
+    height: 653px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px !important;
+    background-image: url(../images/css/login/login.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+.ContenedorLogin .User, .ContenedorLogin .Pass, .ContenedorLogin .Ingresar
+{
+    display: block;
+    position: absolute;
+    border: 0px;
+    background-color: transparent !important;
+    height: 18px;
+    font-family: Trebuchet MS, Arial;
+    font-size: 12px;
+    padding-left: 3px;
+}
+.ContenedorLogin .User
+{
+    bottom: 141px;
+    left: 360px;
+    background-color: transparent !important;
+    width: 218px;
+    margin: 0px !important;
+}
+.ContenedorLogin .Pass
+{
+    bottom: 141px;
+    left: 700px;
+    background-color: transparent !important;
+    width: 248px;
+    margin: 0px !important;
+}
+.ContenedorLogin .Ingresar
+{
+    height: 22px;
+    width: 88px;
+    bottom: 141px;
+    left: 954px;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.ItemSubMenu
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer !important;
+    display: block !important;
+}
+.ItemSubMenu span
+{
+    font-family: 'Roboto', sans-serif !important;
+    color: #4a4f60 !important;
+    font-size: 0.5em;
+    cursor: pointer !important;
+}
+
+
+
+
+.pnlColab span
+{
+    color: #7b9398;    
+}
+.pnlColabNombre a
+{
+    font-size: 90% !important; 
+    color: #fff;
+    font-weight: bold;
+}
+.pnlColabNombre a:hover
+{
+    color: #8ae2ff;
+	text-decoration: none !important;
+}
+.TextoDestacado
+{
+    font-weight: bold;
+    color: #00b1ff !important;
+}
+ 
+.TextoSimple
+{
+    font-size: 12px !important;
+}
+.TextoCargo
+{
+    font-size: 13px !important;
+    display: block;
+    margin-bottom: -10px;
+}
+
+ 
+
+.pnlColabCabecera {
+    padding: 10px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+    border: solid 1px #a6ddf0;
+    margin: 3px;
+    height: auto;
+    min-height: 130px;
+    position: relative;
+    background-color: #fafafa;
+    
+}
+.pnlColabNombreCabecera
+{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
+    height: 25px;
+    background-color: #107abe;
+}
+.pnlColabCabecera span
+{
+    color: #7b9398;
+    text-transform: uppercase;
+}
+.pnlColabNombreCabecera a
+{
+    font-size: 100% !important; 
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor:default;
+}
+.pnlColabNombreCabecera a:hover
+{
+	text-decoration: none !important;
+}
+.TextoDestacadoCabecera
+{
+    font-weight: bold;
+    color: #107abe !important;
+    text-transform: uppercase;
+}
+
+.pnlColabBtnCabecera
+{
+    margin-top: 8px;
+	background: #107abe;
+	border: none;
+	color: #fff;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 5px 5px;
+	font-size: 0.8em !important;
+	border-radius: 4px;
+	letter-spacing: 0px;
+	min-width: 100px;
+    width: 150px !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+.pnlColabBtnCabecera:hover
+{
+	color: #107abe;
+	text-decoration: none;
+}
+.TextoSimpleCabecera
+{
+    font-size: 14px !important;
+}
+.TextoCargoCabecera
+{
+    font-size: 14px !important;
+    display: block;
+    margin-bottom: -10px;
+}
+
+ 
+.pnlHistorial {
+    padding: 10px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+    border: solid 1px #a6ddf0;
+    margin: 3px 3px 10px 3px;
+    height: auto;
+    min-height: 50px;
+    position: relative;
+    background-color: #fafafa;
+}
+.pnlHistorialNombre
+{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
+    height: 25px;
+    background-color: #107abe;
+}
+.pnlHistorial span
+{
+    color: #7b9398;    
+}
+.pnlHistorialNombre a
+{
+    font-size: 90% !important; 
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+	text-decoration: none !important;
+}
+.pnlHistorialNombre a:hover, .pnlHistorialNombre a:active, .pnlHistorialNombre a:visited
+{
+    color: #fff;
+	text-decoration: none !important;
+}
+.TextoDestacado
+{
+    font-weight: bold;
+    color: #00b1ff !important;
+}
+
+.pnlHistorialBtn
+{
+    margin-top: 8px;
+	background: #107abe;
+	border: none;
+	color: #fff;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 5px 5px;
+	font-size: 0.8em !important;
+	border-radius: 4px;
+	letter-spacing: 0px;
+	min-width: 100px;
+    width: 150px !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+.pnlHistorialBtn:hover
+{
+	text-decoration: none;
+}
+.TextoSimple
+{
+    font-size: 12px !important;
+}
+.pnlHistorial .TextoCargo
+{
+    display: block;
+    margin-bottom: 0px;
+} 
+.ResultadoTexto
+{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+.ResultadoValor
+{
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+    font-weight:bold;
+    font-size: 60px; 
+    display: block;
+    width: 100px;
+    text-align: center;
+    color: #107abe !important; 
+} 
+.pnlSinResultados {
+    padding: 10px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+    border: solid 1px #a6ddf0;
+    margin: 3px 3px 10px 3px;
+    height: auto;
+    min-height: 40px;
+    position: relative;
+    background-color: #fafafa;
+}
+.pnlSinResultadosNombre
+{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
+    height: 25px;
+    background-color: #107abe;
+}
+.pnlSinResultados span
+{
+    color: #7b9398;    
+}
+.pnlSinResultados a
+{
+    font-size: 90% !important; 
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+	text-decoration: none !important;
+}
+.pnlSinResultados a:hover, .pnlSinResultados a:active, .pnlSinResultados a:visited
+{
+    color: #fff;
+	text-decoration: none !important;
+}
+
+h1, h2
+{
+    text-transform: uppercase;
+    font-size: 18px !important;
+    color: #6f676b !important;
+}
+.btnCerrarModal
+{
+    float: right !important;
+}
+
+
+
+
+
+.column-left {
+    background-color: #EBE9EA;
+    border: 1px solid #D2D2D2;
+    border-radius: 8px 8px 8px 8px;
+    float: left;
+    position: fixed;
+    min-height: 225px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+}
+
+.AvatarFichaMantenedor
+{
+    border-radius: 85px;
+}
+.divDisable
+{
+    background-color: #c2c2c2;
+    border: solid 1px #9a9a9a;
+}
+.divDisable input, .divDisable select, .divDisable option
+{
+    background-color: #9a9a9a;
+}
+
+.divDisable
+{
+    background-color: #4fffa2;
+    border: solid 1px #c2c2c2;
+}

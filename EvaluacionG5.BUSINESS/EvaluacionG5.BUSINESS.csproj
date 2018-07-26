@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7929C37-19BA-40D3-B09B-F4B866988052}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EvaluacionG5.BUSINESS</RootNamespace>
+    <AssemblyName>EvaluacionG5.BUSINESS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BFACCION.cs" />
+    <Compile Include="BFAREA.cs" />
+    <Compile Include="BFAREA_CURSO.cs" />
+    <Compile Include="BFBITACORA.cs" />
+    <Compile Include="BFCARGO.cs" />
+    <Compile Include="BFCARGO_INSTRUMENTO.cs" />
+    <Compile Include="BFCATEGORIA.cs" />
+    <Compile Include="BFCATEGORIAESCALA.cs" />
+    <Compile Include="BFCENTRO_COSTO.cs" />
+    <Compile Include="BFCLASIFICADOR_1.cs" />
+    <Compile Include="BFCLASIFICADOR_2.cs" />
+    <Compile Include="BFCOMUNA.cs" />
+    <Compile Include="BFCORREO.cs" />
+    <Compile Include="BFCURSO.cs" />
+    <Compile Include="BFCURSO_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="BFDIRECCION.cs" />
+    <Compile Include="BFEMPLEADO.cs" />
+    <Compile Include="BFEMPRESA.cs" />
+    <Compile Include="BFESCALA.cs" />
+    <Compile Include="BFESTADO_INSTRUMENTO.cs" />
+    <Compile Include="BFFAMILIA_CARGO.cs" />
+    <Compile Include="BFGERENCIA.cs" />
+    <Compile Include="BFGRADO.cs" />
+    <Compile Include="BFHOJA_DE_VIDA.cs" />
+    <Compile Include="BFINSTRUMENTO.cs" />
+    <Compile Include="BFINSTRUMENTO_CURSO.cs" />
+    <Compile Include="BFINSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="BFMODALIDAD.cs" />
+    <Compile Include="BFNIVEL_EDUCACIONAL.cs" />
+    <Compile Include="BFNIVEL_OCUPACIONAL.cs" />
+    <Compile Include="BFPARAMETROS_GENERALES.cs" />
+    <Compile Include="BFPERFIL.cs" />
+    <Compile Include="BFPERFIL_USUARIO.cs" />
+    <Compile Include="BFPREGUNTA.cs" />
+    <Compile Include="BFPREGUNTA_EMPLEADO.cs" />
+    <Compile Include="BFPREGUNTA_SECCION.cs" />
+    <Compile Include="BFPREGUNTA_SECCION_EMPLEADO.cs" />
+    <Compile Include="BFRANGO.cs" />
+    <Compile Include="BFREGION.cs" />
+    <Compile Include="BFROL.cs" />
+    <Compile Include="BFSECCION.cs" />
+    <Compile Include="BFSECCION_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="BFSESSIONUSUARIO.cs" />
+    <Compile Include="BFSEXO.cs" />
+    <Compile Include="BFSUCURSAL.cs" />
+    <Compile Include="BFTIPO_EVALUACION.cs" />
+    <Compile Include="BFTIPO_SECCION.cs" />
+    <Compile Include="BFUNIDAD.cs" />
+    <Compile Include="BFUSUARIO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EvaluacionG5.CLASES\EvaluacionG5.CLASES.csproj">
+      <Project>{c87e0a79-61c8-4593-b325-e7a8de6b18ff}</Project>
+      <Name>EvaluacionG5.CLASES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EvaluacionG5.COMMON\EvaluacionG5.COMMON.csproj">
+      <Project>{f930d82b-54b7-4166-a88a-1a42257dd2e0}</Project>
+      <Name>EvaluacionG5.COMMON</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mailing>
+  <mail tipo="1" asunto="Invitación a Evaluación de Desempeño">
+    <![CDATA[
+			<table cellpadding="0" cellspacing="0" style="width: 600px; margin-left: auto; margin-right: auto; color:#41535C; font-family: Calibri; border: 0px;">
+            	<tr>
+                	<td style="width: 600px; height: 42px; border: 0px;">
+               	    <img src="p_DIRECCION_LOGO" width="600" height="42" style="float: left;"></td>
+                </tr>
+            	<tr>
+                	<td style="width: 600px; height: 26px; margin: 0px !important; padding: 0px !important; text-align: left; border: 0px; background-color: #fff;">
+                    	<img src="p_DIRECCION_PESTANA" width="193" height="26" style="margin: 0px; padding: 0px; float: left;">
+                    </td>
+                </tr>
+            	<tr>
+                	<td style="width: 545px; background-color: #d7d7d7; padding: 27px; margin: 0px; text-align: left; border: 0px;">
+                    	<table cellpadding="0" cellspacing="0" style="width: 545px;" >
+                        	<tr>
+                            	<td style="width: 545px; height: 171px; margin: 0px; padding: 0px; background-color: #d7d7d7; border: 0px;">
+                           	    <img src="p_DIRECCION_IMAGEN" width="545" height="171" style="float: right;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="background-color: #004287; color: #fff; width: 511px; height: 20px; text-align: left; padding: 0 0 0 35px; font-weight: bold; margin: 0px; padding-top: 3px; padding-bottom: 3px; font-size: 18px; border: 0px;">
+                                	p_TITULO
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 545px; height: 14px; margin: 0px; padding: 0px; background-color: #004287; border: 0px;">
+                           	    <img src="p_DIRECCION_FONDO_TITULO" width="545" height="14" style="float: left;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 510px; background-color: #fff; padding-top: 10px; padding-left: 20px; padding-right: 15px; margin: 0px; border: 0px;">
+                                	Estimado(a): p_NOMBRE_COLABORADOR
+                                    </p>
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Junto con saludar, le comunicamos que ha sido asignada su Evaluación de Desempeño.
+                                    </p>
+                                    <br />
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Puede acceder a ella haciendo clic 
+                                    <a href="p_LINK" style="text-decoration: none;"> aquí</a>
+                                    </p>
+                                    <h2 style="font-size: 16px;">
+                                    </h2>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 525px; background-color: #fff; text-align: left; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border: 0px;">
+                                	Atentamente Departamento de Recursos Humanos.
+									<br /> 	
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+		]]>
+  </mail>
+  <mail tipo="2" asunto="Invitación a Evaluación de Desempeño">
+		<![CDATA[
+			<table cellpadding="0" cellspacing="0" style="width: 600px; margin-left: auto; margin-right: auto; color:#41535C; font-family: Calibri; border: 0px;">
+            	<tr>
+                	<td style="width: 600px; height: 42px; border: 0px;">
+               	    <img src="p_DIRECCION_LOGO" width="600" height="42" style="float: left;"></td>
+                </tr>
+            	<tr>
+                	<td style="width: 600px; height: 26px; margin: 0px !important; padding: 0px !important; text-align: left; border: 0px; background-color: #fff;">
+                    	<img src="p_DIRECCION_PESTANA" width="193" height="26" style="margin: 0px; padding: 0px; float: left;">
+                    </td>
+                </tr>
+            	<tr>
+                	<td style="width: 545px; background-color: #d7d7d7; padding: 27px; margin: 0px; text-align: left; border: 0px;">
+                    	<table cellpadding="0" cellspacing="0" style="width: 545px;" >
+                        	<tr>
+                            	<td style="width: 545px; height: 171px; margin: 0px; padding: 0px; background-color: #d7d7d7; border: 0px;">
+                           	    <img src="p_DIRECCION_IMAGEN" width="545" height="171" style="float: right;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="background-color: #004287; color: #fff; width: 511px; height: 20px; text-align: left; padding: 0 0 0 35px; font-weight: bold; margin: 0px; padding-top: 3px; padding-bottom: 3px; font-size: 18px; border: 0px;">
+                                	p_TITULO
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 545px; height: 14px; margin: 0px; padding: 0px; background-color: #004287; border: 0px;">
+                           	    <img src="p_DIRECCION_FONDO_TITULO" width="545" height="14" style="float: left;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 510px; background-color: #fff; padding-top: 10px; padding-left: 20px; padding-right: 15px; margin: 0px; border: 0px;">
+                                	Estimado(a): p_NOMBRE_JEFE
+                                    </p>
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Junto con saludar, le comunicamos que han sido asignadas las Evaluaciones de Desempeño de sus siguientes colaboradores:
+                                    </p>
+                                    p_COLABORADORES
+                                    <br />
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Puede acceder a cada una de las Evaluaciones haciendo clic
+                                    <a href="p_LINK" style="text-decoration: none;"> aquí</a>
+                                    </p>
+                                    <h2 style="font-size: 16px;">
+                                    </h2>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 525px; background-color: #fff; text-align: left; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border: 0px;">
+                                	Atentamente Departamento de Recursos Humanos.
+									<br /> 	
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+		]]>
+  </mail>
+  <mail tipo="3" asunto="Recordatorio a Evaluación de Desempeño">
+    <![CDATA[
+			<table cellpadding="0" cellspacing="0" style="width: 600px; margin-left: auto; margin-right: auto; color:#41535C; font-family: Calibri; border: 0px;">
+            	<tr>
+                	<td style="width: 600px; height: 42px; border: 0px;">
+               	    <img src="p_DIRECCION_LOGO" width="600" height="42" style="float: left;"></td>
+                </tr>
+            	<tr>
+                	<td style="width: 600px; height: 26px; margin: 0px !important; padding: 0px !important; text-align: left; border: 0px; background-color: #fff;">
+                    	<img src="p_DIRECCION_PESTANA" width="193" height="26" style="margin: 0px; padding: 0px; float: left;">
+                    </td>
+                </tr>
+            	<tr>
+                	<td style="width: 545px; background-color: #d7d7d7; padding: 27px; margin: 0px; text-align: left; border: 0px;">
+                    	<table cellpadding="0" cellspacing="0" style="width: 545px;" >
+                        	<tr>
+                            	<td style="width: 545px; height: 171px; margin: 0px; padding: 0px; background-color: #d7d7d7; border: 0px;">
+                           	    <img src="p_DIRECCION_IMAGEN" width="545" height="171" style="float: right;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="background-color: #004287; color: #fff; width: 511px; height: 20px; text-align: left; padding: 0 0 0 35px; font-weight: bold; margin: 0px; padding-top: 3px; padding-bottom: 3px; font-size: 18px; border: 0px;">
+                                	p_TITULO
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 545px; height: 14px; margin: 0px; padding: 0px; background-color: #004287; border: 0px;">
+                           	    <img src="p_DIRECCION_FONDO_TITULO" width="545" height="14" style="float: left;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 510px; background-color: #fff; padding-top: 10px; padding-left: 20px; padding-right: 15px; margin: 0px; border: 0px;">
+                                	Estimado(a): p_NOMBRE_COLABORADOR
+                                    </p>
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Junto con saludar, le recordamos que ha sido asignada su Evaluación de Desempeño.
+                                    </p>
+                                    <br />
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Puede acceder a ella haciendo clic 
+                                    <a href="p_LINK" style="text-decoration: none;"> aquí</a>
+                                    </p>
+                                    <h2 style="font-size: 16px;">
+                                    </h2>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 525px; background-color: #fff; text-align: left; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border: 0px;">
+                                	Atentamente Departamento de Recursos Humanos.
+									<br /> 	
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+		]]>
+  </mail>
+  <mail tipo="4" asunto="Recordatorio a Evaluación de Desempeño">
+    <![CDATA[
+			<table cellpadding="0" cellspacing="0" style="width: 600px; margin-left: auto; margin-right: auto; color:#41535C; font-family: Calibri; border: 0px;">
+            	<tr>
+                	<td style="width: 600px; height: 42px; border: 0px;">
+               	    <img src="p_DIRECCION_LOGO" width="600" height="42" style="float: left;"></td>
+                </tr>
+            	<tr>
+                	<td style="width: 600px; height: 26px; margin: 0px !important; padding: 0px !important; text-align: left; border: 0px; background-color: #fff;">
+                    	<img src="p_DIRECCION_PESTANA" width="193" height="26" style="margin: 0px; padding: 0px; float: left;">
+                    </td>
+                </tr>
+            	<tr>
+                	<td style="width: 545px; background-color: #d7d7d7; padding: 27px; margin: 0px; text-align: left; border: 0px;">
+                    	<table cellpadding="0" cellspacing="0" style="width: 545px;" >
+                        	<tr>
+                            	<td style="width: 545px; height: 171px; margin: 0px; padding: 0px; background-color: #d7d7d7; border: 0px;">
+                           	    <img src="p_DIRECCION_IMAGEN" width="545" height="171" style="float: right;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="background-color: #004287; color: #fff; width: 511px; height: 20px; text-align: left; padding: 0 0 0 35px; font-weight: bold; margin: 0px; padding-top: 3px; padding-bottom: 3px; font-size: 18px; border: 0px;">
+                                	p_TITULO
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 545px; height: 14px; margin: 0px; padding: 0px; background-color: #004287; border: 0px;">
+                           	    <img src="p_DIRECCION_FONDO_TITULO" width="545" height="14" style="float: left;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 510px; background-color: #fff; padding-top: 10px; padding-left: 20px; padding-right: 15px; margin: 0px; border: 0px;">
+                                	Estimado(a): p_NOMBRE_JEFE
+                                    </p>
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Junto con saludar, le recordamos que han sido asignadas las Evaluaciones de Desempeño de sus siguientes colaboradores:
+                                    </p>
+                                    p_COLABORADORES
+                                    <br />
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Puede acceder a cada de las Evaluaciones haciendo clic
+                                    <a href="p_LINK" style="text-decoration: none;"> aquí</a>
+                                    </p>
+                                    <h2 style="font-size: 16px;">
+                                    </h2>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 525px; background-color: #fff; text-align: left; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border: 0px;">
+                                	Atentamente Departamento de Recursos Humanos.
+									<br /> 	
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+		]]>
+  </mail>
+  <mail tipo="5" asunto="Autoevaluación">
+    <![CDATA[
+    <table cellpadding="0" cellspacing="0" style="width: 600px; margin-left: auto; margin-right: auto; color:#41535C; font-family: Calibri; border: 0px;">
+            	<tr>
+                	<td style="width: 600px; height: 42px; border: 0px;">
+               	    <img src="p_DIRECCION_LOGO" width="600" height="42" style="float: left;"></td>
+                </tr>
+            	<tr>
+                	<td style="width: 600px; height: 26px; margin: 0px !important; padding: 0px !important; text-align: left; border: 0px; background-color: #fff;">
+                    	<img src="p_DIRECCION_PESTANA" width="193" height="26" style="margin: 0px; padding: 0px; float: left;">
+                    </td>
+                </tr>
+            	<tr>
+                	<td style="width: 545px; background-color: #d7d7d7; padding: 27px; margin: 0px; text-align: left; border: 0px;">
+                    	<table cellpadding="0" cellspacing="0" style="width: 545px;" >
+                        	<tr>
+                            	<td style="width: 545px; height: 171px; margin: 0px; padding: 0px; background-color: #d7d7d7; border: 0px;">
+                           	    <img src="p_DIRECCION_IMAGEN" width="545" height="171" style="float: right;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="background-color: #004287; color: #fff; width: 511px; height: 20px; text-align: left; padding: 0 0 0 35px; font-weight: bold; margin: 0px; padding-top: 3px; padding-bottom: 3px; font-size: 18px; border: 0px;">
+                                	p_TITULO
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 545px; height: 14px; margin: 0px; padding: 0px; background-color: #004287; border: 0px;">
+                           	    <img src="p_DIRECCION_FONDO_TITULO" width="545" height="14" style="float: left;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 510px; background-color: #fff; padding-top: 10px; padding-left: 20px; padding-right: 15px; margin: 0px; border: 0px;">
+                                	Estimado(a): p_NOMBRE_JEFE
+                                    </p>
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Junto con saludar, le comunicamos que la Autoevaluación de Desempeño de p_COLABORADOR, ha sido realizada.
+                                    </p>
+                                    <br />
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Puede revisar esta Autoevaluación haciendo clic 
+                                    <a href="p_LINK" style="text-decoration: none;"> aquí</a>
+                                    </p>
+                                    <h2 style="font-size: 16px;">
+                                    </h2>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 525px; background-color: #fff; text-align: left; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border: 0px;">
+                                	Atentamente Departamento de Recursos Humanos.
+									<br /> 	
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+		]]>
+  </mail>
+  <mail tipo="6" asunto="Inicio Curso">
+    <![CDATA[
+    <table cellpadding="0" cellspacing="0" style="width: 600px; margin-left: auto; margin-right: auto; color:#41535C; font-family: Calibri; border: 0px;">
+            	<tr>
+                	<td style="width: 600px; height: 42px; border: 0px;">
+               	    <img src="p_DIRECCION_LOGO" width="600" height="42" style="float: left;"></td>
+                </tr>
+            	<tr>
+                	<td style="width: 600px; height: 26px; margin: 0px !important; padding: 0px !important; text-align: left; border: 0px; background-color: #fff;">
+                    	<img src="p_DIRECCION_PESTANA" width="193" height="26" style="margin: 0px; padding: 0px; float: left;">
+                    </td>
+                </tr>
+            	<tr>
+                	<td style="width: 545px; background-color: #d7d7d7; padding: 27px; margin: 0px; text-align: left; border: 0px;">
+                    	<table cellpadding="0" cellspacing="0" style="width: 545px;" >
+                        	<tr>
+                            	<td style="width: 545px; height: 171px; margin: 0px; padding: 0px; background-color: #d7d7d7; border: 0px;">
+                           	    <img src="p_DIRECCION_IMAGEN" width="545" height="171" style="float: right;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="background-color: #004287; color: #fff; width: 511px; height: 20px; text-align: left; padding: 0 0 0 35px; font-weight: bold; margin: 0px; padding-top: 3px; padding-bottom: 3px; font-size: 18px; border: 0px;">
+                                	p_TITULO
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 545px; height: 14px; margin: 0px; padding: 0px; background-color: #004287; border: 0px;">
+                           	    <img src="p_DIRECCION_FONDO_TITULO" width="545" height="14" style="float: left;"></td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 510px; background-color: #fff; padding-top: 10px; padding-left: 20px; padding-right: 15px; margin: 0px; border: 0px;">
+                                	Estimado(a): p_NOMBRE_JEFE
+                                    </p>
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Junto con saludar, le comunicamos que su Jefatura Directa ha efectuado su Evaluación de Desempeño.
+                                    </p>
+                                    <br />
+                                    <p style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;">
+                                    Puede revisar sus resultados haciendo clic 
+                                    <a href="p_LINK" style="text-decoration: none;"> aquí</a>
+                                    </p>
+                                    <h2 style="font-size: 16px;">
+                                    </h2>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td style="width: 525px; background-color: #fff; text-align: left; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border: 0px;">
+                                	Atentamente Departamento de Recursos Humanos.
+									<br /> 	
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+		]]>
+  </mail>
+</mailing>

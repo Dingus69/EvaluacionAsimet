@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_titAdmInstrumentos" xml:space="preserve">
+    <value>Administración de Plantilla de Evaluación</value>
+  </data>
+  <data name="_titAdmInstrumentosSecciones" xml:space="preserve">
+    <value>Secciones</value>
+  </data>
+  <data name="_titAdmInstrumentosSeccionPreguntas" xml:space="preserve">
+    <value>Items Sección</value>
+  </data>
+  <data name="_titMantPregunta" xml:space="preserve">
+    <value>Editor de Items a Evaluar</value>
+  </data>
+  <data name="_titMenu" xml:space="preserve">
+    <value>Menú Principal</value>
+  </data>
+  <data name="_titMenuAdministracion" xml:space="preserve">
+    <value>Administración</value>
+  </data>
+  <data name="_titMenuConsola" xml:space="preserve">
+    <value>Consola</value>
+  </data>
+  <data name="_titMenuGestion" xml:space="preserve">
+    <value>Reportes e Indicadores</value>
+  </data>
+  <data name="_titAdmEscala" xml:space="preserve">
+    <value>Administración de Escalas de Evaluación</value>
+  </data>
+  <data name="_titAdmParametros" xml:space="preserve">
+    <value>Administración de Parametros</value>
+  </data>
+  <data name="_titAdmTipoSeccion" xml:space="preserve">
+    <value>Administración de Categorias de Secciones</value>
+  </data>
+  <data name="_titAdmUsuarios" xml:space="preserve">
+    <value>Administración de Usuarios</value>
+  </data>
+  <data name="_titAsignarEvaluacion" xml:space="preserve">
+    <value>Asignación de Evaluaciones</value>
+  </data>
+  <data name="_titCargaNomina" xml:space="preserve">
+    <value>Carga Nomina de Personal</value>
+  </data>
+  <data name="_titDashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="_titEdicionFormularios" xml:space="preserve">
+    <value>Editar Formulario de Evaluación</value>
+  </data>
+  <data name="_titEvaluacion" xml:space="preserve">
+    <value>Formulario de Evaluación</value>
+  </data>
+  <data name="_titGestionConsolidado" xml:space="preserve">
+    <value>Reporte Consolidado</value>
+  </data>
+  <data name="_titGestionDetalle" xml:space="preserve">
+    <value>Detalle Evaluaciones</value>
+  </data>
+  <data name="_etiPerfiles" xml:space="preserve">
+    <value>Perfiles</value>
+  </data>
+  <data name="_titPieParteDos" xml:space="preserve">
+    <value>Grupo5</value>
+  </data>
+  <data name="_titPieParteUno" xml:space="preserve">
+    <value>Desarrollado por - </value>
+  </data>
+  <data name="_titColaboradores" xml:space="preserve">
+    <value>Colaboradores</value>
+  </data>
+  <data name="_titBuscadorColaboradores" xml:space="preserve">
+    <value>Buscador de Colaboradores</value>
+  </data>
+  <data name="_titEditarEvaluacion" xml:space="preserve">
+    <value>Editar Formulario</value>
+  </data>
+  <data name="_titNotificaciones" xml:space="preserve">
+    <value>Notificaciones</value>
+  </data>
+  <data name="_etiAdvertencia" xml:space="preserve">
+    <value>Advertencia</value>
+  </data>
+  <data name="_titAdvertencia" xml:space="preserve">
+    <value>Advertencia</value>
+  </data>
+  <data name="_titError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="_titExito" xml:space="preserve">
+    <value>Exito</value>
+  </data>
+  <data name="_alertSinAcceso" xml:space="preserve">
+    <value>Lo sentimos, usted no tiene acceso a esta sección. Ante cualquier duda debe contactarse con el administrador de esta plataforma.</value>
+  </data>
+  <data name="_titBitacora" xml:space="preserve">
+    <value>Bitácora</value>
+  </data>
+  <data name="_titEstadoAsignacion" xml:space="preserve">
+    <value>Cambiar estado de asignación</value>
+  </data>
+  <data name="_titActualizacion" xml:space="preserve">
+    <value>Actualización</value>
+  </data>
+  <data name="_titVerDetalles" xml:space="preserve">
+    <value>Ver Detalles</value>
+  </data>
+  <data name="_titApelar" xml:space="preserve">
+    <value>Apelar</value>
+  </data>
+  <data name="_titVisar" xml:space="preserve">
+    <value>Visar evaluación</value>
+  </data>
+  <data name="_titTomaConocimiento" xml:space="preserve">
+    <value>Toma de Conocimiento</value>
+  </data>
+  <data name="_titAsignarEvaluacionPartners" xml:space="preserve">
+    <value>Asignación de Evaluaciones</value>
+  </data>
+  <data name="_etiEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="_titFicha" xml:space="preserve">
+    <value>Ficha personal</value>
+  </data>
+  <data name="_titInformeEvaluacion" xml:space="preserve">
+    <value>Informe Evaluación</value>
+  </data>
+  <data name="_titPlanDesarrollo" xml:space="preserve">
+    <value>Plan de Desarrollo</value>
+  </data>
+  <data name="_alertSinKPI" xml:space="preserve">
+    <value>El colaborador no presenta KPI en este periodo.</value>
+  </data>
+  <data name="_titOlvidoContrasena" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+  <data name="_titAdminEmpresas" xml:space="preserve">
+    <value>Administración Empresas</value>
+  </data>
+  <data name="_titAdminCursos" xml:space="preserve">
+    <value>Mantenedor de cursos</value>
+  </data>
+  <data name="_titPonderaciones" xml:space="preserve">
+    <value>Ponderaciones (%)</value>
+  </data>
+  <data name="_titAreaAdministrativas" xml:space="preserve">
+    <value>Administrativas</value>
+  </data>
+  <data name="_titAreaComerciales" xml:space="preserve">
+    <value>Comerciales</value>
+  </data>
+  <data name="_titAreaHabilidadesBlandas" xml:space="preserve">
+    <value>Habilidades Blandas</value>
+  </data>
+  <data name="_titAreaIdiomas" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="_titAreaMejoraContinua" xml:space="preserve">
+    <value>Mejora Continua</value>
+  </data>
+  <data name="_titAreaOtrasCapacitaciones" xml:space="preserve">
+    <value>Otras Capacitaciones</value>
+  </data>
+  <data name="_titAreaRelativasProduccion" xml:space="preserve">
+    <value>Producción</value>
+  </data>
+  <data name="_titAreaSeguridad" xml:space="preserve">
+    <value>Seguridad Industrial y Autocuidado</value>
+  </data>
+  <data name="_titAreaTiOfimatica" xml:space="preserve">
+    <value>TI/Ofimatica</value>
+  </data>
+  <data name="_titCursos" xml:space="preserve">
+    <value>Cursos de capacitación</value>
+  </data>
+</root>

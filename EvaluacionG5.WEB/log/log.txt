@@ -1,0 +1,1314 @@
+--------------------------------------------------------------------------------
+10/07/2018 09:37:17 a. m. - EXCEPCION
+Message: Procedure proc_select_INSTRUMENTO_EMPLEADO_POR_TIPO has no parameters and arguments were supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLINSTRUMENTOEMPLEADOList.GetInstrumentosPorTipo(Int64 Rut, String NomInstrumentoEmpleado, Int64 RutEmpresa, String CodGerencia, String CodCentroCosto, String CodSucursal, String CodArea, String CodCargo, String CodRol, String CodClasificador1, String CodClasificador2, Decimal CodTipo) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLINSTRUMENTO_EMPLEADOList.cs:línea 332
+   en EvaluacionG5.BUSINESS.BFINSTRUMENTOEMPLEADO.GetInstrumentosPorTipo(Int64 Rut, String NomInstrumentoEmpleado, Int64 RutEmpresa, String CodGerencia, String CodCentroCosto, String CodSucursal, String CodArea, String CodCargo, String CodRol, String CodClasificador1, String CodClasificador2, Decimal CodTipo) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFINSTRUMENTO_EMPLEADO.cs:línea 625
+   en EvaluacionG5.WEB.modulos.evaluacion.dashboard.VerDetalles(Decimal CodTipo) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\evaluacion\dashboard.aspx.cs:línea 458
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11/07/2018 10:18:17 a. m. - EXCEPCION
+Message: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: System.ComponentModel.Win32Exception (0x80004005): El sistema no puede encontrar el archivo especificado
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11/07/2018 10:19:06 a. m. - EXCEPCION
+Message: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: System.ComponentModel.Win32Exception (0x80004005): El sistema no puede encontrar el archivo especificado
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+12/07/2018 10:35:53 a. m. - EXCEPCION
+Message: Incorrect syntax near ')'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 63
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 378
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+12/07/2018 10:37:10 a. m. - EXCEPCION
+Message: Incorrect syntax near ')'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 63
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 378
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+12/07/2018 10:40:48 a. m. - EXCEPCION
+Message: Incorrect syntax near ')'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 63
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 378
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+12/07/2018 10:48:19 a. m. - EXCEPCION
+Message: Cannot insert the value NULL into column 'FLAG_ACTIVO', table 'EvaluacionAsimet.dbo.EMPLEADO'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Object ExecuteScalar(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteScalar(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 261
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteScalar(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 137
+   en EvaluacionG5.CLASES.DAL.DLBase.Insert(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 59
+   en EvaluacionG5.CLASES.DAO.DomainObject.Insert() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 58
+   en EvaluacionG5.CLASES.DAO.DomainObject.Save() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 121
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 353
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+12/07/2018 11:07:56 a. m. - EXCEPCION
+Message: Incorrect syntax near ','.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 63
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 405
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+12/07/2018 11:09:44 a. m. - EXCEPCION
+Message: Incorrect syntax near '('.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 63
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 405
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+12/07/2018 11:21:17 a. m. - EXCEPCION
+Message: Cannot insert the value NULL into column 'FLAG_ACTIVO', table 'EvaluacionAsimet.dbo.EMPLEADO'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Object ExecuteScalar(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteScalar(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 261
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteScalar(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\EVALUACION G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 137
+   en EvaluacionG5.CLASES.DAL.DLBase.Insert(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 59
+   en EvaluacionG5.CLASES.DAO.DomainObject.Insert() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 58
+   en EvaluacionG5.CLASES.DAO.DomainObject.Save() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 121
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 376
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+12/07/2018 03:03:26 p. m. - EXCEPCION
+Message: Otro SqlParameterCollection ya contiene SqlParameter.
+Source: EvaluacionG5.DATAACCESS
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Update(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 75
+   en EvaluacionG5.CLASES.DAO.DomainObject.Update() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 65
+   en EvaluacionG5.CLASES.DAO.DomainObject.Save() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 126
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 381
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+17/07/2018 03:33:54 p. m. - EXCEPCION
+Message: Procedure or function 'proc_select_COMUNA_all' expects parameter '@COD_REGION', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLCOMUNAList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLCOMUNAList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFCOMUNA.GetCOMUNAAll(Int32 CodRegion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFCOMUNA.cs:línea 58
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 501
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+17/07/2018 03:37:31 p. m. - EXCEPCION
+Message: COD_REGION
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLCOMUNA.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLCOMUNA.cs:línea 127
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 110
+   en EvaluacionG5.CLASES.DAL.DLGenericBaseList`1.GetCollection(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGenericBaseList.cs:línea 31
+   en EvaluacionG5.CLASES.DAL.DLCOMUNAList.SelectAll(Int32 CodRegion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLCOMUNAList.cs:línea 48
+   en EvaluacionG5.BUSINESS.BFCOMUNA.GetCOMUNAAll(Int32 CodRegion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFCOMUNA.cs:línea 58
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 501
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+17/07/2018 03:39:10 p. m. - EXCEPCION
+Message: COD_REGION
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLCOMUNA.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLCOMUNA.cs:línea 127
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 110
+   en EvaluacionG5.CLASES.DAL.DLGenericBaseList`1.GetCollection(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGenericBaseList.cs:línea 31
+   en EvaluacionG5.CLASES.DAL.DLCOMUNAList.SelectAll(Int32 CodRegion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLCOMUNAList.cs:línea 48
+   en EvaluacionG5.BUSINESS.BFCOMUNA.GetCOMUNAAll(Int32 CodRegion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFCOMUNA.cs:línea 58
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 501
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+17/07/2018 04:08:42 p. m. - EXCEPCION
+Message: ExecuteReader: no se ha inicializado la propiedad CommandText
+Source: EvaluacionG5.DATAACCESS
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLPERFILList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLPERFILList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFPERFIL.GetPERFILAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 498
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+17/07/2018 04:12:24 p. m. - EXCEPCION
+Message: ExecuteReader: no se ha inicializado la propiedad CommandText
+Source: EvaluacionG5.DATAACCESS
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLPERFILList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLPERFILList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFPERFIL.GetPERFILAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 498
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+17/07/2018 04:13:05 p. m. - EXCEPCION
+Message: ExecuteReader: no se ha inicializado la propiedad CommandText
+Source: EvaluacionG5.DATAACCESS
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLPERFILList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLPERFILList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFPERFIL.GetPERFILAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 498
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+17/07/2018 05:18:36 p. m. - EXCEPCION
+Message: DataBinding: 'EvaluacionG5.CLASES.DAO.ECENTROCOSTO' no contiene una propiedad con el nombre 'NOMBRESUCURSAL'.
+Source: System.Web
+TargetSite: System.Object GetPropertyValue(System.Object, System.String)
+StackTrace: 
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en EvaluacionG5.WEB.UtilesWEB.LlenaDDL(DropDownList& ddl, List`1 objList, String Valor, String Texto) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\UtilesWEB.cs:línea 163
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 518
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+17/07/2018 05:45:02 p. m. - EXCEPCION
+Message: DataBinding: 'EvaluacionG5.CLASES.DAO.ECENTROCOSTO' no contiene una propiedad con el nombre 'NOMBRESUCURSAL'.
+Source: System.Web
+TargetSite: System.Object GetPropertyValue(System.Object, System.String)
+StackTrace: 
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en EvaluacionG5.WEB.UtilesWEB.LlenaDDL(DropDownList& ddl, List`1 objList, String Valor, String Texto) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\UtilesWEB.cs:línea 163
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 518
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:17:18 p. m. - EXCEPCION
+Message: The UPDATE statement conflicted with the FOREIGN KEY SAME TABLE constraint "FK_EMPLEADO_REL_VISAD_EMPLEADO". The conflict occurred in database "EvaluacionAsimet", table "dbo.EMPLEADO".
+The statement has been terminated.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Update(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 75
+   en EvaluacionG5.CLASES.DAO.DomainObject.Update() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 65
+   en EvaluacionG5.CLASES.DAO.DomainObject.Save() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 126
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.Save(EEMPLEADO objEMPLEADO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 40
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:18:53 p. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:18:53 p. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:24:49 p. m. - EXCEPCION
+Message: The UPDATE statement conflicted with the FOREIGN KEY SAME TABLE constraint "FK_EMPLEADO_REL_VISAD_EMPLEADO". The conflict occurred in database "EvaluacionAsimet", table "dbo.EMPLEADO".
+The statement has been terminated.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Update(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 75
+   en EvaluacionG5.CLASES.DAO.DomainObject.Update() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 65
+   en EvaluacionG5.CLASES.DAO.DomainObject.Save() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 126
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.Save(EEMPLEADO objEMPLEADO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 40
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:24:49 p. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:24:49 p. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:27:37 p. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:27:37 p. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:51:41 p. m. - EXCEPCION
+Message: NOMBRE_USUARIO
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLUSUARIO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLUSUARIO.cs:línea 159
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 110
+   en EvaluacionG5.CLASES.DAL.DLGenericBaseList`1.GetCollection(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGenericBaseList.cs:línea 31
+   en EvaluacionG5.CLASES.DAL.DLUSUARIOList.GetUsuarios(Int64 Rut, String Nombre) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLUSUARIOList.cs:línea 51
+   en EvaluacionG5.BUSINESS.BFUSUARIO.GetUsuarios(Int64 Rut, String Nombre) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFUSUARIO.cs:línea 38
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.btnConsultar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 76
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:53:19 p. m. - EXCEPCION
+Message: NOMBRE_USUARIO
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLUSUARIO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLUSUARIO.cs:línea 159
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 110
+   en EvaluacionG5.CLASES.DAL.DLGenericBaseList`1.GetCollection(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGenericBaseList.cs:línea 31
+   en EvaluacionG5.CLASES.DAL.DLUSUARIOList.GetUsuarios(Int64 Rut, String Nombre) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLUSUARIOList.cs:línea 51
+   en EvaluacionG5.BUSINESS.BFUSUARIO.GetUsuarios(Int64 Rut, String Nombre) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFUSUARIO.cs:línea 38
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.btnConsultar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 76
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:53:25 p. m. - EXCEPCION
+Message: NOMBRE_USUARIO
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLUSUARIO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLUSUARIO.cs:línea 159
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 110
+   en EvaluacionG5.CLASES.DAL.DLGenericBaseList`1.GetCollection(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGenericBaseList.cs:línea 31
+   en EvaluacionG5.CLASES.DAL.DLUSUARIOList.GetUsuarios(Int64 Rut, String Nombre) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLUSUARIOList.cs:línea 51
+   en EvaluacionG5.BUSINESS.BFUSUARIO.GetUsuarios(Int64 Rut, String Nombre) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFUSUARIO.cs:línea 38
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.btnConsultar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 76
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 12:53:50 p. m. - EXCEPCION
+Message: NOMBRE_USUARIO
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLUSUARIO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLUSUARIO.cs:línea 159
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 110
+   en EvaluacionG5.CLASES.DAL.DLGenericBaseList`1.GetCollection(IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGenericBaseList.cs:línea 31
+   en EvaluacionG5.CLASES.DAL.DLUSUARIOList.GetUsuarios(Int64 Rut, String Nombre) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLUSUARIOList.cs:línea 51
+   en EvaluacionG5.BUSINESS.BFUSUARIO.GetUsuarios(Int64 Rut, String Nombre) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFUSUARIO.cs:línea 38
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.btnConsultar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 76
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 02:43:18 p. m. - EXCEPCION
+Message: DataBinding: 'EvaluacionG5.CLASES.DAO.EUSUARIO' no contiene una propiedad con el nombre 'RUT_COMPLETO'.
+Source: System.Web
+TargetSite: System.Object GetPropertyValue(System.Object, System.String)
+StackTrace: 
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.modulos_administracion_mantenedor_usuarios_aspx.__DataBinding__control14(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx:línea 91
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en EvaluacionG5.WEB.UtilesWEB.LlenaGrilla(GridView& grd, List`1 objList, Int16 NumPaginacion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\UtilesWEB.cs:línea 142
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.btnConsultar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 76
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+18/07/2018 02:43:41 p. m. - EXCEPCION
+Message: DataBinding: 'EvaluacionG5.CLASES.DAO.EUSUARIO' no contiene una propiedad con el nombre 'RUT_COMPLETO'.
+Source: System.Web
+TargetSite: System.Object GetPropertyValue(System.Object, System.String)
+StackTrace: 
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.modulos_administracion_mantenedor_usuarios_aspx.__DataBinding__control14(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx:línea 91
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en EvaluacionG5.WEB.UtilesWEB.LlenaGrilla(GridView& grd, List`1 objList, Int16 NumPaginacion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\UtilesWEB.cs:línea 142
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.btnConsultar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 76
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+19/07/2018 04:46:34 p. m. - EXCEPCION
+Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_EMPLEADO_REL_FAMIL_FAMILIA_". The conflict occurred in database "EvaluacionAsimet", table "dbo.FAMILIA_CARGO".
+The statement has been terminated.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Object ExecuteScalar(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteScalar(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 261
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteScalar(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 137
+   en EvaluacionG5.CLASES.DAL.DLBase.Insert(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 59
+   en EvaluacionG5.CLASES.DAO.DomainObject.Insert() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 58
+   en EvaluacionG5.CLASES.DAO.DomainObject.Save() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 121
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 388
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+19/07/2018 04:48:57 p. m. - EXCEPCION
+Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_EMPLEADO_REL_FAMIL_FAMILIA_". The conflict occurred in database "EvaluacionAsimet", table "dbo.FAMILIA_CARGO".
+The statement has been terminated.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Object ExecuteScalar(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteScalar(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 261
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteScalar(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 137
+   en EvaluacionG5.CLASES.DAL.DLBase.Insert(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 59
+   en EvaluacionG5.CLASES.DAO.DomainObject.Insert() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 58
+   en EvaluacionG5.CLASES.DAO.DomainObject.Save() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 121
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 388
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 12:36:59 a. m. - EXCEPCION
+Message: Incorrect syntax near ')'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 69
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 508
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 12:38:35 a. m. - EXCEPCION
+Message: Incorrect syntax near ')'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 69
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 508
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 12:41:26 a. m. - EXCEPCION
+Message: Incorrect syntax near ')'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 69
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 508
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 12:50:44 a. m. - EXCEPCION
+Message: Incorrect syntax near ')'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 69
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 503
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 12:53:04 a. m. - EXCEPCION
+Message: Incorrect syntax near ')'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.DataTable dtExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.dtExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 110
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 112
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteDataTable(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 107
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADOList.SelectCargados(String ListaRuts) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADOList.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADOSCARGADOS(String ListaRut) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 69
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 503
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 09:19:33 a. m. - EXCEPCION
+Message: NOM_NIVEL_OCUPACIONAL
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADO.cs:línea 325
+   en EvaluacionG5.CLASES.DAL.DLBase.Select(Int64 id, DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 44
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 101
+   en EvaluacionG5.CLASES.DAO.DomainObject..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 28
+   en EvaluacionG5.CLASES.DAO.EEMPLEADO..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\EEMPLEADO.cs:línea 108
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADO(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 52
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 483
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 09:20:01 a. m. - EXCEPCION
+Message: NOM_NIVEL_OCUPACIONAL
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADO.cs:línea 325
+   en EvaluacionG5.CLASES.DAL.DLBase.Select(Int64 id, DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 44
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 101
+   en EvaluacionG5.CLASES.DAO.DomainObject..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 28
+   en EvaluacionG5.CLASES.DAO.EEMPLEADO..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\EEMPLEADO.cs:línea 108
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADO(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 52
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 483
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 09:21:54 a. m. - EXCEPCION
+Message: NOM_NIVEL_OCUPACIONAL
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADO.cs:línea 325
+   en EvaluacionG5.CLASES.DAL.DLBase.Select(Int64 id, DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 44
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 101
+   en EvaluacionG5.CLASES.DAO.DomainObject..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 28
+   en EvaluacionG5.CLASES.DAO.EEMPLEADO..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\EEMPLEADO.cs:línea 108
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADO(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 52
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 483
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 09:23:59 a. m. - EXCEPCION
+Message: NOM_NIVEL_OCUPACIONAL
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADO.cs:línea 325
+   en EvaluacionG5.CLASES.DAL.DLBase.Select(Int64 id, DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 44
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 101
+   en EvaluacionG5.CLASES.DAO.DomainObject..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 28
+   en EvaluacionG5.CLASES.DAO.EEMPLEADO..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\EEMPLEADO.cs:línea 108
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADO(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 52
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 483
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 09:28:29 a. m. - EXCEPCION
+Message: NOM_NIVEL_OCUPACIONAL
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADO.cs:línea 325
+   en EvaluacionG5.CLASES.DAL.DLBase.Select(Int64 id, DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 44
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 101
+   en EvaluacionG5.CLASES.DAO.DomainObject..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 28
+   en EvaluacionG5.CLASES.DAO.EEMPLEADO..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\EEMPLEADO.cs:línea 108
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADO(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 56
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 489
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 09:33:49 a. m. - EXCEPCION
+Message: NOM_NIVEL_OCUPACIONAL
+Source: System.Data
+TargetSite: Int32 GetOrdinal(System.String)
+StackTrace: 
+   en System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   en System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   en System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   en EvaluacionG5.CLASES.DAL.DLEMPLEADO.Fill(DomainObject obj, IDataReader dr) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLEMPLEADO.cs:línea 325
+   en EvaluacionG5.CLASES.DAL.DLBase.Select(Int64 id, DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 44
+   en EvaluacionG5.CLASES.DAO.DomainObject.Load(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 101
+   en EvaluacionG5.CLASES.DAO.DomainObject..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\DomainObject.cs:línea 28
+   en EvaluacionG5.CLASES.DAO.EEMPLEADO..ctor(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAO\EEMPLEADO.cs:línea 108
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEMPLEADO(Int64 id) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 56
+   en EvaluacionG5.BUSINESS.BFEMPLEADO.GetEmpleadosExcel(String newFile, Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFEMPLEADO.cs:línea 489
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 09:51:23 a. m. - EXCEPCION
+Message: Procedure proc_select_FAMILIA_CARGO_all has no parameters and arguments were supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLFAMILIACARGOList.SelectAll(Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLFAMILIA_CARGOList.cs:línea 46
+   en EvaluacionG5.BUSINESS.BFFAMILIACARGO.GetFAMILIACARGOAll(Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFFAMILIA_CARGO.cs:línea 58
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 572
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 09:52:08 a. m. - EXCEPCION
+Message: Procedure proc_select_FAMILIA_CARGO_all has no parameters and arguments were supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLFAMILIACARGOList.SelectAll(Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLFAMILIA_CARGOList.cs:línea 46
+   en EvaluacionG5.BUSINESS.BFFAMILIACARGO.GetFAMILIACARGOAll(Int64 RutEmpresa) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFFAMILIA_CARGO.cs:línea 58
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 572
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 43
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:21:40 a. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:21:40 a. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:25:10 a. m. - EXCEPCION
+Message: DataBinding: 'EvaluacionG5.CLASES.DAO.EUSUARIO' no contiene una propiedad con el nombre 'RUT_COMPLETO'.
+Source: System.Web
+TargetSite: System.Object GetPropertyValue(System.Object, System.String)
+StackTrace: 
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.modulos_administracion_mantenedor_usuarios_aspx.__DataBinding__control14(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx:línea 93
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en EvaluacionG5.WEB.UtilesWEB.LlenaGrilla(GridView& grd, List`1 objList, Int16 NumPaginacion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\UtilesWEB.cs:línea 142
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.btnGuardar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 289
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:28:00 a. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:28:00 a. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:28:28 a. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:28:28 a. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:46:47 a. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 10:46:48 a. m. - EXCEPCION
+Message: Procedure or function 'proc_delete_PERFIL_USUARIO' expects parameter '@RUT_USUARIO', which was not supplied.
+Source: .Net SqlClient Data Provider
+TargetSite: Int32 ExecuteNonQuery(System.Data.SqlClient.SqlConnection, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 46
+   en EvaluacionG5.DATAACCESS.Database.ExecuteNonQuery(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 18
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(String strConnection, CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 82
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteNonQuery(CommandType commandType, String commandText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 77
+   en EvaluacionG5.CLASES.DAL.DLBase.Delete(DomainObject obj) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLBase.cs:línea 97
+   en EvaluacionG5.BUSINESS.BFPERFILUSUARIO.Delete(EPERFILUSUARIO objPERFILUSUARIO) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFPERFIL_USUARIO.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 11:57:04 a. m. - EXCEPCION
+Message: Login failed for user 'DesempenoAsimet'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 02:02:45 p. m. - EXCEPCION
+Message: 'ddlClasif2' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value
+Source: System.Web
+TargetSite: Void set_SelectedValue(System.String)
+StackTrace: 
+   en System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.lnkEditar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 152
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 03:05:58 p. m. - EXCEPCION
+Message: Referencia a objeto no establecida como instancia de un objeto.
+Source: EvaluacionG5.WEB
+TargetSite: Void lnkEditar_Click(System.Object, System.EventArgs)
+StackTrace: 
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.lnkEditar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 152
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 03:10:16 p. m. - EXCEPCION
+Message: Referencia a objeto no establecida como instancia de un objeto.
+Source: EvaluacionG5.WEB
+TargetSite: Void lnkEditar_Click(System.Object, System.EventArgs)
+StackTrace: 
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.lnkEditar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 152
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+20/07/2018 03:39:47 p. m. - EXCEPCION
+Message: DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'COD_FAMILIA_CARGO'.
+Source: System.Web
+TargetSite: System.Object GetPropertyValue(System.Object, System.String)
+StackTrace: 
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.modulos_administracion_mantenedor_usuarios_aspx.__DataBinding__control62(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx:línea 129
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en EvaluacionG5.WEB.UtilesWEB.LlenaGrilladt(GridView& grdObjeto, DataTable dt, Int16 NumPaginacion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\UtilesWEB.cs:línea 60
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_usuarios.btnConsultar_Click(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_usuarios.aspx.cs:línea 80
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+23/07/2018 01:08:19 p. m. - EXCEPCION
+Message: Valor de tiempo de espera caducado. El periodo de tiempo de espera se agotó al intentar consumir la confirmación del protocolo de enlace previo al inicio de sesión. El motivo podría ser que se produjo un error en el protocolo de enlace o que el servidor no pudo responder a tiempo.  El tiempo invertido al intentar conectarse a este servidor fue: [Previo al inicio de sesión] inicialización=27858; protocolo de enlace=48; 
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+23/07/2018 01:09:17 p. m. - EXCEPCION
+Message: Valor de tiempo de espera caducado. El periodo de tiempo de espera se agotó al intentar consumir la confirmación del protocolo de enlace previo al inicio de sesión. El motivo podría ser que se produjo un error en el protocolo de enlace o que el servidor no pudo responder a tiempo.  El tiempo invertido al intentar conectarse a este servidor fue: [Previo al inicio de sesión] inicialización=20329; protocolo de enlace=0; 
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+23/07/2018 01:11:22 p. m. - EXCEPCION
+Message: Valor de tiempo de espera caducado. El periodo de tiempo de espera se agotó al intentar consumir la confirmación del protocolo de enlace previo al inicio de sesión. El motivo podría ser que se produjo un error en el protocolo de enlace o que el servidor no pudo responder a tiempo.  El tiempo invertido al intentar conectarse a este servidor fue: [Previo al inicio de sesión] inicialización=21959; protocolo de enlace=0; 
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+23/07/2018 03:05:09 p. m. - EXCEPCION
+Message: Valor de tiempo de espera caducado. El periodo de tiempo de espera se agotó al intentar consumir la confirmación del protocolo de enlace previo al inicio de sesión. El motivo podría ser que se produjo un error en el protocolo de enlace o que el servidor no pudo responder a tiempo.  El tiempo invertido al intentar conectarse a este servidor fue: [Previo al inicio de sesión] inicialización=23616; protocolo de enlace=0; 
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+23/07/2018 03:17:30 p. m. - EXCEPCION
+Message: Valor de tiempo de espera caducado. El periodo de tiempo de espera se agotó al intentar consumir la confirmación del protocolo de enlace previo al inicio de sesión. El motivo podría ser que se produjo un error en el protocolo de enlace o que el servidor no pudo responder a tiempo.  El tiempo invertido al intentar conectarse a este servidor fue: [Previo al inicio de sesión] inicialización=21888; protocolo de enlace=0; 
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+23/07/2018 03:24:52 p. m. - EXCEPCION
+Message: Cannot open server 'grupo5eus' requested by the login. Client with IP address '201.219.237.105' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLSESSIONUSUARIO.SelectSessionUsuario(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLSESSIONUSUARIO.cs:línea 91
+   en EvaluacionG5.BUSINESS.BFSESSIONUSUARIO.GetSESSIONUSUARIO(Int64 Rut, String Passwd) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFSESSIONUSUARIO.cs:línea 31
+   en EvaluacionG5.WEB.login.ingresar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\login.aspx.cs:línea 60
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+23/07/2018 04:34:09 p. m. - EXCEPCION
+Message: Could not find stored procedure 'proc_select_AREA_CURSO_all'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLAREACURSOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLAREA_CURSOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFAREACURSO.GetAREACURSOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFAREA_CURSO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_cursos.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_cursos.aspx.cs:línea 171
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+23/07/2018 05:22:27 p. m. - EXCEPCION
+Message: Could not find stored procedure 'proc_select_AREA_CURSO_all'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLAREACURSOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLAREA_CURSOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFAREACURSO.GetAREACURSOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFAREA_CURSO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_cursos.CargarCombos() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_cursos.aspx.cs:línea 171
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+24/07/2018 10:05:37 a. m. - EXCEPCION
+Message: DataBinding: 'EvaluacionG5.CLASES.DAO.ECURSO' no contiene una propiedad con el nombre 'COD_CURSO'.
+Source: System.Web
+TargetSite: System.Object GetPropertyValue(System.Object, System.String)
+StackTrace: 
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.modulos_administracion_mantenedor_cursos_aspx.__DataBinding__control13(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_cursos.aspx:línea 70
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en EvaluacionG5.WEB.UtilesWEB.LlenaGrilla(GridView& grd, List`1 objList, Int16 NumPaginacion) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\UtilesWEB.cs:línea 142
+   en EvaluacionG5.WEB.modulos.administracion.mantenedor_cursos.Consultar() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\mantenedor_cursos.aspx.cs:línea 191
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+24/07/2018 03:19:55 p. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 72
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+24/07/2018 03:22:21 p. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 72
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+24/07/2018 03:26:15 p. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 72
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+24/07/2018 03:28:26 p. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 72
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+24/07/2018 03:29:40 p. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 72
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+24/07/2018 03:30:23 p. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 72
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+24/07/2018 04:43:59 p. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 74
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+25/07/2018 10:19:55 a. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 74
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+25/07/2018 10:22:50 a. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 74
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+25/07/2018 10:22:59 a. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 74
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+25/07/2018 10:24:07 a. m. - EXCEPCION
+Message: Invalid object name 'GRADO'.
+Source: .Net SqlClient Data Provider
+TargetSite: System.Data.SqlClient.SqlDataReader ExecuteReader(System.String, System.Data.CommandType, System.String, System.Data.SqlClient.SqlParameter[])
+StackTrace: 
+   en EvaluacionG5.DATAACCESS.Database.ExecuteReader(String connString, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\clsUtilDataBase.cs:línea 85
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(String strConn, CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 97
+   en EvaluacionG5.DATAACCESS.SqlServerDB.ExecuteReader(CommandType cmdType, String cmdText, IDbDataParameter[] parameters) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.DATAACCESS\SqlServerDB.cs:línea 102
+   en EvaluacionG5.CLASES.DAL.DLGRADOList.SelectAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.CLASES\DAL\DLGRADOList.cs:línea 32
+   en EvaluacionG5.BUSINESS.BFGRADO.GetGRADOAll() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.BUSINESS\BFGRADO.cs:línea 53
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.InicializarFormulario() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 74
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+25/07/2018 10:29:02 a. m. - EXCEPCION
+Message: Subproceso anulado.
+Source: mscorlib
+TargetSite: Void AbortInternal()
+StackTrace: 
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.ValidaSession() en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 31
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 40
+InnerException: 
+--------------------------------------------------------------------------------

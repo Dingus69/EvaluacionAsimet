@@ -1,0 +1,1189 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>
+	Evaluación G5
+</title>
+
+    <!-- Bootstrap -->
+    <link href="../../include/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+
+    <!--Estilo-->
+    <link href="../../include/bootstrap/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+    <link href="../../include/css/formulario.css" type="text/css" media="all" rel="Stylesheet" /><link href="../../include/css/grilla_por_estado.css" type="text/css" media="all" rel="Stylesheet" /><link href="../../include/css/AdminLTE.min.css" type="text/css" media="all" rel="Stylesheet" /><link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" /><link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+    <div class="header">
+        <img id="ctl00_imgHeader" class="logo img-responsive" src="../../include/images/logo-header.png" style="border-width:0px;" />
+    </div>
+    <nav class="navbar navbar-inverse nav">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>Bienvenido 
+                  <span id="ctl00_lblNombreUsuario" class="white">Andy Rioseco  Arce</span></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/modulos/evaluacion/dashboard.aspx"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administración<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li style="display: none;"><a href="../administracion/lista_asignaciones.aspx">
+                        Asignación de Evaluaciones</a></li>
+                    <li><a href="../administracion/lista_asignaciones_partners.aspx">
+                        Asignación de Evaluaciones</a></li>
+                    <li><a href="../administracion/lista_instrumentos.aspx">
+                        Plantilla de Evaluación</a></li>
+                    <li><a href="../administracion/carga_nomina.aspx">
+                        Carga Nomina de Personal</a></li>
+                    <li><a href="../administracion/mantenedor_usuarios.aspx">
+                        Usuarios</a></li>
+                    <li><a href="../administracion/mantenedor_escala.aspx">
+                        Escalas de Evaluación</a></li>
+                    <li><a href="../administracion/mantenedor_tipo_seccion.aspx">
+                        Categorias de Seccion</a></li>
+                    <li><a href="../administracion/mantenedor_parametros.aspx">
+                        Parametros</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes e Indicadores<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../gestion/reporte_detallado.aspx">
+                        Reporte Consolidado</a></li>
+                    <li style="display: none;"><a href="../gestion/comparativa_anual.aspx">
+                        Comparativa anual</a></li>
+                </ul>
+            </li>
+            <li><a href="/default.aspx"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <form name="aspnetForm" method="post" action="./dashboard.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZHZKpLHevhRQvS2N2oKYujFIZOY5zctClwyOLVEexPCEDipq03fGmk10xzgqx0jhYw2&amp;t=636531285525433943" type="text/javascript"></script>
+
+<script type="text/javascript" src="/WebResource.axd?d=E-UTIZfH9R0ZydGY1vCvCrruOtCEZdyDm7ezAGvJ3FO-cecpFR5hD4AkvBkBZwVFu8vRRun2KKB9cwFKR-Y5JjljTFrp_qYFqlnl-j65xaaiZKtp8kUec8jzLb07QG0C9jWiF18jpaslpQN7Hn_dkdjmcCu5-5YNIoI4SlA2wpU1&t=634318915089570745"></script>
+<script type="text/javascript" src="/WebResource.axd?d=b-QF3XhyWB_Ewlp-SwtFU621w43lLlGqSXE-o_PGNb7VK_AMTh3C6tOmvrTF7PmL5RbLcgnD8TgJPT4C54Xsfd8q7BrhMhuRAu2y2paL2fovDNn-gDWPNPtgfuj0rcWVZf0Tjz8FlMphO7zWNcyhoUdfz5sUhwAR4qDPUAEtFls1&t=634318915089570745"></script>
+<script type="text/javascript" src="/WebResource.axd?d=q2lSTf19SD7S9KWjSsdxXz2dhs2ccvDN4_4e1vpgvURpwZV3Cc0KghowRT6WruIxSodVBroQq3UU-b6MuSDV2uXs-_-jr6A1Wl9j7MH93ZnwKaVjA59ZmJ9nQBpbpZw4n174zmbdu2ItG94ih-JNIFlCbvVadYw36NHYGCdgZR81&t=634318915089570745"></script>
+<!-- ************************************************ -->
+<!-- * FreeTextBox v3 (3.3.1.12354)                 * -->
+<!-- * http://www.freetextbox.com/                  * -->
+<!-- * ASP.NET HTML editor for PC/IE & Mozilla      * -->
+<!-- * License Type: NoLicense (To: Unlicensed)     * -->
+<!-- ************************************************ -->
+
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+FTB_API['ctl00_ContentPlaceHolder1_txtCuerpoCorreo'].StoreHtml();
+return true;
+}
+//]]>
+</script>
+
+                
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script src="../../include/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        function numbersonly(e) {
+            var unicode = e.charCode ? e.charCode : e.keyCode
+            if (unicode != 8 && unicode != 44) {
+                if (unicode < 48 || unicode > 57) //if not a number
+                { return false } //disable key press    
+            }
+        }
+        function Menu(op) {
+            switch (op) {
+                case "0":
+                    $('#modal-danger').modal('show');
+                    break;
+                case "1":
+                    $('#modBuscar').modal('show');
+                    break;
+                case "2":
+                    $('#modal-warning').modal('show');
+                    break;
+                case "3":
+                    $('#modal-danger').modal('show');
+                    break;
+                case "4":
+                    $('#modal-success').modal('show');
+                    break;
+                case "5":
+                    $('#modBitacora').modal('show');
+                    break;
+                case "6":
+                    $('#modNotificacion').modal('show');
+                    break;
+                case "7":
+                    $('#modFicha').modal('show');
+                    break;
+                case "8":
+                    $('#modInformeEvaluacion').modal('show');
+                    break;
+                case "9":
+                    $('#modHojaDeVida').modal('show');
+                    break;
+                case "10":
+                    $('#modPlanDesarrollo').modal('show');
+                    break;
+                case "11":
+                    $('#modDetalleHistorial').modal('show');
+                    break;
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(function () {$('#container').highcharts({chart: {type: 'column'},
+            title: {text: 'Distibución de asignaciones por estado.'},
+            xAxis: { categories: [ 'Asignadas', 'En borrador', 'Evaluadas' ], crosshair: true },
+            yAxis: {title: {text: 'Cantidad'}},
+            legend: {enabled: false},
+            plotOptions: {series: {borderWidth: 0,dataLabels: {enabled: true,format: '{point.y:.0f}'}}},
+            tooltip: {headerFormat: '<span style="font-size:11px">{series.name}</span><br>',pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>'},
+    
+            series: [{name: "Estado",colorByPoint: true,data: 
+                [{
+                    name: "Asignadas",
+                    color: "#00add7",
+                    y: 0
+                    }, {
+                        name: "En borrador",
+                        color: "#c21856",
+                        y: 0
+                        }, {
+                            name: "Evaluadas",
+                            color: "#009551",
+                            y: 2
+                            }, {
+                            name: "En Feedback",
+                            color: "#0073b7",
+                            y: 2
+                            }]
+            }],
+        });
+        });
+
+
+                    $(function () {$('#containerFicha').highcharts({chart: {type: 'line'},
+                        title: {text: ''},
+                        xAxis: { categories: [  ], crosshair: true },
+                        yAxis: {title: {text: 'Resultado'}},
+                        legend: {
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'middle'
+                        },
+                        plotOptions: {series: {borderWidth: 0,dataLabels: {enabled: true,format: '{point.y:.0f}'}}},
+                        tooltip: {headerFormat: '<span style="font-size:11px">{series.name}</span><br>',pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>'},
+    
+                        series: [{
+                            name: 'Jefatura',
+                            data: []
+                        }, {
+                            name: 'Colaboradores',
+                            data: []
+                        }, {
+                            name: 'Pares',
+                            data: []
+                        }, {
+                            name: 'Auto evaluación',
+                            data: []
+                        }],
+                    });
+                    });
+
+                    $(function () {$('#containerFichaPares').highcharts({chart: {type: 'line'},
+                        title: {text: ' - Colaboradores'},
+                        xAxis: { categories: [], crosshair: true },
+                        yAxis: {title: {text: 'Resultado'}},
+                        legend: {enabled: false},
+                        plotOptions: {series: {borderWidth: 0,dataLabels: {enabled: true,format: '{point.y:.0f}'}}},
+                        tooltip: {headerFormat: '<span style="font-size:11px">{series.name}</span><br>',pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>'},
+    
+                        series: [],
+                    });
+                    });
+
+                    $(function () {$('#containerFichaColaboradores').highcharts({chart: {type: 'line'},
+                        title: {text: ' - Pares'},
+                        xAxis: { categories: [], crosshair: true },
+                        yAxis: {title: {text: 'Resultado'}},
+                        legend: {enabled: false},
+                        plotOptions: {series: {borderWidth: 0,dataLabels: {enabled: true,format: '{point.y:.0f}'}}},
+                        tooltip: {headerFormat: '<span style="font-size:11px">{series.name}</span><br>',pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>'},
+    
+                        series: [],
+                    });
+                    });
+
+
+    </script>
+    <div class="container">
+        <script src="/include/chart/js/highcharts.js"></script>
+        <script src="/include/chart/js/modules/data.js"></script>
+        <script src="/include/chart/js/modules/drilldown.js"></script>
+
+        <ul class="nav nav-tabs" style="background-color: transparent; color: #4a4f60;">
+            <li id="ctl00_ContentPlaceHolder1_liMisColaboradores">
+                <a id="ctl00_ContentPlaceHolder1_lnlMisColaboradores" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lnlMisColaboradores&#39;,&#39;&#39;)">Evaluaciones en proceso</a>
+            </li>
+            <li id="ctl00_ContentPlaceHolder1_liMisEvaluaciones" class="active">
+                <a id="ctl00_ContentPlaceHolder1_misEvaluaciones" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$misEvaluaciones&#39;,&#39;&#39;)">Mi historial</a>
+            </li>
+            <li id="ctl00_ContentPlaceHolder1_liKPI">
+                <a id="ctl00_ContentPlaceHolder1_lnkKPI" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lnkKPI&#39;,&#39;&#39;)">KPI</a>
+            </li>
+            <li id="ctl00_ContentPlaceHolder1_liMiEquipo">
+                <a id="ctl00_ContentPlaceHolder1_lnkMiEquipo" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lnkMiEquipo&#39;,&#39;&#39;)">Mi equipo</a>
+            </li>
+
+            
+        </ul>
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfNombreFormulario" id="ctl00_ContentPlaceHolder1_hdfNombreFormulario" />
+
+        <div class="main" style="width: 100% !important;">
+            
+            <div id="ctl00_ContentPlaceHolder1_divMisEvaluaciones" style="width: 100%; margin: 0 auto;">
+                <ul class="nav nav-tabs" style="background-color: transparent; color: #4a4f60;">
+                    <li id="ctl00_ContentPlaceHolder1_liMiDesempeno" class="active">
+                        <a id="ctl00_ContentPlaceHolder1_lnkMiDesempeno" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lnkMiDesempeno&#39;,&#39;&#39;)">Mis competencias</a>
+                    </li>
+                    <li id="ctl00_ContentPlaceHolder1_liMisKPI">
+                        <a id="ctl00_ContentPlaceHolder1_lnkMisKPI" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lnkMisKPI&#39;,&#39;&#39;)">Mis KPI</a>
+                    </li>
+                </ul>
+                
+                        <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                            <div class="table-wrapper_7 cbp-mc-1column" style="width: 100%; margin: 0px !important; padding: 0px !important;">
+                                <div>
+	<table cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones" style="width:100%;border-collapse:collapse;">
+		<tr>
+			<th scope="col">Acción</th><th scope="col">Evaluación</th><th scope="col">Inicio</th><th scope="col">Fin</th><th scope="col">Jefatura</th><th scope="col">Colaboradores</th><th scope="col">Pares</th><th scope="col">Autoevaluación</th><th scope="col">Nota final</th>
+		</tr><tr>
+			<td align="center" style="width:10%;">
+                                                <a id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lnkVerMisEvaluaciones" data-toggle="tooltip" title="Ver detalle" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdMisEvaluaciones$ctl02$lnkVerMisEvaluaciones&#39;,&#39;&#39;)"><span class="glyphicon glyphicon-list-alt" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></a>
+                                                
+                                            </td><td style="width:30%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lblNombreInstrumento">Evaluación de Desempeño 2017</span>
+                                            </td><td style="width:12%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lblInicio">21/11/2017</span>
+                                            </td><td style="width:12%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lblFin">31/12/2017</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lblResultadoJefe">0</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lblResultadoColab">86,5</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lblResultadoPares">27</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lblResultadoAuto">86,5</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl02_lblResultado">31,35</span>
+                                            </td>
+		</tr><tr>
+			<td align="center" style="width:10%;">
+                                                <a id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lnkVerMisEvaluaciones" data-toggle="tooltip" title="Ver detalle" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$grdMisEvaluaciones$ctl03$lnkVerMisEvaluaciones&#39;,&#39;&#39;)"><span class="glyphicon glyphicon-list-alt" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></a>
+                                                
+                                            </td><td style="width:30%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lblNombreInstrumento">Evaluación de Desempeño 2017</span>
+                                            </td><td style="width:12%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lblInicio">24/11/2017</span>
+                                            </td><td style="width:12%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lblFin">31/12/2017</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lblResultadoJefe">0</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lblResultadoColab">0</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lblResultadoPares">25</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lblResultadoAuto">0</span>
+                                            </td><td style="width:6%;">
+                                                <span id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones_ctl03_lblResultado">5</span>
+                                            </td>
+		</tr>
+	</table>
+    
+    
+    <table cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder1_grdMisEvaluaciones" style="width:100%;border-collapse:collapse;" class="TableEvaluaciones" >
+		<tr>
+        	<td class="tdAvatar" >
+            	<asp:Image ID="Image1" runat="server" />
+                <img src="../../include/images/avatar-usuario-generico.png" width="70" height="70" alt=""/></td>
+        	<td class="tdDatos1" >
+            	<asp:Label ID="Label2" runat="server" Text="Rut"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text='<%# Bind("RUT_EMPLEADO") %>'></asp:Label>
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Nombre"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text='<%# Bind("NOMBRE_EMPLEADO") %>'></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text='<%# Bind("APELLIDO_PATERNO") %>'></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text='<%# Bind("APELLIDO_MATERNO") %>'></asp:Label>
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Gerencia"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text='<%# Bind("COD_INSTRUMENTO_EMPLEADO") %>'></asp:Label>
+            </td>
+        	<td class="tdDatos2" >
+            	<asp:Label ID="Label2" runat="server" Text="Cargo"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text='<%# Bind("COD_INSTRUMENTO_EMPLEADO") %>'></asp:Label>
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Relacion"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text='<%# Bind("RELACION") %>'></asp:Label> 
+            </td>
+        	<td class="tdAcciones" >
+            	<asp:LinkButton ID="lnkEvaluar" runat="server" data-toggle="tooltip" OnClick="lnkEvaluar_Click" title="<%$ Resources: etiquetas,_etiEvaluar%>"><span class="glyphicon glyphicon-list-alt" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>
+             	<asp:LinkButton ID="lnkEditar" runat="server" data-toggle="tooltip" OnClick="lnkEditar_Click" Visible="false" title="<%$ Resources: etiquetas,_etiEditar%>"><span class="glyphicon glyphicon-edit" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>
+              	<asp:LinkButton ID="lnkVerBitacora" runat="server" data-toggle="tooltip" OnClick="lnkVerBitacora_Click" Visible="false" title="<%$ Resources: etiquetas,_etiBitacora%>"><span class="glyphicon glyphicon-list" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>
+            	<asp:LinkButton ID="lnkNotificaciones" runat="server" data-toggle="tooltip" OnClick="lnkNotificaciones_Click" Visible="false" title="<%$ Resources: etiquetas,_etiNotificar%>"><span class="glyphicon glyphicon-envelope" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>                                
+            </td>
+		</tr>
+	</table>
+    
+</div>
+                            </div>
+                        </div>
+                    
+            </div>
+            
+            
+            
+        </div>
+
+    </div>
+
+
+
+    <div id="modBitacora" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width: 95%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" class="btn btn-default" data-dismiss="modal"
+                        data-backdrop="false">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h2>
+                        Bitácora</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="table-wrapper cbp-mc-1column">
+                            <div>
+
+</div>
+                        </div>
+                    </div>
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="cbp-mc-1column">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnCerrar" value="Cerrar" id="ctl00_ContentPlaceHolder1_btnCerrar" class="cbp-mc-submit" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modFicha" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width: 95%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" class="btn btn-default" data-dismiss="modal"
+                        data-backdrop="false">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h2>
+                        Ficha personal</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label for="txtFichaRut">
+                                Rut</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaRut" type="text" id="ctl00_ContentPlaceHolder1_txtFichaRut" class="form-control" />
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="txtFichaNombres">
+                                Nombre</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaNombres" type="text" id="ctl00_ContentPlaceHolder1_txtFichaNombres" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="txtFichaApPaterno">
+                                Apellido Paterno</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaApPaterno" type="text" id="ctl00_ContentPlaceHolder1_txtFichaApPaterno" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="txtFichaApMaterno">
+                                Apellido Materno</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaApMaterno" type="text" id="ctl00_ContentPlaceHolder1_txtFichaApMaterno" class="form-control" />
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="txtFichaEmail">
+                                Email</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaEmail" type="text" id="ctl00_ContentPlaceHolder1_txtFichaEmail" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label for="txtFichaSucursal">
+                                Sucursal</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaSucursal" type="text" id="ctl00_ContentPlaceHolder1_txtFichaSucursal" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="txtFichaGerencia">
+                                Gerencia</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaGerencia" type="text" id="ctl00_ContentPlaceHolder1_txtFichaGerencia" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="txtFichaArea">
+                                Área</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaArea" type="text" id="ctl00_ContentPlaceHolder1_txtFichaArea" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="txtFichaCentroCosto">
+                                Centro de costo</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaCentroCosto" type="text" id="ctl00_ContentPlaceHolder1_txtFichaCentroCosto" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="txtFichaRol">
+                                Rol</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaRol" type="text" id="ctl00_ContentPlaceHolder1_txtFichaRol" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="txtFichaCargo">
+                                Cargo</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtFichaCargo" type="text" id="ctl00_ContentPlaceHolder1_txtFichaCargo" class="form-control" />
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-tabs" style="background-color: transparent; color: #4a4f60;">
+                        <li id="ctl00_ContentPlaceHolder1_liDesempenoFicha" class="active">
+                            <a id="ctl00_ContentPlaceHolder1_lnkDesempenoFicha" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lnkDesempenoFicha&#39;,&#39;&#39;)">Encuestas de desempeño</a>
+                        </li>
+                        <li id="ctl00_ContentPlaceHolder1_liKPIFicha">
+                            <a id="ctl00_ContentPlaceHolder1_lnkKPIFicha" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lnkKPIFicha&#39;,&#39;&#39;)">KPI</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="cbp-mc-1column">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$Button3" value="Cerrar" id="ctl00_ContentPlaceHolder1_Button3" class="cbp-mc-submit" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modInformeEvaluacion" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width: 95%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" class="btn btn-default" data-dismiss="modal"
+                        data-backdrop="false">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h2>
+                        Informe Evaluación</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="container" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="row">
+                            <h1>
+                                </h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <h2>Resultado final -
+                                        </h2>
+                                </div>
+                                <div class="row">
+                                    <div id="containerFicha"></div>
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenTextoGraf01" id="ctl00_ContentPlaceHolder1_hdfResumenTextoGraf01" />
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenColabGraf01" id="ctl00_ContentPlaceHolder1_hdfResumenColabGraf01" />
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenJefatGraf01" id="ctl00_ContentPlaceHolder1_hdfResumenJefatGraf01" />
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenParesGraf01" id="ctl00_ContentPlaceHolder1_hdfResumenParesGraf01" />
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenAutoevGraf01" id="ctl00_ContentPlaceHolder1_hdfResumenAutoevGraf01" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <h2>Pares</h2>
+                                </div>
+                                <div class="row">
+                                    <div id="containerFichaPares"></div>
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenTextoGraf02" id="ctl00_ContentPlaceHolder1_hdfResumenTextoGraf02" />
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenDataGraf02" id="ctl00_ContentPlaceHolder1_hdfResumenDataGraf02" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <h2>Colaboradores</h2>
+                                </div>
+                                <div class="row">
+                                    <div id="containerFichaColaboradores"></div>
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenTextoGraf03" id="ctl00_ContentPlaceHolder1_hdfResumenTextoGraf03" />
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfResumenDataGraf03" id="ctl00_ContentPlaceHolder1_hdfResumenDataGraf03" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h2>Comentarios</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <textarea name="ctl00$ContentPlaceHolder1$txtFichaComentarios" rows="5" cols="20" id="ctl00_ContentPlaceHolder1_txtFichaComentarios" style="width:100%;">
+</textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h2>Plan de desarrollo</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <textarea name="ctl00$ContentPlaceHolder1$txtFichaPlanDesarrollo" rows="5" cols="20" id="ctl00_ContentPlaceHolder1_txtFichaPlanDesarrollo" style="width:100%;">
+</textarea>
+                            </div>
+                        </div>
+                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                            <div class="cbp-mc-1column">
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$Button4" value="Cerrar" id="ctl00_ContentPlaceHolder1_Button4" class="cbp-mc-submit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modHojaDeVida" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width: 95%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" class="btn btn-default" data-dismiss="modal"
+                        data-backdrop="false">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h2>
+                        Hoja de Vida</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="cbp-mc-1column">
+                            <label>Agregar cometario</label>
+                            <textarea name="ctl00$ContentPlaceHolder1$txtAgregarComentario" rows="5" cols="20" id="ctl00_ContentPlaceHolder1_txtAgregarComentario" class="form-control">
+</textarea>
+                        </div>
+                    </div>
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="cbp-mc-1column">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnAgregarHojaVida" value="Guardar" id="ctl00_ContentPlaceHolder1_btnAgregarHojaVida" class="cbp-mc-submit" />
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnCerrarHojaVida" value="Cerrar" id="ctl00_ContentPlaceHolder1_btnCerrarHojaVida" class="cbp-mc-submit" />
+
+                        </div>
+                    </div>
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="table-wrapper cbp-mc-1column">
+                            <div>
+
+</div>
+                        </div>
+                    </div>
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="cbp-mc-1column"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modPlanDesarrollo" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width: 95%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" class="btn btn-default" data-dismiss="modal"
+                        data-backdrop="false">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    
+                    <h2>
+                        Plan de Desarrollo</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="container" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <textarea name="ctl00$ContentPlaceHolder1$txtPlanDesarrolloMant" rows="5" cols="20" id="ctl00_ContentPlaceHolder1_txtPlanDesarrolloMant" style="width:100%;">
+</textarea>
+                            </div>
+                        </div>
+                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                            <div class="cbp-mc-1column">
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnGuardarPlan" value="Guardar" id="ctl00_ContentPlaceHolder1_btnGuardarPlan" class="cbp-mc-submit" />
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$Button5" value="Cerrar" id="ctl00_ContentPlaceHolder1_Button5" class="cbp-mc-submit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modNotificacion" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width: 50%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" class="btn btn-default" data-dismiss="modal"
+                        data-backdrop="false">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h2>
+                        Notificaciones</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="cbp-mc-1column">
+                            <label>
+                                Asunto</label>
+                            <select name="ctl00$ContentPlaceHolder1$ddlAsuntoCorreo" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlAsuntoCorreo\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlAsuntoCorreo">
+
+</select>
+                        </div>
+                        <div class="cbp-mc-1column TextoEnriquecido">
+                            <label>
+                                Cuerpo correo</label>
+                            <style type="text/css">
+
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_OuterTable {
+	width: 100%;
+	background-color: #9EBEF5;
+}
+#ctl00_ContentPlaceHolder1_txtCuerpoCorreo_toolbarArea td {
+	vertical-align: middle;
+	border-collapse: separate;
+}
+#ctl00_ContentPlaceHolder1_txtCuerpoCorreo_toolbarArea select {
+	margin: 0px;
+	padding: 0px;
+	font: 11px Tahoma,Verdana,sans-serif;
+}
+#ctl00_ContentPlaceHolder1_txtCuerpoCorreo_toolbarArea img {
+	display: block;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_HtmlBox {
+	overflow: auto;
+	font-family: Courier New, Courier;
+	padding: 4px;
+	border-right: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #808080;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_DesignBox {
+	background-color: #FFFFFF;
+	border: 0; 
+	border-right: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #808080;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_DesignBox body {
+	background-color: black;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Toolbar {
+	margin-bottom: 1px; 
+	margin-right: 2px;
+	float: left;
+	
+}
+
+
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_items img {
+	padding: 1px;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out img {
+	padding: 1px; 
+	background-color: transparent;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Over img {
+	
+	padding: 0px;
+	border-top: 1px solid #000080;	
+	border-left: 1px solid #000080;
+	border-right: 1px solid #000080;
+	border-bottom: 1px solid #000080;  
+	background-color: #FFF4CC;
+	background-image: url(/WebResource.axd?d=Ky2bW9yYcPxutSex_5B5ifcW16lIYf9YtObObDuGDO3IwNXXelvHwR8WclBLKU-EdDmH2uxl6QYblaqh9ttBGOoD1vNlSj3HpdsKLborjuEwM5ncbp9-_oUlVrmfSnDQAvUkaRroZCOaTkbwA9DahMum8z_7-Iirr_vQCPw3b5CPNmdABSS1vFeBpxLTJ_BB0&t=634318915089570745);
+	
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_On_Out img {
+	
+	padding: 0px;
+	border-top: 1px solid #000080;	
+	border-left: 1px solid #000080;
+	border-right: 1px solid #000080;
+	border-bottom: 1px solid #000080;  
+	background-color: #FFD58C;
+	background-image: url(/WebResource.axd?d=rf8x8nTaH-lmnm8JG2ZsXmU6tTfL0Pf1Jc0txIJkJFeKtufNUcVEneQgEw06cVIQ2d4hxItFh-gz80dD9clCCAkBFM3oCoK0FPV6lkIllvCgcfKGx8RsYWgRdi_CZKF5IAq9b2fNqP5TeBxM7JdvPaC9B1Z9mzNP-LH8z0PRdzx4RfTKWkd7GYFBFo5_G5Dj0&t=634318915089570745);
+	
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_On_Over img {
+	
+	padding: 0px;
+	border-top: 1px solid #000080;	
+	border-left: 1px solid #000080;
+	border-right: 1px solid #000080;
+	border-bottom: 1px solid #000080;  
+	background-color: #FE914E;
+	background-image: url(/WebResource.axd?d=K6oaSzXKG0UAHg04ixW8j5Epc1dErepc2aZDC6Oebord9Od-ZF0kGfUEwfOJ60JZZbOBPYYOzbWXqtkeik32eqadNLwad9PIuO9B6d6yU3py2GL7LcyROHoQooh5qSME06ShSYRm728EHS3lMrr5ra5GGMuK7AEtG2y1zOC-ZDa86vZvusiEoNl1qe_inEOi0&t=634318915089570745);
+	
+}
+
+
+#ctl00_ContentPlaceHolder1_txtCuerpoCorreo_TabRow td {
+	vertical-align:center;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_StartTabOn {
+	font: 10pt MS Sans Serif;
+	padding: 1px;
+	border-left: 1px solid #81A9E2;
+	border-right: 1px solid #FFFFFF;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #81A9E2;
+	background-color: #81A9E2;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_StartTabOff {
+	font: 10pt MS Sans Serif;
+	padding:1px;
+	border-left: 1px solid #81A9E2;
+	border-right: 1px solid #808080;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #81A9E2;
+	background-color: #81A9E2;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_TabOn {
+	font: 8pt MS Sans Serif;
+	padding:1px;
+	padding-left:5px;
+	padding-right:5px;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #808080;
+	border-top: 1px solid #9EBEF5;
+	border-bottom: 1px solid #808080;
+	background-color: #9EBEF5;	
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_TabOffRight {
+	font: 8pt MS Sans Serif;
+	padding:1px;
+	padding-left:5px;
+	padding-right:5px;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #808080;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #81A9E2;
+	background-color: #81A9E2;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_TabOffLeft {
+	font: 8pt MS Sans Serif;
+	padding:1px;
+	padding-left:5px;
+	padding-right:5px;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #FFFFFF;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #9EBEF5;
+	background-color: #81A9E2;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_EndTab {
+	font: 10pt MS Sans Serif;
+	width: 100%;
+	padding:1px;
+	border-left: 1px solid #81A9E2;
+	border-right: 1px solid #81A9E2;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #81A9E2;
+	background-color: #81A9E2;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_AncestorArea {
+	display:none;
+	margin-left: 4px;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_AncestorArea a {
+	padding: 1px;
+	margin-left: 2px;
+	margin-right: 2px;
+	border: 1px solid #808080;	
+	color: #000;
+	font-family: arial;
+	font-size: 11px;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_AncestorArea a:link, .ctl00_ContentPlaceHolder1_txtCuerpoCorreo_AncestorArea a:visited, .ctl00_ContentPlaceHolder1_txtCuerpoCorreo_AncestorArea a:active {
+	background-color: transparent;
+	text-decoration: none;
+}
+.ctl00_ContentPlaceHolder1_txtCuerpoCorreo_AncestorArea a:hover {
+	text-decoration: none;
+	background-color: #316AC5;
+	border: 1px solid #fff;
+	color:#fff;
+}
+
+</style>
+<table cellpadding="2" cellspacing="0" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_OuterTable"><tr><td>
+<div>
+<div id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_toolbarArea" style="padding-bottom:2px;clear:both;">
+<div class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Toolbar">
+<table border="0" cellpadding="0" cellspacing="0" style="background-image:url(/WebResource.axd?d=DRoQbz4LCkttOxMVEpXw-2th_NLS3uFZBOBeC7E__0VsiTIa1BTYgPHOMgUuKcanrRfI9JdyGOxXlYwlXVW9Nh0WH-wTGcEZd4-KN_ddsmcrUSCQ3oFWcGFT3HlHay6gsrYIV_V9rmgIcvfH83CdiwTt4pbg3O1wqM9oWRIXr3bhaMNUa1i0CCZCS-gSFsnL0&t=634318915089570745);"><tr><td border="0" unselectable="on"><img src="/WebResource.axd?d=levKS0ualnIwlgsfTHJ_KaqvvJYBCY4smahMG-l8lgI6FXlZ6Gjhs4SL0I84Dal-JFaoKpST6N-eVShMkNfNgqp7CrVyLnMvfQg9WxsqTriyfZfuqicJuaSmlCvkx_M0eWEtAFz4sEIu2keIUY2GdYOAoSyT5bnYuiWxAlMjoWy0ChMPKxpaTl91oraT6pur0&t=634318915089570745" align="center" /></td><td><table cellpadding="0" cellspacing="0" border="0" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_items"><tr><td style="padding-left:4px;" unselectable="on"><select id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_0_0" TabIndex="-1" ><option value="">Paragraph</option><option value="&lt;p&gt;">Normal</option>
+<option value="&lt;h1&gt;">Heading 1</option>
+<option value="&lt;h2&gt;">Heading 2</option>
+<option value="&lt;h3&gt;">Heading 3</option>
+<option value="&lt;h4&gt;">Heading 4</option>
+<option value="&lt;h5&gt;">Heading 5</option>
+<option value="&lt;h6&gt;">Heading 6</option>
+<option value="&lt;pre&gt;">Formatted</option>
+<option value="&lt;address&gt;">Address</option>
+</select></td><td style="padding-left:4px;" unselectable="on"><select id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_0_1" TabIndex="-1" ><option value="">Font</option><option value="Arial">Arial</option>
+<option value="Times">Times</option>
+</select></td><td style="padding-left:4px;" unselectable="on"><select id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_0_2" TabIndex="-1" ><option value="">Size</option><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select></td><td style="padding-left:4px;" unselectable="on"><select id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_0_3" TabIndex="-1" ><option value="">Color</option><option value="#000000" style="background-color: Black;color: #FFFFFF;">Black</option>
+<option value="#808080" style="background-color: Gray;">Gray</option>
+<option value="#A9A9A9" style="background-color: DarkGray;">DarkGray</option>
+<option value="#D3D3D3" style="background-color: LightGrey;">LightGray</option>
+<option value="#FFFFFF" style="background-color: White;">White</option>
+<option value="#7FFFD4" style="background-color: Aquamarine;">Aquamarine</option>
+<option value="#0000FF" style="background-color: Blue;">Blue</option>
+<option value="#000080" style="background-color: Navy;color: #FFFFFF;">Navy</option>
+<option value="#800080" style="background-color: Purple;color: #FFFFFF;">Purple</option>
+<option value="#FF1493" style="background-color: DeepPink;">DeepPink</option>
+<option value="#EE82EE" style="background-color: Violet;">Violet</option>
+<option value="#FFC0CB" style="background-color: Pink;">Pink</option>
+<option value="#006400" style="background-color: DarkGreen;color: #FFFFFF;">DarkGreen</option>
+<option value="#008000" style="background-color: Green;color: #FFFFFF;">Green</option>
+<option value="#9ACD32" style="background-color: YellowGreen;">YellowGreen</option>
+<option value="#FFFF00" style="background-color: Yellow;">Yellow</option>
+<option value="#FFA500" style="background-color: Orange;">Orange</option>
+<option value="#FF0000" style="background-color: Red;">Red</option>
+<option value="#A52A2A" style="background-color: Brown;">Brown</option>
+<option value="#DEB887" style="background-color: BurlyWood;">BurlyWood</option>
+<option value="#F5F5DC" style="background-color: Beige;">Beige</option>
+</select></td></tr></table></td><td><img src="/WebResource.axd?d=w_keYtOZzb_TE_H8i3rL0LX4u_giHV2UJWiXHuzufoHYAY2VITks4uLwhbqTNi8oItRxhY8C2-7KlJDdENKn0arJRbAf7LXecwbkLe00x8xXATj6VJRn-Ocxw_3Vbz20fEsRSj6NNQQM2CPJbfbDSLi7TpUKAQ1L8EvHrfRMFc-ZzXuY33UGGiBYLwu0oFgj0&t=634318915089570745" border="0" unselectable="on" align="center" /></td></tr></table></div><div class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Toolbar">
+<table border="0" cellpadding="0" cellspacing="0" style="background-image:url(/WebResource.axd?d=DRoQbz4LCkttOxMVEpXw-2th_NLS3uFZBOBeC7E__0VsiTIa1BTYgPHOMgUuKcanrRfI9JdyGOxXlYwlXVW9Nh0WH-wTGcEZd4-KN_ddsmcrUSCQ3oFWcGFT3HlHay6gsrYIV_V9rmgIcvfH83CdiwTt4pbg3O1wqM9oWRIXr3bhaMNUa1i0CCZCS-gSFsnL0&t=634318915089570745);"><tr><td border="0" unselectable="on"><img src="/WebResource.axd?d=levKS0ualnIwlgsfTHJ_KaqvvJYBCY4smahMG-l8lgI6FXlZ6Gjhs4SL0I84Dal-JFaoKpST6N-eVShMkNfNgqp7CrVyLnMvfQg9WxsqTriyfZfuqicJuaSmlCvkx_M0eWEtAFz4sEIu2keIUY2GdYOAoSyT5bnYuiWxAlMjoWy0ChMPKxpaTl91oraT6pur0&t=634318915089570745" align="center" /></td><td><table cellpadding="0" cellspacing="0" border="0" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_items"><tr><td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_0" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=ZDEX2Gg9v29C0deCkli-2ftAxQBmMH8GkyTTv2Bh6pt_qvhB5Gvgd8HkpkWraM_idkYdA6hGuhrIBLSN3kzzQ67P2a_aXTZyWuHum2D9f_q9gYm0h9J1tTJ7mEY9WWkty6Ip_pXW2N3r9gm_AwJg0W1OMa1zRx8xUT_NqcGBGt81&t=634318915089570745" border="0" title="Bold" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_1" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=UAXyJFT93LE_s52TZ8c9WgDnGXze4R1j1TLIw0-jh7nWCn7SYSTnOAMjhh7vadj6rNQ78I5O0nAt5A5UnS01L0im2xmWwW_lCVr3AOo5GZckyEriF_EAaFF0OhirogibCRzIkBCYmMIZWXZcRt8x0O5-JOzSt_Op6YZJNOqgfoo1&t=634318915089570745" border="0" title="Italic" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_2" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=bS9-_K5NlAoM_wgXuP_0ttARsXlByQEq_V69UGg7HRPi694kn7Yc91p9mn5GTr0LctDNjqQtV4nENFUlWMhgxegN_Q2Rxd6MX5NpV412OzrEyIMEZ44x5_14uZpm7Z8UwWjvyXkcpHd_tReCZ5m19vhWB9AY1w3zxZI1BrqTYqQ1&t=634318915089570745" border="0" title="Underline" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_3" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=MSE4MFg170psZszT5dZIiMlAhF-jhcUQXClKgtRs7v2NSWL818y-Nm1EurGMCIrN1b3dP94F9c8-LEYlkZNl-Ic_BnRpgTjoqVwQ2GkcFnFEhpUJraZQNTe1CPR-jaeR5JsdSa30Os-ZNuVgubYN4d5J7e_USaaVMO7RGPq7OIM1&t=634318915089570745" border="0" title="StrikeThrough" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td><img src="/WebResource.axd?d=D7h8SF-3EKgVorvUhdBI1-5S7SeTb-0w9SOSo-9HM50nU8bBVgGuLojGmVoVDLvss0hDES3SA7HN2Qn63VDVz4vlX008pHgzWEuIDkM-tkf3EshHQiuIRky0eSqBNbznYxnJf2qWKxK1PN7Afq-d50ggGfQuAntH1ZvKerGf8_5Duc-CxUJfmE7u9FipgFQn0&t=634318915089570745" border=0 unselectable="on"></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_5" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=8OnLT2ndh1y5yTkRSKV7PNyHX5fhTC8XjcNf-qH9f8jISroaTDyiiYhcBAMvkBJJVJGvKHjTkwfQ91RQ22xWD9f1xcGx3Oekj2I8XNfm9kiEvA0l5A8c5tWcrkU9G2183-bM-zOZ26ZBftXEhS1H-TzWyg2ADHU754J0qjpqq9U1&t=634318915089570745" border="0" title="Superscript" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_6" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=7Axe2VTGwx6krmylA3Q1x2jpSUKLbZUR8pQewI12GkIV0iFNaQUAMvhddaK-Ig6F4IpdfiovdXOaHc6l7wWPtoIp1GEQcW9RT0t32rPRRlxrRnWu4Fme71nZ9A6d30zIEpDKqFBlqHYwBCGwZ74DVyugdcj2Y7EsnYOaf6LYX6M1&t=634318915089570745" border="0" title="Subscript" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_7" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=1bRGCrdKz3vs13xORqj5uLVIrCs-cYPssF88G8JvK_j25m4DW9Bs-Lu9YHPMafDtnm9HeSO0A8aEeBAps7VGz_1SWmD0ZlgxL0ZafYJqMjbUWWiMBafZ2vxJ7sw2AvAJG4tZ9oyh2OoH-okPjCN_wONSNOKdI3WO8BNglh-qnZE1&t=634318915089570745" border="0" title="Remove All Formatting" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+</tr></table></td><td><img src="/WebResource.axd?d=w_keYtOZzb_TE_H8i3rL0LX4u_giHV2UJWiXHuzufoHYAY2VITks4uLwhbqTNi8oItRxhY8C2-7KlJDdENKn0arJRbAf7LXecwbkLe00x8xXATj6VJRn-Ocxw_3Vbz20fEsRSj6NNQQM2CPJbfbDSLi7TpUKAQ1L8EvHrfRMFc-ZzXuY33UGGiBYLwu0oFgj0&t=634318915089570745" border="0" unselectable="on" align="center" /></td></tr></table></div><div class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Toolbar">
+<table border="0" cellpadding="0" cellspacing="0" style="background-image:url(/WebResource.axd?d=DRoQbz4LCkttOxMVEpXw-2th_NLS3uFZBOBeC7E__0VsiTIa1BTYgPHOMgUuKcanrRfI9JdyGOxXlYwlXVW9Nh0WH-wTGcEZd4-KN_ddsmcrUSCQ3oFWcGFT3HlHay6gsrYIV_V9rmgIcvfH83CdiwTt4pbg3O1wqM9oWRIXr3bhaMNUa1i0CCZCS-gSFsnL0&t=634318915089570745);"><tr><td border="0" unselectable="on"><img src="/WebResource.axd?d=levKS0ualnIwlgsfTHJ_KaqvvJYBCY4smahMG-l8lgI6FXlZ6Gjhs4SL0I84Dal-JFaoKpST6N-eVShMkNfNgqp7CrVyLnMvfQg9WxsqTriyfZfuqicJuaSmlCvkx_M0eWEtAFz4sEIu2keIUY2GdYOAoSyT5bnYuiWxAlMjoWy0ChMPKxpaTl91oraT6pur0&t=634318915089570745" align="center" /></td><td><table cellpadding="0" cellspacing="0" border="0" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_items"><tr><td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_0" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=usuTB3Jw5Rs_lIcVomgsrGYdU516HKgL9hNp3xak3T4tB2CzKA8mDi1jWyvZys83ipOwG_1ALXRirmxDRMhvXRzCfmKtk63bEKcDz6F3VOhjyFCS-L6kPgnkodSZT29EsIl9_TFcxyICdqIBQUPYNXMPMvzrD928eztbvZiutb81&t=634318915089570745" border="0" title="Justify Left" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_1" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=sT4j4UlpVwdrWbZOKdvzmcC_eMpjG9aSEfOcs14CTEGAF1OHT9Aw3YMaHtcyHIQ0o_wIIip2W9E7Y7mMEF9U_ZLQ6XNXU0Mq6nLFqPG3HMnNG_D6U2eXuXmv__t1LqIkOb6Tt1qHKdpzCQ67OPhYpHFAMJsaE81guyLdJQ-33YA1&t=634318915089570745" border="0" title="Justify Right" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_2" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=NJBZAqPuPJO_yK8Dds8Q3olZSLBuGgdW9CMRxI3VcJrSAVrfQvvFZ_UJr1UulRumGjIV9u51cley-MEVZRKDT1tCrMgmogkcAoQPjsBPocx2d3NlRP2VikuXTgz1PhrRaD-3b5Df4TBkI80x6hMaSYSavx1bhD-V4MR_vbCKsLI1&t=634318915089570745" border="0" title="Justify Center" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_3" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=u-O0T_TeJRQSpN5bugEe0sXTsiMCr5J-bFfP5QW15xvvjzIsIXKJHpjalDIZ_3nEDwh7rEB17BfIlwkIFU6EhtJH9gpLhHUv9CJJ0l59FJnvLeKCUKrohXh_qi9vHexdXFJG7N9Q2glZ4ysMIWhl4wzvg9wEmalgqmAi37wQf0U1&t=634318915089570745" border="0" title="Justify Full" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td><img src="/WebResource.axd?d=D7h8SF-3EKgVorvUhdBI1-5S7SeTb-0w9SOSo-9HM50nU8bBVgGuLojGmVoVDLvss0hDES3SA7HN2Qn63VDVz4vlX008pHgzWEuIDkM-tkf3EshHQiuIRky0eSqBNbznYxnJf2qWKxK1PN7Afq-d50ggGfQuAntH1ZvKerGf8_5Duc-CxUJfmE7u9FipgFQn0&t=634318915089570745" border=0 unselectable="on"></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_5" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=9xl7Rt0hFzZip_HFgCNIb8NtjpcvIZGb3CJfTzLHpmS1gdhDAxS4PRTAtYWzuvkPMnUlr0F3Hra4j1kEJndiRZPZwnvZkUfvAY4joIKDBKMGDjtLo4ME1I90hdi1l5bIXL2EDkNAomWghkeHgd-7tFXqIlHWJi3ohd_k44HOPV41&t=634318915089570745" border="0" title="Bulleted List" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_6" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=lONkqxApBAbiLX2i9RkkpCWqUVZQdSh3AfoBu8Q5b3NFTZ_6mQnhN4FZ5-H8EFtQmj8EBe7uCfIW1ufhOdzcVK9n8zh87c3NnXqKq8z-tlUAWy7JILoHGA0WYhxOT-Lte4bHnmPo5tfmV-8zrE8VSRi4GXZTOMqJJCdqjn6RGJ41&t=634318915089570745" border="0" title="Numbered List" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_7" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=Iz1RwuisU23lkjeuJd5rqs-Ap4F9TWetEKiR4sWEna3ARQwAszVVVyJ-s_dcrh8JW-Fxuygdd9yX6vJdHkFrWu5Ft0I5Wl2x97cdkz5NYi7JnyE8JIjuBy3uOTNaJdMGNeg4B1ziTjx7v2aK7f2naEx1wAjLdolK0MR0gmN2ea41&t=634318915089570745" border="0" title="Indent" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_8" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=HXivt3mki6OCwgpy00OxeHHCmPHD2u88i8h2IUtGWGV4dqNSbN9gMOEDCkA25sphAObjUodI5gyLSLAe8WSV82KntG4pwLiyJhIEisUjKwF2k47uUvvUOF1YNXGj-nPcv4Qfs9Srn41uxRE2wQFqZ3XvVIQ4t1CmL0uNtdrrkL41&t=634318915089570745" border="0" title="Outdent" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td><img src="/WebResource.axd?d=D7h8SF-3EKgVorvUhdBI1-5S7SeTb-0w9SOSo-9HM50nU8bBVgGuLojGmVoVDLvss0hDES3SA7HN2Qn63VDVz4vlX008pHgzWEuIDkM-tkf3EshHQiuIRky0eSqBNbznYxnJf2qWKxK1PN7Afq-d50ggGfQuAntH1ZvKerGf8_5Duc-CxUJfmE7u9FipgFQn0&t=634318915089570745" border=0 unselectable="on"></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_10" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=hYaPt5yncG8LAoS_Jsy0yXheFILHglRIl7PboZw3xhyKFAa1K4z0jSODcOxjThx7I2XE0oYF2G3XhrS6GTkOaxaLTVDHd8sXqP5o_zhJlXAr3iAVCMCfV5FyOeh-uciqoTsvldN5yST_bQxT0U_tLFLnA1kKahkgzfYK3GrLM6Q1&t=634318915089570745" border="0" title="Create Link" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_11" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=4Hn9hZe1nEmBJeU5Grnl94zwCG_5NkafODjr5CYK1WB0O4BxmM0P6tZ7gtoaRuiDhMD-c7gLcWElI5YCg9HA2d8nSrjTkT8jjq6D6Y2xNmzXjaXb0b4A7f1XkouSoQ_mYNG4lyfKCP5KJNqoK3O2QBiXgc3vvvKRafWCBf4a-Co1&t=634318915089570745" border="0" title="Remove Link" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_12" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=HTz9tyvCb6JnikYNVyv9DSWLcUqB1GOSh_dkEUyzAhJCazVXQqy64tECQYSGsLYAO1o-OALhjGCdAheu7muJlzxWr7EHxz3P4kYjUxuvTRBkwoC7SKUJsrapIsI2JfGuuZpOM7xgZmTHS0s2yIRzhWQc6sr2Xc7gSMWCmFSgvHE1&t=634318915089570745" border="0" title="Insert Image" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_13" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=dQm5JLaxuz3L2Hs5k0Ke2-72HJEJpQ34KXHHZQ7aP0lwNiY6FjnRkbrPqRAa9ADJ0fAi0YhQVVK3ZR08FWLkWC89vqvszVB5K7PwxolITrWn6VVo1Bz1OPQWrdnMfrx5RPoBcKZa7KwRgDrv9TPSdu209NIHNTqvWpDjyxISHyw1&t=634318915089570745" border="0" title="Insert Rule" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+</tr></table></td><td><img src="/WebResource.axd?d=w_keYtOZzb_TE_H8i3rL0LX4u_giHV2UJWiXHuzufoHYAY2VITks4uLwhbqTNi8oItRxhY8C2-7KlJDdENKn0arJRbAf7LXecwbkLe00x8xXATj6VJRn-Ocxw_3Vbz20fEsRSj6NNQQM2CPJbfbDSLi7TpUKAQ1L8EvHrfRMFc-ZzXuY33UGGiBYLwu0oFgj0&t=634318915089570745" border="0" unselectable="on" align="center" /></td></tr></table></div><div class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Toolbar">
+<table border="0" cellpadding="0" cellspacing="0" style="background-image:url(/WebResource.axd?d=DRoQbz4LCkttOxMVEpXw-2th_NLS3uFZBOBeC7E__0VsiTIa1BTYgPHOMgUuKcanrRfI9JdyGOxXlYwlXVW9Nh0WH-wTGcEZd4-KN_ddsmcrUSCQ3oFWcGFT3HlHay6gsrYIV_V9rmgIcvfH83CdiwTt4pbg3O1wqM9oWRIXr3bhaMNUa1i0CCZCS-gSFsnL0&t=634318915089570745);"><tr><td border="0" unselectable="on"><img src="/WebResource.axd?d=levKS0ualnIwlgsfTHJ_KaqvvJYBCY4smahMG-l8lgI6FXlZ6Gjhs4SL0I84Dal-JFaoKpST6N-eVShMkNfNgqp7CrVyLnMvfQg9WxsqTriyfZfuqicJuaSmlCvkx_M0eWEtAFz4sEIu2keIUY2GdYOAoSyT5bnYuiWxAlMjoWy0ChMPKxpaTl91oraT6pur0&t=634318915089570745" align="center" /></td><td><table cellpadding="0" cellspacing="0" border="0" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_items"><tr><td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_0" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=k3iyAFl7pCjJZFCDmzNBtNyBuB5P8tfOQekNfrkaWNe8avtFLbFq2uuhF2V4Mriu1UC-GaN2K4-dvTB0DtJVxwDgQCRDaCXmXyPbOpaczJzsjIhieb8556YX2gnlD5m9PpxmA4tjlEhgNy8kjfRTXoDiU5-ELMziCOFWD1m90ZI1&t=634318915089570745" border="0" title="Cut" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_1" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=9tfE9Jvo7wAcwBCswbq_gVtPnCFfXJQW6AEm_n-99yW5oRS0mvt57FEFDuoYlnugT5b_muRb1AwHmB5TXeSUVFzbIrN_2UV_5C5cqyiHfQZXmVQZeUfdrOZeCcCt7ukHoj0oCk7Kt-vHKHksRgGDFhh7TU6F9ycl_fKuU9VxwdI1&t=634318915089570745" border="0" title="Copy" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_2" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=CGEw1bMNKqzfFIdIUgxA1SqhNNeRHUCrkzVqBI3Yze6yJo3tkGrayyixY4L2mUheY27EGnNDpXA9nsaE-MhqzAUWrofcGxxZQQCmqME0GmxIgyX-E3a2EvkR2eVWQwxNkx7hLnGsGzpgnm1q20a8xIF7ZbvLp9Sbh08o3Ml3iDo1&t=634318915089570745" border="0" title="Paste" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td><img src="/WebResource.axd?d=D7h8SF-3EKgVorvUhdBI1-5S7SeTb-0w9SOSo-9HM50nU8bBVgGuLojGmVoVDLvss0hDES3SA7HN2Qn63VDVz4vlX008pHgzWEuIDkM-tkf3EshHQiuIRky0eSqBNbznYxnJf2qWKxK1PN7Afq-d50ggGfQuAntH1ZvKerGf8_5Duc-CxUJfmE7u9FipgFQn0&t=634318915089570745" border=0 unselectable="on"></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_4" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=Ljd_SgikbzwSjSv7KzRLNlka4SGMVkaPjlSvCFuExwtemCXOAtdpoaMP5lmq0-3gyjABrNhbJyvdcBP9JwBUE6s9vJKTdpRCRMj5hnPrMr6LhSiOjLioLFGH_NkK9ZG8hZTP9v0lwV-i9CAjGYxIjGEazHsQZNFDcnl9gL9D8F81&t=634318915089570745" border="0" title="Undo" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_5" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=EpGzgUbzKboYlaHRerfaefLg9qbTfDMluOsZ6YbhqCz2WYaznNuAQnLlybC2B0CUo_tJvrhvhRwsEzt0ckmnq9rmsnCRyT_6gTzdPKAVe1hF_4aswOruLI7M4LRPqC3n6kZ4wqsD-YuK2Fk9T_vKB1crYOXBi1ox8D8dubWM2bs1&t=634318915089570745" border="0" title="Redo" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+<td id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_6" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_Button_Off_Out"><img src="/WebResource.axd?d=6We9pD3TIxEw9I1AQTv2wDeK1DAwbRF6Jeu064ctoCtsPkK-14_SfRRPcW1RjAuQKDGRrJihRfK7LiS4ILHZ8m_qPOyw3u5H4Nnghq0ilEsXofuLjoyITPTFMnt4Z7TLrY8UNuxqdiM6frUYJVt-xSq7ft7LFCyQO5AezswFlLg1&t=634318915089570745" border="0" title="Print" unselectable="on" width="21" height="20" tabindex="-1" align="center" /></td>
+</tr></table></td><td><img src="/WebResource.axd?d=w_keYtOZzb_TE_H8i3rL0LX4u_giHV2UJWiXHuzufoHYAY2VITks4uLwhbqTNi8oItRxhY8C2-7KlJDdENKn0arJRbAf7LXecwbkLe00x8xXATj6VJRn-Ocxw_3Vbz20fEsRSj6NNQQM2CPJbfbDSLi7TpUKAQ1L8EvHrfRMFc-ZzXuY33UGGiBYLwu0oFgj0&t=634318915089570745" border="0" unselectable="on" align="center" /></td></tr></table></div></div>
+
+	<div id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_designEditorArea" style="clear:both;padding-top:1px;">
+	    <iframe id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_designEditor" style="padding: 0px; width:100%; height: 100%;" src="about:blank" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_DesignBox"></iframe>
+	</div>
+	<div id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_htmlEditorArea" style="clear:both;display:none;padding-bottom:1px;">
+	    <textarea id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo" name="ctl00_ContentPlaceHolder1_txtCuerpoCorreo" disabled="disabled" style="padding: 0px; width:100%; height: 100%;" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_HtmlBox"></textarea>
+	</div>
+	<div id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_previewPaneArea" style="clear:both;display:none;padding-bottom:1px;">
+	    <iframe id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_previewPane" style="padding: 0px; width:100%; height: 100%" src="about:blank" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_DesignBox"></iframe>
+	</div>
+
+<div style="clear:both;padding-top:2px;">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+		<tr id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_TabRow">
+			<td class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_StartTabOn">&nbsp;
+				
+			</td>
+			<td class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_TabOn" id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_designModeTab" unselectable="on">
+				<nobr><img unselectable="on" src="/WebResource.axd?d=Bqu9lvxmwb4iZtdFUMuE8-JrfkHfJ3EI2B82uMOl4k_aZq14F8UOdtHLKgm7BncOtUmIehBAg7z-DssbwyZ7eeO8a2yL-p_r8Ad-N-ossheG7viXWoIVdkqto0a5ejiWS7UbWpNRnJZx2g6EScEqEFeoRsRdZdlEK38QMEvHYJY1&t=634318915089570745" align="absmiddle" width="21" height="20">&nbsp;Design</nobr>
+			</td>
+			<td class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_TabOffRight" ID="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_htmlModeTab" unselectable="on">
+				<nobr><img unselectable="on" SRC="/WebResource.axd?d=Dab6x27s5ctHy1edp5wDGsJ_krF6Lnu1zXfIelZqc6EEEo76GoSnTdKgjM0_FFF7ZRJVAhKrw8WZhkj8LndX98eVaZrEi9aYbcoF2lYAQiuqgmmzIx8QYz-PkBYs-CWt0174_wSeBfP-xKIGi52Tki5cA-5ghLi40To5UYNnDXQ1&t=634318915089570745" align="absmiddle" width="21" height="20">&nbsp;HTML</nobr>
+			</td>
+			<td class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_EndTab">
+				<div id="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_AncestorArea" class="ctl00_ContentPlaceHolder1_txtCuerpoCorreo_AncestorArea"></div>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+</div>
+</table>
+
+                            <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfEmailEmpleado" id="ctl00_ContentPlaceHolder1_hdfEmailEmpleado" />
+                            <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfNombreEmpleado" id="ctl00_ContentPlaceHolder1_hdfNombreEmpleado" />
+                            <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfURL" id="ctl00_ContentPlaceHolder1_hdfURL" />
+                        </div>
+                    </div>
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="cbp-mc-1column">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnCerrarNotificacion" value="Cerrar" id="ctl00_ContentPlaceHolder1_btnCerrarNotificacion" class="cbp-mc-submit" />
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnEnviarNotificacion" value="Enviar" id="ctl00_ContentPlaceHolder1_btnEnviarNotificacion" class="cbp-mc-submit" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modDetalleHistorial" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width: 80%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" class="btn btn-default" data-dismiss="modal"
+                        data-backdrop="false">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h2>
+                        Ver Detalles</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                            <div class="table-wrapper_7 cbp-mc-1column" style="width: 100%; margin: 0px !important; padding: 0px !important;">
+                                <div>
+
+</div>
+                            </div>
+                        </div>
+                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                        <div class="cbp-mc-1column">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnCerrarDetalleHistorial" value="Cerrar" id="ctl00_ContentPlaceHolder1_btnCerrarDetalleHistorial" class="cbp-mc-submit" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-danger fade" id="modal-danger">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">
+                        Error</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        
+                        
+                        
+                        
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">
+                        Cerrar</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal modal-success fade" id="modal-success">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">
+                        Exito</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        El proceso ha finalizado exitosamente.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">
+                        Cerrar</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
+
+
+            
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E9F032AE" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="7Z5Ga+EBQgQSNb1PZKkcjDdoq7QE6HnDNqo/QU7fvMpKKbnJywLaYWEXaW8jU1175yefjojmqbAG5UxOM7J/IpZmnGq2FsgV7H/P52GN4A+5pUscUuilsuVxXvVf6zi80+fA2OQMmN9GR8q2HpE9He3YAgP5W4XlkjAWbha2iWODQcSIu209t7CkZvXBoylvUrL/eFmK6KDEmrVcxLh7+6kKgTJUrOCgr6kPyZfuEkEGPlWwKBnHZ6xl7Zqbst5tJsOoEo4RJDkoX6s25K+UX/bAoAZhZVg1SbP536xQKiSqSjgC8x2/0mE/0nUoanuYXiWy62Xih2O/alSSwkP/nvYN0+I+Qdy13IXEkk1GvSTCQ9FDWWsQdimc8vMz1oyf0c9c8Q+q1S+ccpd53pRbkLsUC7hsCeZ0Yi/oRfLXxy8JYTYt+9jBOFf+602FfOaFhKHhIvp6t34PnPW/KjJHa9MZHJ/T8eWqGzDb9piKTpesappPy13WZVQ1WlIuaenHSk4B4AZNM+KHOpt237mGfEoYCFuuu1hEBWIZBJt6g91Af8RaH8VZLEG6aQPKY3hE89OEDwOGTjT3Rq99cLBhQlNgyXDzVkv88Sl8XWisRfKoqFZyXM0siQeo+bmlW7cmuh5a9MVmeRBlGAySxczqGMlb3BgXLEyKKTAew5JaTEBTv5/7VCL6rsXfQfuM9dSySL/x2cqhk/xGR/eisGYGfRVI2Ytc3zdyPQv2aPmQX+tSXlWRWA1SBzU+yQIskKczVF2vOwiX3cryG87yVbDQ/DDpHf8DVNIEP8kUupBoEC1JyW5c214MyCnkc448j0fwnKjfW/9Gqhcql7h/EhEY2LqSjBWjTThMrGLp8t7BKNs/B8I02gbfKrvAC0obDYajjs89cjb9p18wYQ37WwoTKLwaaCdFS23yWreEt0CJ9ZFqd1oN1WFJQPaHAy9U92fWRq4OFLRj0CHeIo/VcBPIzN3lykw5r0F+wGXQQeF/z/vtXtFsPAErQwjH4wVTn18mZCL5xC13ODTO632nKORF6Zvfx7OAL07xRGn0FZaaidSCVHr6k0R6GLpJqALetMHziWSo2VMbtP+5A6RFokKO5057Y097Jfd6HNVZMqIXHEYPL5FtbaATn/JZKwDWXXg6" />
+</div>
+
+<script type="text/javascript">
+if (window.FTB_AddEvent) { 
+	FTB_AddEvent(window,'load',function () {
+    
+        FTB_API['ctl00_ContentPlaceHolder1_txtCuerpoCorreo'] = new FTB_FreeTextBox('ctl00_ContentPlaceHolder1_txtCuerpoCorreo',
+					true,
+					false,
+					new Array(
+						new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_0','bold',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_1','italic',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_2','underline',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_3','strikethrough',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_5','superscript',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_6','subscript',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_1_7','removeformat',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_0','justifyleft',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_1','justifyright',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_2','justifycenter',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_3','justifyfull',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_5','insertunorderedlist',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_6','insertorderedlist',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_7','indent',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_8','outdent',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_10','createlink',function() { this.ftb.CreateLink(); },null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_11','unlink',null,null,false,function() { var el = this.ftb.GetParentElement(); if (el.tagName && el.tagName.toLowerCase() != 'a') this.disabled = true; else this.disabled = false;  }),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_12','insertimage',function() { this.ftb.InsertImage(); },null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_2_13','inserthorizontalrule',null,null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_0','cut',function() { this.ftb.Cut(); },null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_1','copy',function() { this.ftb.Copy(); },null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_2','paste',function() { this.ftb.Paste(); },null,false,null),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_4','undo',function() { this.ftb.Undo(); },null,false,function() { this.disabled=!this.ftb.CanUndo(); }),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_5','redo',function() { this.ftb.Redo(); },null,false,function() { this.disabled=!this.ftb.CanRedo(); }),
+			new FTB_Button('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_3_6','print',function() { this.ftb.Print(); },null,false,null)
+					),
+					new Array(
+						new FTB_DropDownList('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_0_0','formatBlock',null,null,null),
+			new FTB_DropDownList('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_0_1','fontname',null,null,null),
+			new FTB_DropDownList('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_0_2','fontsize',null,null,null),
+			new FTB_DropDownList('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_0_3','forecolor',null,null,null)
+					),				
+					FTB_BREAK_P,
+					FTB_PASTE_DEFAULT,
+					FTB_TAB_INSERTSPACES,
+					FTB_MODE_DESIGN,									
+					null,
+					'',
+					'',
+					'',
+					'',
+					'',
+					'ftb.imagegallery.aspx?rif={0}&cif={0}',
+					'~/images/',
+					false,
+					21,
+					20
+					
+				);
+	});
+} else {
+ed = document.getElementById('ctl00_ContentPlaceHolder1_txtCuerpoCorreo_designEditor').contentWindow;ed.document.open(); ed.document.write('FreeTextBox has not been correctly installed. To install FreeTextBox either:<br> (1) add a reference to FtbWebResource.axd in web.config:<br>&lt;system.web&gt;<br>&lt;httpHandlers&gt;<br>&lt;add verb=&quot;GET&quot;<br>path=&quot;FtbWebResource.axd&quot;<br>type=&quot;FreeTextBoxControls.AssemblyResourceHandler, FreeTextBox&quot; /&gt;<br>&lt;/httpHandlers&gt;<br>&lt;/system.web&gt;<br><br>(2) Save the FreeTextBox image and javascript files to a location on your website and set up FreeTextBox as follows <br>&lt;FTB:FreeTextBox id=&quot;FreeTextBox1&quot; SupportFolder=&quot;ftbfileslocation&quot; JavaScriptLocation=&quot;ExternalFile&quot; ButtonImagesLocation=&quot;ExternalFile&quot; ToolbarImagesLocation=&quot;ExternalFile&quot; ButtonImagesLocation=&quot;ExternalFile&quot; runat=&quot;server&quot; /&gt;');ed.document.close();
+}
+</script>
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+theForm.oldOnLoad = window.onload;
+window.onload = WebForm_RestoreScrollPosition;
+//]]>
+</script>
+</form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center">Desarrollado por <a href="http://www.grupo5.cl" target="_blank">Grupo5</a></p>
+        </div>
+    </footer>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Chrome","requestId":"f623cb3de1384f198ac9a83bdb691c5f"}
+</script>
+<script type="text/javascript" src="http://localhost:2276/3a723ff0207d46c49d2acae35f748478/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_etiCargo" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="_etiAccionPregunta" xml:space="preserve">
+    <value>Acción Pregunta</value>
+  </data>
+  <data name="_etiAgregarPregunta" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="_etiAgregarSeccion" xml:space="preserve">
+    <value>Agregar sección manualmente</value>
+  </data>
+  <data name="_etiApMaterno" xml:space="preserve">
+    <value>Apellido Materno</value>
+  </data>
+  <data name="_etiApPaterno" xml:space="preserve">
+    <value>Apellido Paterno</value>
+  </data>
+  <data name="_etiArea" xml:space="preserve">
+    <value>Área</value>
+  </data>
+  <data name="_etiAsignados" xml:space="preserve">
+    <value>Asignados</value>
+  </data>
+  <data name="_etiAutoevaluacion" xml:space="preserve">
+    <value>Autoevaluación</value>
+  </data>
+  <data name="_etiBuscar" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="_etiCargar" xml:space="preserve">
+    <value>Cargar</value>
+  </data>
+  <data name="_etiCerrar" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="_etiCompromisoPregunta" xml:space="preserve">
+    <value>Compromiso Pregunta</value>
+  </data>
+  <data name="_etiConsultar" xml:space="preserve">
+    <value>Consultar</value>
+  </data>
+  <data name="_etiDescripcionInstrumento" xml:space="preserve">
+    <value>Descripción Plantilla</value>
+  </data>
+  <data name="_etiDescripcionPregunta" xml:space="preserve">
+    <value>Descripción Pregunta</value>
+  </data>
+  <data name="_etiDescripcionSeccion" xml:space="preserve">
+    <value>Descripcion Sección</value>
+  </data>
+  <data name="_etiDisponibles" xml:space="preserve">
+    <value>Disponibles</value>
+  </data>
+  <data name="_etiEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="_etiEmpresa" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="_etiEscala" xml:space="preserve">
+    <value>Escala</value>
+  </data>
+  <data name="_etiGrado" xml:space="preserve">
+    <value>Grados</value>
+  </data>
+  <data name="_etiGuardar" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="_etiIndicadorPregunta" xml:space="preserve">
+    <value>Indicador Pregunta</value>
+  </data>
+  <data name="_etiIrTodos" xml:space="preserve">
+    <value>&gt;&gt;</value>
+  </data>
+  <data name="_etiIrUno" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="_etiNombre" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="_etiNombreInstrumento" xml:space="preserve">
+    <value>Nombre Plantilla</value>
+  </data>
+  <data name="_etiNombreSeccion" xml:space="preserve">
+    <value>Nombre Sección</value>
+  </data>
+  <data name="_etiObservacionInstrumento" xml:space="preserve">
+    <value>Observación Plantilla</value>
+  </data>
+  <data name="_etiOrdenSeccion" xml:space="preserve">
+    <value>Orden</value>
+  </data>
+  <data name="_etiPonderacionSeccion" xml:space="preserve">
+    <value>Ponderación</value>
+  </data>
+  <data name="_etiRol" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="_etiRut" xml:space="preserve">
+    <value>Rut</value>
+  </data>
+  <data name="_etiRutJefe" xml:space="preserve">
+    <value>Rut Jefe</value>
+  </data>
+  <data name="_etiRutVisador" xml:space="preserve">
+    <value>Visador</value>
+  </data>
+  <data name="_etiSeccionesXLSFUL" xml:space="preserve">
+    <value>Archivo para carga de secciones</value>
+  </data>
+  <data name="_etiSeccionesXLSTitulo" xml:space="preserve">
+    <value>Secciones (XLS)</value>
+  </data>
+  <data name="_etiSucursal" xml:space="preserve">
+    <value>Sucursal</value>
+  </data>
+  <data name="_etiTextoPregunta" xml:space="preserve">
+    <value>Pregunta</value>
+  </data>
+  <data name="_etiTipoSeccion" xml:space="preserve">
+    <value>Tipo Sección</value>
+  </data>
+  <data name="_etiUsuariosXLSFUL" xml:space="preserve">
+    <value>Archivo para cargar usuarios</value>
+  </data>
+  <data name="_etiUsuariosXLSTitulo" xml:space="preserve">
+    <value>Usuarios (XLS)</value>
+  </data>
+  <data name="_etiVolver" xml:space="preserve">
+    <value>Volver</value>
+  </data>
+  <data name="_etiVolverTodos" xml:space="preserve">
+    <value>&lt;&lt;</value>
+  </data>
+  <data name="_etiVolverUno" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="_etiCodigo" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="_etiDominio" xml:space="preserve">
+    <value>Dominio</value>
+  </data>
+  <data name="_etiNuevo" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="_etiPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="_etiPuerto" xml:space="preserve">
+    <value>Puerto</value>
+  </data>
+  <data name="_etiUsuario" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="_etiValorMayor" xml:space="preserve">
+    <value>Valor mayor</value>
+  </data>
+  <data name="_etiValorMenor" xml:space="preserve">
+    <value>Valor menor</value>
+  </data>
+  <data name="_etiApelacion" xml:space="preserve">
+    <value>Con apelación</value>
+  </data>
+  <data name="_etiPermitirNuevasPreguntas" xml:space="preserve">
+    <value>Permitir agregar preguntas</value>
+  </data>
+  <data name="_etiVisacion" xml:space="preserve">
+    <value>Con visación</value>
+  </data>
+  <data name="_etiDirecciónEval" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="_etiFin" xml:space="preserve">
+    <value>Fin</value>
+  </data>
+  <data name="_etiInicio" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="_etiInstrumento" xml:space="preserve">
+    <value>Plantilla de Evaluación</value>
+  </data>
+  <data name="_etiAgregarSeleccionados" xml:space="preserve">
+    <value>Agregar Seleccionados</value>
+  </data>
+  <data name="_etiAgregarTodos" xml:space="preserve">
+    <value>Agregar Todos</value>
+  </data>
+  <data name="_etiDescripcion" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="_etiObservacion" xml:space="preserve">
+    <value>Observación</value>
+  </data>
+  <data name="_etiBorrador" xml:space="preserve">
+    <value>Guardar Borrador</value>
+  </data>
+  <data name="_etiCerrarEvaluacion" xml:space="preserve">
+    <value>Finalizar evaluación</value>
+  </data>
+  <data name="_etiAsignadas" xml:space="preserve">
+    <value>Asignadas</value>
+  </data>
+  <data name="_etiCerradas" xml:space="preserve">
+    <value>Finalizadas</value>
+  </data>
+  <data name="_etiEnApelacion" xml:space="preserve">
+    <value>En apelación</value>
+  </data>
+  <data name="_etiEnBorrador" xml:space="preserve">
+    <value>En proceso</value>
+  </data>
+  <data name="_etiInformadas" xml:space="preserve">
+    <value>Informadas</value>
+  </data>
+  <data name="_etiMisColaboradores" xml:space="preserve">
+    <value>Evaluaciones en proceso</value>
+  </data>
+  <data name="_etiMisEvaluaciones" xml:space="preserve">
+    <value>Mi historial</value>
+  </data>
+  <data name="_etiVerDetalle" xml:space="preserve">
+    <value>Ver detalle</value>
+  </data>
+  <data name="_etiVisadas" xml:space="preserve">
+    <value>Visadas</value>
+  </data>
+  <data name="_etiApelar" xml:space="preserve">
+    <value>Apelar</value>
+  </data>
+  <data name="_etiInformar" xml:space="preserve">
+    <value>Informar</value>
+  </data>
+  <data name="_etiVisar" xml:space="preserve">
+    <value>Visar</value>
+  </data>
+  <data name="_etiAdvertencia" xml:space="preserve">
+    <value>Esta acción realizara cambios en los registros. ¿Desea continuar?</value>
+  </data>
+  <data name="_etiContinuar" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="_etiError" xml:space="preserve">
+    <value>Atención: Ha ocurrido un error en el proceso.</value>
+  </data>
+  <data name="_etiExito" xml:space="preserve">
+    <value>El proceso ha finalizado exitosamente.</value>
+  </data>
+  <data name="_etiMisVisaciones" xml:space="preserve">
+    <value>Estado de visaciones</value>
+  </data>
+  <data name="_etiCentroCosto" xml:space="preserve">
+    <value>Centro de costo</value>
+  </data>
+  <data name="_etiClasificador1" xml:space="preserve">
+    <value>Clasificador 1</value>
+  </data>
+  <data name="_etiClasificador2" xml:space="preserve">
+    <value>Clasificador 2</value>
+  </data>
+  <data name="_etiEvaluador" xml:space="preserve">
+    <value>Evaluador</value>
+  </data>
+  <data name="_etiGerencia" xml:space="preserve">
+    <value>Gerencia</value>
+  </data>
+  <data name="_etiInstrucciones" xml:space="preserve">
+    <value>Instrucciones</value>
+  </data>
+  <data name="_etiRelacion" xml:space="preserve">
+    <value>Relación</value>
+  </data>
+  <data name="_etiResultado" xml:space="preserve">
+    <value>Resultado</value>
+  </data>
+  <data name="_etiVisador" xml:space="preserve">
+    <value>Visador</value>
+  </data>
+  <data name="_etiRepetirPassword" xml:space="preserve">
+    <value>Repetir Password</value>
+  </data>
+  <data name="_etiDescargarConsolidado" xml:space="preserve">
+    <value>Descargar Consolidado</value>
+  </data>
+  <data name="_etiDescargarDetalle" xml:space="preserve">
+    <value>Descargar Detalle</value>
+  </data>
+  <data name="_etiErrorPonderacion" xml:space="preserve">
+    <value>La suma de la ponderación debe ser de 100.</value>
+  </data>
+  <data name="_etiCatchError" xml:space="preserve">
+    <value>ATENCION: Ha ocurrido un error, revise la información ingresada y vuelva a intentar.
+En caso de persistir el problema, comunicarse con el administrador de la plataforma.</value>
+  </data>
+  <data name="_etiSMPT" xml:space="preserve">
+    <value>SMPT</value>
+  </data>
+  <data name="_etiNombreClasificador1" xml:space="preserve">
+    <value>Nombre Clasificador 1</value>
+  </data>
+  <data name="_etiNombreClasificador2" xml:space="preserve">
+    <value>Nombre Clasificador 2</value>
+  </data>
+  <data name="_etiBitacora" xml:space="preserve">
+    <value>Ver bitácora</value>
+  </data>
+  <data name="_etiEditar" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="_etiErrorRango" xml:space="preserve">
+    <value>Atención: Los valores ingresados no deben salir del rango de evaluación.</value>
+  </data>
+  <data name="_etiErrorVacios" xml:space="preserve">
+    <value>Atención: Debe ingresar todos los valores solicitados.</value>
+  </data>
+  <data name="_etiEvaluar" xml:space="preserve">
+    <value>Evaluar</value>
+  </data>
+  <data name="_etiVerEvaluacion" xml:space="preserve">
+    <value>Ver evaluación</value>
+  </data>
+  <data name="_etiVisarEvaluacion" xml:space="preserve">
+    <value>Visar evaluación</value>
+  </data>
+  <data name="_etiEliminar" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="_etiActivo" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="_etiErrorDatosRelacionados" xml:space="preserve">
+    <value>Atención: No es posible realizar esta acción, ya que los datos que desea eliminar posee información asociada.</value>
+  </data>
+  <data name="_etiNombreAsignacion" xml:space="preserve">
+    <value>Nombre asignación</value>
+  </data>
+  <data name="_etiCategorias" xml:space="preserve">
+    <value>Categorias</value>
+  </data>
+  <data name="_etiNotificar" xml:space="preserve">
+    <value>Notificar</value>
+  </data>
+  <data name="_etiActualizar" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="_etiAplicarFechas" xml:space="preserve">
+    <value>Aplicar Fechas</value>
+  </data>
+  <data name="_etiRangos" xml:space="preserve">
+    <value>Rangos de evaluacíon</value>
+  </data>
+  <data name="_etiValorRango" xml:space="preserve">
+    <value>Valor rango</value>
+  </data>
+  <data name="_etiCuerpoCorreo" xml:space="preserve">
+    <value>Cuerpo correo</value>
+  </data>
+  <data name="_etiEnviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="_etiUrlPlataforma" xml:space="preserve">
+    <value>URL plataforma</value>
+  </data>
+  <data name="_etiAsunto" xml:space="preserve">
+    <value>Asunto</value>
+  </data>
+  <data name="_etiAgregarComentario" xml:space="preserve">
+    <value>Comentario final</value>
+  </data>
+  <data name="_etiDetalleApelacion" xml:space="preserve">
+    <value>Detalle apelación</value>
+  </data>
+  <data name="_etiMotivo" xml:space="preserve">
+    <value>Motivo de apelación</value>
+  </data>
+  <data name="_etiSelecTodos" xml:space="preserve">
+    <value>Seleccionar Todos</value>
+  </data>
+  <data name="_etiDescargarFormato" xml:space="preserve">
+    <value>Descargar formato</value>
+  </data>
+  <data name="_alertClaveNoValida" xml:space="preserve">
+    <value>Atención: La clave ingresada no es valida.</value>
+  </data>
+  <data name="_alertDatosNoValidos" xml:space="preserve">
+    <value>Atención: Los datos ingresados no son validos.</value>
+  </data>
+  <data name="_alertRutNoValido" xml:space="preserve">
+    <value>Atención: El Rut ingresado no es valido.</value>
+  </data>
+  <data name="_alertUsuarioNoValido" xml:space="preserve">
+    <value>Atención: El usuario ingresado no es valido.</value>
+  </data>
+  <data name="_etiCompromiso" xml:space="preserve">
+    <value>Compromiso</value>
+  </data>
+  <data name="_etiDeclaracion" xml:space="preserve">
+    <value>Declaro haber sido informado de los resultados de mi evaluación de competencias y del plan de desarrollo correspondiente.</value>
+  </data>
+  <data name="_etiEvaluado" xml:space="preserve">
+    <value>Evaluado</value>
+  </data>
+  <data name="_etiTomarConocimiento" xml:space="preserve">
+    <value>Tomar conocimiento</value>
+  </data>
+  <data name="_etiAcuerdo" xml:space="preserve">
+    <value>Acuerdo</value>
+  </data>
+  <data name="_etiDescargar" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="_etiTipoReporte" xml:space="preserve">
+    <value>Tipo reporte</value>
+  </data>
+  <data name="_etiAceptar" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="_etiAcuerdoEvaluado" xml:space="preserve">
+    <value>Firmado por Evaluado</value>
+  </data>
+  <data name="_etiAcuerdoEvaluador" xml:space="preserve">
+    <value>Firmado por Evaluador</value>
+  </data>
+  <data name="_etiParesXLSFUL" xml:space="preserve">
+    <value>Archivo para cargar asignaciones</value>
+  </data>
+  <data name="_etiKPI" xml:space="preserve">
+    <value>KPI</value>
+  </data>
+  <data name="_etiMiEquipo" xml:space="preserve">
+    <value>Mi equipo</value>
+  </data>
+  <data name="_etiHojaDeVida" xml:space="preserve">
+    <value>Hoja de Vida</value>
+  </data>
+  <data name="_etiKPIVigente" xml:space="preserve">
+    <value>KPI Vigente</value>
+  </data>
+  <data name="_etiPlanDesarrollo" xml:space="preserve">
+    <value>Plan de desarrollo</value>
+  </data>
+  <data name="_etiDesempeno" xml:space="preserve">
+    <value>Encuestas de desempeño</value>
+  </data>
+  <data name="_etiMiDesempeno" xml:space="preserve">
+    <value>Mis competencias</value>
+  </data>
+  <data name="_etiMisKPI" xml:space="preserve">
+    <value>Mis KPI</value>
+  </data>
+  <data name="_etiVerKPI" xml:space="preserve">
+    <value>Ver KPI</value>
+  </data>
+  <data name="_etiVerFicha" xml:space="preserve">
+    <value>Ver ficha</value>
+  </data>
+  <data name="_etiComentarioFeedback" xml:space="preserve">
+    <value>Comentario Feedback</value>
+  </data>
+  <data name="_etiEnFeedback" xml:space="preserve">
+    <value>En Feedback</value>
+  </data>
+  <data name="_etiContinuarNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="_etiContinuarSi" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="_etiDeselecTodos" xml:space="preserve">
+    <value>Deseleccionar Todos</value>
+  </data>
+  <data name="_etiTipoAsignacion" xml:space="preserve">
+    <value>Tipo Asignación</value>
+  </data>
+  <data name="_etiErrorSinComentario" xml:space="preserve">
+    <value>Debe ingresar un comentario en las competencias evaluadas con la nota mínima o máxima de la escala.</value>
+  </data>
+  <data name="_etiColaboradores" xml:space="preserve">
+    <value>Colaboradores</value>
+  </data>
+  <data name="_etiJefaturas" xml:space="preserve">
+    <value>Jefaturas</value>
+  </data>
+  <data name="_etiPares" xml:space="preserve">
+    <value>Pares</value>
+  </data>
+  <data name="_etiCargoContacto" xml:space="preserve">
+    <value>Cargo Contacto</value>
+  </data>
+  <data name="_etiEmailContacto" xml:space="preserve">
+    <value>Email Contacto</value>
+  </data>
+  <data name="_etiFlagActiva" xml:space="preserve">
+    <value>Activa</value>
+  </data>
+  <data name="_etiFonoContacto" xml:space="preserve">
+    <value>Fono</value>
+  </data>
+  <data name="_etiGiro" xml:space="preserve">
+    <value>Giro</value>
+  </data>
+  <data name="_etiNombreContacto" xml:space="preserve">
+    <value>Nombre Contacto</value>
+  </data>
+  <data name="_etiNombreFantasia" xml:space="preserve">
+    <value>Nombre Fantasía</value>
+  </data>
+  <data name="_etiRazonSocial" xml:space="preserve">
+    <value>Razón Social</value>
+  </data>
+  <data name="_etiContrasena" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="_etiRepContrasena" xml:space="preserve">
+    <value>Repetir Contraseña</value>
+  </data>
+  <data name="_etiAreaCurso" xml:space="preserve">
+    <value>Area Curso</value>
+  </data>
+  <data name="_etiConCalibracion" xml:space="preserve">
+    <value>Con calibración</value>
+  </data>
+  <data name="_etiConObservaciones" xml:space="preserve">
+    <value>Ingreso de objetivos</value>
+  </data>
+  <data name="_etiPondColaboradores" xml:space="preserve">
+    <value>Colaboradores</value>
+  </data>
+  <data name="_etiPondEutoEvaluacion" xml:space="preserve">
+    <value>Autoevaluación</value>
+  </data>
+  <data name="_etiPondJefaturas" xml:space="preserve">
+    <value>Jefaturas</value>
+  </data>
+  <data name="_etiPondPares" xml:space="preserve">
+    <value>Pares</value>
+  </data>
+</root>
