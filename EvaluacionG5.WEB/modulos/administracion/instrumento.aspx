@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="table-wrapper_0 cbp-mc-1column">
+                <div class="table-wrapper_1 cbp-mc-1column">
                     <asp:GridView ID="grdSecciones" runat="server" ShowHeader="false" AutoGenerateColumns="false" OnRowDataBound="grdSecciones_RowDataBound">
                         <Columns>
                             <asp:TemplateField>
@@ -188,7 +188,7 @@
                                         </div>
                                     </div>
                                     <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                                        <div class="table-wrapper_0 cbp-mc-1column">
+                                        <div class="table-wrapper_1 cbp-mc-1column">
                                             <asp:GridView ID="grdPreguntas" runat="server" ShowHeader="false" AutoGenerateColumns="false" CssClass="GridAnidado" DataSource='<%# Bind("PREGUNTAS") %>'>
                                                 <Columns>
                                                     <asp:TemplateField>
@@ -228,248 +228,248 @@
                 </div>
             </div>
 
+            <asp:Panel ID="pnlCursos" runat="server">
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal35" runat="server" Text="<%$ Resources: titulos,_titCursos%>" />
+                        </h2>
+                    </div>
+                </div>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal36" runat="server" Text="<%$ Resources: titulos,_titAreaMejoraContinua%>" />
+                        </h2>
+                    </div>
+                </div>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal14" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea1" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea1" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea1_Click" />
+                        <asp:Button ID="btnIrTodosArea1" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea1_Click" />
+                        <asp:Button ID="btnVolverUnoArea1" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea1_Click" />
+                        <asp:Button ID="btnVolverTodosArea1" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea1_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal15" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea1" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                </div>
 
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal35" runat="server" Text="<%$ Resources: titulos,_titCursos%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal37" runat="server" Text="<%$ Resources: titulos,_titAreaHabilidadesBlandas%>" />
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal36" runat="server" Text="<%$ Resources: titulos,_titAreaMejoraContinua%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal45" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea2" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea2" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea2_Click" />
+                        <asp:Button ID="btnIrTodosArea2" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea2_Click" />
+                        <asp:Button ID="btnVolverUnoArea2" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea2_Click" />
+                        <asp:Button ID="btnVolverTodosArea2" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea2_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal46" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea2" runat="server" Rows="6"></asp:ListBox>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal14" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea1" runat="server" Rows="4"></asp:ListBox>
-                </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea1" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea1_Click" />
-                    <asp:Button ID="btnIrTodosArea1" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea1_Click" />
-                    <asp:Button ID="btnVolverUnoArea1" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea1_Click" />
-                    <asp:Button ID="btnVolverTodosArea1" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea1_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal15" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea1" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
 
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal37" runat="server" Text="<%$ Resources: titulos,_titAreaHabilidadesBlandas%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal38" runat="server" Text="<%$ Resources: titulos,_titAreaComerciales%>" />
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal45" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea2" runat="server" Rows="4"></asp:ListBox>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal47" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea3" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea3" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea3_Click" />
+                        <asp:Button ID="btnIrTodosArea3" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea3_Click" />
+                        <asp:Button ID="btnVolverUnoArea3" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea3_Click" />
+                        <asp:Button ID="btnVolverTodosArea3" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea3_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal48" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea3" runat="server" Rows="6"></asp:ListBox>
+                    </div>
                 </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea2" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea2_Click" />
-                    <asp:Button ID="btnIrTodosArea2" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea2_Click" />
-                    <asp:Button ID="btnVolverUnoArea2" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea2_Click" />
-                    <asp:Button ID="btnVolverTodosArea2" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea2_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal46" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea2" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
 
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal38" runat="server" Text="<%$ Resources: titulos,_titAreaComerciales%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal39" runat="server" Text="<%$ Resources: titulos,_titAreaRelativasProduccion%>" />
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal47" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea3" runat="server" Rows="4"></asp:ListBox>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal49" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea4" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea4" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea4_Click" />
+                        <asp:Button ID="btnIrTodosArea4" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea4_Click" />
+                        <asp:Button ID="btnVolverUnoArea4" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea4_Click" />
+                        <asp:Button ID="btnVolverTodosArea4" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea4_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal50" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea4" runat="server" Rows="6"></asp:ListBox>
+                    </div>
                 </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea3" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea3_Click" />
-                    <asp:Button ID="btnIrTodosArea3" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea3_Click" />
-                    <asp:Button ID="btnVolverUnoArea3" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea3_Click" />
-                    <asp:Button ID="btnVolverTodosArea3" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea3_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal48" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea3" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
 
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal39" runat="server" Text="<%$ Resources: titulos,_titAreaRelativasProduccion%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal40" runat="server" Text="<%$ Resources: titulos,_titAreaAdministrativas%>" />
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal49" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea4" runat="server" Rows="4"></asp:ListBox>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal51" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea5" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea5" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea5_Click" />
+                        <asp:Button ID="btnIrTodosArea5" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea5_Click" />
+                        <asp:Button ID="btnVolverUnoArea5" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea5_Click" />
+                        <asp:Button ID="btnVolverTodosArea5" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea5_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal52" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea5" runat="server" Rows="6"></asp:ListBox>
+                    </div>
                 </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea4" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea4_Click" />
-                    <asp:Button ID="btnIrTodosArea4" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea4_Click" />
-                    <asp:Button ID="btnVolverUnoArea4" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea4_Click" />
-                    <asp:Button ID="btnVolverTodosArea4" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea4_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal50" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea4" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
 
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal40" runat="server" Text="<%$ Resources: titulos,_titAreaAdministrativas%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal41" runat="server" Text="<%$ Resources: titulos,_titAreaTiOfimatica%>" />
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal51" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea5" runat="server" Rows="4"></asp:ListBox>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal53" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea6" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea6" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea6_Click" />
+                        <asp:Button ID="btnIrTodosArea6" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea6_Click" />
+                        <asp:Button ID="btnVolverUnoArea6" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea6_Click" />
+                        <asp:Button ID="btnVolverTodosArea6" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea6_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal54" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea6" runat="server" Rows="6"></asp:ListBox>
+                    </div>
                 </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea5" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea5_Click" />
-                    <asp:Button ID="btnIrTodosArea5" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea5_Click" />
-                    <asp:Button ID="btnVolverUnoArea5" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea5_Click" />
-                    <asp:Button ID="btnVolverTodosArea5" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea5_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal52" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea5" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
 
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal41" runat="server" Text="<%$ Resources: titulos,_titAreaTiOfimatica%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal42" runat="server" Text="<%$ Resources: titulos,_titAreaIdiomas%>" />
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal53" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea6" runat="server" Rows="4"></asp:ListBox>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal55" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea7" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea7" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea7_Click" />
+                        <asp:Button ID="btnIrTodosArea7" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea7_Click" />
+                        <asp:Button ID="btnVolverUnoArea7" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea7_Click" />
+                        <asp:Button ID="btnVolverTodosArea7" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea7_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal56" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea7" runat="server" Rows="6"></asp:ListBox>
+                    </div>
                 </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea6" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea6_Click" />
-                    <asp:Button ID="btnIrTodosArea6" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea6_Click" />
-                    <asp:Button ID="btnVolverUnoArea6" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea6_Click" />
-                    <asp:Button ID="btnVolverTodosArea6" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea6_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal54" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea6" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
 
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal42" runat="server" Text="<%$ Resources: titulos,_titAreaIdiomas%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal43" runat="server" Text="<%$ Resources: titulos,_titAreaSeguridad%>" />
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal55" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea7" runat="server" Rows="4"></asp:ListBox>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal57" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea8" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea8" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea8_Click" />
+                        <asp:Button ID="btnIrTodosArea8" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea8_Click" />
+                        <asp:Button ID="btnVolverUnoArea8" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea8_Click" />
+                        <asp:Button ID="btnVolverTodosArea8" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea8_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal58" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea8" runat="server" Rows="6"></asp:ListBox>
+                    </div>
                 </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea7" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea7_Click" />
-                    <asp:Button ID="btnIrTodosArea7" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea7_Click" />
-                    <asp:Button ID="btnVolverUnoArea7" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea7_Click" />
-                    <asp:Button ID="btnVolverTodosArea7" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea7_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal56" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea7" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
 
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal43" runat="server" Text="<%$ Resources: titulos,_titAreaSeguridad%>" />
-                    </h2>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-1column">
+                        <h2 class="text-left">
+                            <asp:Literal ID="Literal44" runat="server" Text="<%$ Resources: titulos,_titAreaOtrasCapacitaciones%>" />
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal57" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea8" runat="server" Rows="4"></asp:ListBox>
+                <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal59" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
+                        <asp:ListBox ID="lstCurDispArea9" runat="server" Rows="6"></asp:ListBox>
+                    </div>
+                    <div class="cbp-mc-10column double10 text-center">
+                        <asp:Button ID="btnIrUnoArea9" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit Ir_y_Venir_Inicial" OnClick="btnIrUnoArea9_Click" />
+                        <asp:Button ID="btnIrTodosArea9" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnIrTodosArea9_Click" />
+                        <asp:Button ID="btnVolverUnoArea9" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverUnoArea9_Click" />
+                        <asp:Button ID="btnVolverTodosArea9" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit Ir_y_Venir" OnClick="btnVolverTodosArea9_Click" />
+                    </div>
+                    <div class="cbp-mc-10column cuadruple10">
+                        <label>
+                            <asp:Literal ID="Literal60" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
+                        <asp:ListBox ID="lstCurAsigArea9" runat="server" Rows="6"></asp:ListBox>
+                    </div>
                 </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea8" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea8_Click" />
-                    <asp:Button ID="btnIrTodosArea8" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea8_Click" />
-                    <asp:Button ID="btnVolverUnoArea8" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea8_Click" />
-                    <asp:Button ID="btnVolverTodosArea8" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea8_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal58" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea8" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
-
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-1column">
-                    <h2 class="text-left">
-                        <asp:Literal ID="Literal44" runat="server" Text="<%$ Resources: titulos,_titAreaOtrasCapacitaciones%>" />
-                    </h2>
-                </div>
-            </div>
-            <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;"> 
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal59" runat="server" Text="<%$ Resources: etiquetas,_etiDisponibles%>" /></label>
-                    <asp:ListBox ID="lstCurDispArea9" runat="server" Rows="4"></asp:ListBox>
-                </div>
-                <div class="cbp-mc-10column double10 text-center">
-                    <asp:Button ID="btnIrUnoArea9" runat="server" Text="<%$ Resources: etiquetas,_etiIrUno%>" CssClass="cbp-mc-submit" OnClick="btnIrUnoArea9_Click" />
-                    <asp:Button ID="btnIrTodosArea9" runat="server" Text="<%$ Resources: etiquetas,_etiIrTodos%>" CssClass="cbp-mc-submit" OnClick="btnIrTodosArea9_Click" />
-                    <asp:Button ID="btnVolverUnoArea9" runat="server" Text="<%$ Resources: etiquetas,_etiVolverUno%>" CssClass="cbp-mc-submit" OnClick="btnVolverUnoArea9_Click" />
-                    <asp:Button ID="btnVolverTodosArea9" runat="server" Text="<%$ Resources: etiquetas,_etiVolverTodos%>" CssClass="cbp-mc-submit" OnClick="btnVolverTodosArea9_Click" />
-                </div>
-                <div class="cbp-mc-10column cuadruple10">
-                    <label>
-                        <asp:Literal ID="Literal60" runat="server" Text="<%$ Resources: etiquetas,_etiAsignados%>" /></label>
-                    <asp:ListBox ID="lstCurAsigArea9" runat="server" Rows="4"></asp:ListBox>
-                </div> 
-            </div>
-
+            </asp:Panel>
 
             <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
                 <div class="cbp-mc-1column">
@@ -551,7 +551,8 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        <asp:Literal ID="Literal30" runat="server" Text="<%$ Resources: etiquetas,_etiAdvertencia%>" /></p>
+                        <asp:Literal ID="Literal30" runat="server" Text="<%$ Resources: etiquetas,_etiAdvertencia%>" />
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">
@@ -575,7 +576,8 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        <asp:Literal ID="Literal33" runat="server" Text="<%$ Resources: etiquetas,_etiExito%>" /></p>
+                        <asp:Literal ID="Literal33" runat="server" Text="<%$ Resources: etiquetas,_etiExito%>" />
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">

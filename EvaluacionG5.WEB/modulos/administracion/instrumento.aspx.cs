@@ -50,6 +50,7 @@ namespace EvaluacionG5.WEB.modulos.administracion
                     }
                     else
                     {
+                        AgregarSeccion();
                         CargaCursos(0);
                         ViewState["Modo"] = "Insertar";
                     }
@@ -70,9 +71,6 @@ namespace EvaluacionG5.WEB.modulos.administracion
             {
                 BFESCALA objES = new BFESCALA();
                 objWEB.LlenaDDL(ref ddlEscalas, objES.GetESCALAAll(objSession.RutEmpresa).Cast<DomainObject>().ToList(), "CODESCALA", "NOMESCALA");
-                //BFGRADO objGR = new BFGRADO();
-                //objWEB.LlenaDDL(ref ddlGrados, objGR.GetGRADOAll().Cast<DomainObject>().ToList(), "CODGRADO", "NOMBREGRADO");
-                //this.ddlGrados.SelectedValue = "3";
             }
             catch (Exception ex)
             {
@@ -531,182 +529,293 @@ namespace EvaluacionG5.WEB.modulos.administracion
 
         protected void btnIrUnoArea1_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "1");
         }
 
         protected void btnIrTodosArea1_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "1");
         }
 
         protected void btnVolverUnoArea1_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "1");
         }
 
         protected void btnVolverTodosArea1_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "1");
         }
 
         protected void btnIrUnoArea2_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "2");
         }
 
         protected void btnIrTodosArea2_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "2");
         }
 
         protected void btnVolverUnoArea2_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "2");
         }
 
         protected void btnVolverTodosArea2_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "2");
         }
 
         protected void btnIrUnoArea3_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "3");
         }
 
         protected void btnIrTodosArea3_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "3");
         }
 
         protected void btnVolverUnoArea3_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "3");
         }
 
         protected void btnVolverTodosArea3_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "3");
         }
 
         protected void btnIrUnoArea4_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "4");
         }
 
         protected void btnIrTodosArea4_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "4");
         }
 
         protected void btnVolverUnoArea4_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "4");
         }
 
         protected void btnVolverTodosArea4_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "4");
         }
 
         protected void btnIrUnoArea5_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "5");
         }
 
         protected void btnIrTodosArea5_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "5");
         }
 
         protected void btnVolverUnoArea5_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "5");
         }
 
         protected void btnVolverTodosArea5_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "5");
         }
 
         protected void btnIrUnoArea6_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "6");
         }
 
         protected void btnIrTodosArea6_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "6");
         }
 
         protected void btnVolverUnoArea6_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "6");
         }
 
         protected void btnVolverTodosArea6_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "6");
         }
 
         protected void btnIrUnoArea7_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "7");
         }
 
         protected void btnIrTodosArea7_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "7");
         }
 
         protected void btnVolverUnoArea7_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "7");
         }
 
         protected void btnVolverTodosArea7_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "7");
         }
 
         protected void btnIrUnoArea8_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "8");
         }
 
         protected void btnIrTodosArea8_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "8");
         }
 
         protected void btnVolverUnoArea8_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "8");
         }
 
         protected void btnVolverTodosArea8_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "8");
         }
 
         protected void btnIrUnoArea9_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_1", "9");
         }
 
         protected void btnIrTodosArea9_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("1_2", "9");
         }
 
         protected void btnVolverUnoArea9_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_1", "9");
         }
 
         protected void btnVolverTodosArea9_Click(object sender, EventArgs e)
         {
-
+            IrVenirCursos("2_2", "9");
         }
+
+        protected void IrVenirCursos(string Tipo, string Id)
+        {
+            try
+            {
+                // TIPO = 1_1 --> Ir uno desde disponible a asignado
+                // TIPO = 1_2 --> Ir todos desde disponible a asignado
+                // TIPO = 2_1 --> Volver uno desde asignado a disponible
+                // TIPO = 2_2 --> Volver todos desde asignado a disponible
+
+                ListBox lstDisponibles;
+                ListBox lstAsignados;
+                lstDisponibles = ((ListBox)pnlCursos.FindControl("lstCurDispArea" + Id));
+                lstAsignados = ((ListBox)pnlCursos.FindControl("lstCurAsigArea" + Id));
+
+                switch (Tipo)
+                {
+                    case "1_1":
+                        MoverUno(ref lstDisponibles, ref lstAsignados);
+                        break;
+                    case "1_2":
+                        MoverTodos(ref lstDisponibles, ref lstAsignados);
+                        break;
+                    case "2_1":
+                        MoverUno(ref lstAsignados, ref lstDisponibles);
+                        break;
+                    case "2_2":
+                        MoverTodos(ref lstAsignados, ref lstDisponibles);
+                        break;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Log log = new Log();
+                log.EscribirLog(ex);
+                litCatchError.Visible = true;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
+            }
+        }
+
+        protected void MoverUno(ref ListBox origen, ref ListBox Destino)
+        {
+            try
+            {
+                foreach (ListItem item in origen.Items)
+                {
+                    if (item.Selected)
+                        Destino.Items.Add(item);
+                }
+                bool blnTermino = false;
+                while (blnTermino == false)
+                {
+                    blnTermino = true;
+                    foreach (ListItem item in origen.Items)
+                    {
+                        if (item.Selected)
+                        {
+                            origen.Items.Remove(item);
+                            blnTermino = false;
+                            break;
+                        }
+                    }
+                }
+                foreach (ListItem item in origen.Items)
+                {
+                    if (item.Selected)
+                        origen.Items.Remove(item);
+                }
+
+            }
+            catch(Exception ex)
+            {
+                Log log = new Log();
+                log.EscribirLog(ex);
+                litCatchError.Visible = true;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
+            }
+        }
+
+        protected void MoverTodos(ref ListBox origen, ref ListBox Destino)
+        {
+            try
+            {
+                foreach (ListItem item in origen.Items)
+                {
+                    Destino.Items.Add(item);
+                }
+                bool blnTermino = false;
+                while (blnTermino == false)
+                {
+                    blnTermino = true; 
+                    foreach (ListItem item in origen.Items)
+                    {
+                        origen.Items.Remove(item);
+                        blnTermino = false;
+                        break;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log log = new Log();
+                log.EscribirLog(ex);
+                litCatchError.Visible = true;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
+            }
+        }
+
     }
 }

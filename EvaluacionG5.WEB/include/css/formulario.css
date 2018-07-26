@@ -278,7 +278,15 @@ input, select, option, textarea, label, ul, li, span, td span, a
 	font-size: 0.8em !important;
 	border-radius: 4px;
 	letter-spacing: 0px;
-    margin-top: 13px !important;
+    margin-top: 13px;
+}
+.Ir_y_Venir_Inicial { 
+	width: 80% !important; 
+    margin-top: 18px !important;
+}
+.Ir_y_Venir { 
+	width: 80% !important; 
+    margin-top: 3px !important;
 }
 
 .cbp-mc-form input.cbp-mc-submit:hover {

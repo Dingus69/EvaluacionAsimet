@@ -1312,3 +1312,59 @@ StackTrace:
    en EvaluacionG5.WEB.modulos.administracion.instrumento.Page_Load(Object sender, EventArgs e) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\MultiEmpresa\EvaluacionG5\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 40
 InnerException: 
 --------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+26/07/2018 04:46:21 p. m. - EXCEPCION
+Message: Referencia a objeto no establecida como instancia de un objeto.
+Source: EvaluacionG5.WEB
+TargetSite: Void MoverTodos(System.Web.UI.WebControls.ListBox ByRef, System.Web.UI.WebControls.ListBox ByRef)
+StackTrace: 
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.MoverTodos(ListBox& origen, ListBox& Destino) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\EvaluacionAsimet\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 780
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+26/07/2018 04:46:29 p. m. - EXCEPCION
+Message: Referencia a objeto no establecida como instancia de un objeto.
+Source: EvaluacionG5.WEB
+TargetSite: Void MoverUno(System.Web.UI.WebControls.ListBox ByRef, System.Web.UI.WebControls.ListBox ByRef)
+StackTrace: 
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.MoverUno(ListBox& origen, ListBox& Destino) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\EvaluacionAsimet\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 755
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+26/07/2018 04:47:34 p. m. - EXCEPCION
+Message: Referencia a objeto no establecida como instancia de un objeto.
+Source: EvaluacionG5.WEB
+TargetSite: Void MoverTodos(System.Web.UI.WebControls.ListBox ByRef, System.Web.UI.WebControls.ListBox ByRef)
+StackTrace: 
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.MoverTodos(ListBox& origen, ListBox& Destino) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\EvaluacionAsimet\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 780
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+26/07/2018 04:49:27 p. m. - EXCEPCION
+Message: Referencia a objeto no establecida como instancia de un objeto.
+Source: EvaluacionG5.WEB
+TargetSite: Void MoverTodos(System.Web.UI.WebControls.ListBox ByRef, System.Web.UI.WebControls.ListBox ByRef)
+StackTrace: 
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.MoverTodos(ListBox& origen, ListBox& Destino) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\EvaluacionAsimet\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 780
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+26/07/2018 04:52:53 p. m. - EXCEPCION
+Message: Colección modificada; puede que no se ejecute la operación de enumeración.
+Source: mscorlib
+TargetSite: Boolean MoveNext()
+StackTrace: 
+   en System.Collections.ArrayList.ArrayListEnumeratorSimple.MoveNext()
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.MoverTodos(ListBox& origen, ListBox& Destino) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\EvaluacionAsimet\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 784
+InnerException: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+26/07/2018 04:53:36 p. m. - EXCEPCION
+Message: Colección modificada; puede que no se ejecute la operación de enumeración.
+Source: mscorlib
+TargetSite: Boolean MoveNext()
+StackTrace: 
+   en System.Collections.ArrayList.ArrayListEnumeratorSimple.MoveNext()
+   en EvaluacionG5.WEB.modulos.administracion.instrumento.MoverTodos(ListBox& origen, ListBox& Destino) en C:\Users\Guillermo Sanhueza\Documents\PROYECTOS\ASIMET\Evaluacion G5\SRC\EvaluacionAsimet\EvaluacionG5.WEB\modulos\administracion\instrumento.aspx.cs:línea 784
+InnerException: 
+--------------------------------------------------------------------------------

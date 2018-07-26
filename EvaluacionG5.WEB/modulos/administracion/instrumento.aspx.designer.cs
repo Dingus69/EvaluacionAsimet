@@ -310,6 +310,15 @@ namespace EvaluacionG5.WEB.modulos.administracion {
         protected global::System.Web.UI.WebControls.GridView grdSecciones;
         
         /// <summary>
+        /// pnlCursos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlCursos;
+        
+        /// <summary>
         /// Literal35 control.
         /// </summary>
         /// <remarks>
