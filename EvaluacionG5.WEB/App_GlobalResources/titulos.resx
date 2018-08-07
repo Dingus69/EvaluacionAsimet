@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_titAdmInstrumentos" xml:space="preserve">
-    <value>Administración de Plantilla de Evaluación</value>
+    <value>Administración de Configuración de Evaluaciones</value>
   </data>
   <data name="_titAdmInstrumentosSecciones" xml:space="preserve">
     <value>Secciones</value>
@@ -290,5 +290,20 @@
   </data>
   <data name="_titCursos" xml:space="preserve">
     <value>Cursos de capacitación</value>
+  </data>
+  <data name="_titCapacitaciones" xml:space="preserve">
+    <value>Cursos de capacitación</value>
+  </data>
+  <data name="_titFormularioEvaluacion" xml:space="preserve">
+    <value>Formulario de evaluación</value>
+  </data>
+  <data name="_titObjetivosActuales" xml:space="preserve">
+    <value>Objetivos</value>
+  </data>
+  <data name="_titObjetivosProximos" xml:space="preserve">
+    <value>Objetivos proximo periodo</value>
+  </data>
+  <data name="_titObservacionesFinales" xml:space="preserve">
+    <value>Observaciones finales</value>
   </data>
 </root>

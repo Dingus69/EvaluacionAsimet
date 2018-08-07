@@ -325,7 +325,7 @@ namespace EvaluacionG5.BUSINESS
 
 
 
-        public bool AsignarPorTipo(EINSTRUMENTO objINSTRUMENTO, List<EEMPLEADO> lstEM, string Nombre, DateTime Inicio, DateTime Fin, Int16 Tipo)
+        public bool AsignarPorTipo(EINSTRUMENTO objINSTRUMENTO, List<EEMPLEADO> lstEM, string Nombre, DateTime Inicio, DateTime Fin, Int64 RutEmpresa, Int16 Tipo)
         {
             try
             {
@@ -336,7 +336,8 @@ namespace EvaluacionG5.BUSINESS
                 objIE.OBSERVACION = objINSTRUMENTO.OBSERVACION;
                 objIE.INICIOEVALUACION = Inicio;
                 objIE.FINEVALUACION = Fin;
-                objIE.CODESTADOEVAL = 1; 
+                objIE.CODESTADOEVAL = 1;
+                objIE.RUT_EMPRESA = RutEmpresa; 
                 switch (Tipo)
                 {
                     case 1:

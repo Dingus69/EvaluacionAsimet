@@ -663,11 +663,10 @@
     border-left-width: 0px !important;*/
 }
 
-.TableEvaluaciones
+.TableEvaluaciones, .TableEvaluacionesInterna
 { 
 	background-color: #fff;
 	border-radius: 10px;
-	width: 49% !important;
 	float: left;
 	margin-right: 1% !important;
 	margin-bottom: 10px !important;
@@ -676,38 +675,60 @@
 	border-left: solid 5px rgba(0,0,0,0.15) !important;
 	min-height: 130px;
 }
-.TableEvaluaciones td
+.TableEvaluaciones
+{
+	width: 49% !important;
+}
+.TableEvaluacionesInterna
+{
+	width: 100% !important;
+}
+.TableEvaluaciones td, .TableEvaluacionesInterna td
 {  
 	padding-top: 15px !important;
-	padding-bottom: 15px !important; 
-}
-.TableEvaluaciones td
-{
+	padding-bottom: 15px !important;  
 	border: 0px;
 	border: 0px;
 }
-.TableEvaluaciones .tdAvatar
+.TableEvaluaciones .tdAvatar, .TableEvaluacionesInterna .tdAvatar
 {
 	width: 15%;
 	text-align: center;
 	vertical-align: text-top;
 	position: relative;
 }
-.TableEvaluaciones .tdAvatar img
+.TableEvaluacionesInterna .tdAvatar
+{
+	width: 15%;
+	text-align: center;
+	vertical-align: text-top;
+	position: relative;
+}
+.TableEvaluaciones .tdAvatar img 
 {
 	position: absolute;
 	top: 15px;
 	left: 5px;
 }
-.TableEvaluaciones .tdDatos1
+.TableEvaluacionesInterna .tdAvatar img
+{
+	position: absolute;
+	top: 25px;
+	left: 15px;
+}
+.TableEvaluaciones .tdDatos1, .TableEvaluacionesInterna .tdDatos1
 {
 	width: 48%;
 	vertical-align: text-top;
 }
-.TableEvaluaciones .tdDatos2
+.TableEvaluaciones .tdDatos2, .TableEvaluacionesInterna .tdDatos2
 {
 	width: 27%;
 	vertical-align: text-top;
+}
+.TableEvaluaciones .tdAcciones, .TableEvaluacionesInterna .tdAcciones
+{
+	width: 10%;
 }
 .Dato
 { 
@@ -717,10 +738,6 @@
 .DatoResaltado
 {
     font-weight: bold;
-}
-.TableEvaluaciones .tdAcciones
-{
-	width: 10%;
 }
 
 

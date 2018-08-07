@@ -95,6 +95,11 @@ namespace EvaluacionG5.BUSINESS
             return _objDALList.SelectAll(RutEmpresa);
         }
 
+        public EESCALA GetESCALAINSTRUMENTOEMPRESA(Int64 RutEmpresa, Int16 CodEscala)
+        {
+            return _objDALList.GetESCALAINSTRUMENTOEMPRESA(RutEmpresa, CodEscala);
+        }
+
         public bool Delete(EESCALA objESCALA)
 		{
 			try

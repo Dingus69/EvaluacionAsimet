@@ -35,8 +35,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                 ValidaSession();
                 {
                     if (!Page.IsPostBack)
-                    {
-                        InicializarFormulario();
+                    { 
                         if (Request["CodInstrumentoEmpleado"] != null)
                         {
                             ViewState["CodInstrumentoEmpleado"] = Request["CodInstrumentoEmpleado"];
@@ -50,7 +49,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                                 ViewState["Modo"] = Request["Modo"];
                                 if (Request["Modo"] == "MisEvaluaciones")
                                 {
-                                    this.divRelacion.Attributes.Add("style", "display: none");
+                                    //this.divRelacion.Attributes.Add("style", "display: none");
                                     btnVolver.Visible = true;
                                     btnBorrador.Visible = false;
                                     btnGuardarEvaluacion.Visible = false;
@@ -80,14 +79,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                                 }
                             }
                         }
-                    }
-
-                    //if (this.Request.Params["__EVENTTARGET"] == "CalculaNota")
-                    //{
-                    //    NotaTiempoRealAbierta();
-                    //}
-
-
+                    } 
                 }
             }
             catch(Exception ex)
@@ -97,13 +89,59 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                 litCatchError.Visible = true;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
             }
-        }
+        } 
 
-        protected void InicializarFormulario()
+        protected void Cargar()
         {
             try
             {
+                BFINSTRUMENTOEMPLEADO objBFIE = new BFINSTRUMENTOEMPLEADO();
+                BFEMPLEADO objBFEM = new BFEMPLEADO();
+                BFINSTRUMENTO objBFIN = new BFINSTRUMENTO();
+                BFESCALA objBFES = new BFESCALA();
 
+                EINSTRUMENTOEMPLEADO objIE = objBFIE.GetINSTRUMENTOEMPLEADO(Utiles.ConvertToInt64(ViewState["CodInstrumentoEmpleado"]));
+                EEMPLEADO objEM = objBFEM.GetEMPLEADO(objIE.RUTEMPLEADO);
+                EINSTRUMENTO objIN = objBFIN.GetINSTRUMENTOEMPRESA(Utiles.ConvertToInt64(objIE.CODINSTRUMENTO), objEM.RUTEMPRESA);
+                EESCALA objES = objBFES.GetESCALAINSTRUMENTOEMPRESA(objEM.RUTEMPRESA, Utiles.ConvertToInt16(objIN.CODESCALA));
+
+                this.txtRut.Text = objEM.RUTCOMPLETO;
+                this.txtNombreUsuario.Text = objEM.NOMBRECOMPLETO;
+                this.txtGerencia.Text = objEM.NOMBRE_GERENCIA;
+                this.txtCargo.Text = objEM.NOMBRE_CARGO;
+                this.txtResultado.Text = Utiles.ConvertToString(objIE.RESULTADO);
+                this.lblNombreFormulario.Text = objIE.NOMINSTRUMENTOEMPLEADO;
+                this.hdfNombreFormulario.Value = objIE.NOMINSTRUMENTOEMPLEADO;
+                this.lblDescripcion.Text = objIE.DESCRIPCION;
+                this.lblObservacion.Text = objIE.OBSERVACION;
+                this.lblInstrucciones.Text = objES.INSTRUCCIONES;
+                this.hdfFlagRangos.Value = Utiles.ConvertToString(objES.FLAG_RANGOS);
+
+                if (objIE.RESULTADO > 0)
+                    lblNombreFormulario.Text = lblNombreFormulario.Text + " - " + Utiles.ConvertToString(objIE.RESULTADO);
+                if ((lblDescripcion.Text.Trim() == "") && (lblObservacion.Text.Trim() == ""))
+                    divDescripcionObservacion.Style.Add("display", "none");
+                if (lblInstrucciones.Text.Trim() == "")
+                    divDescripcionObservacion.Style.Add("divInstrucciones", "none");
+
+                ViewState["VALORMENOR"] = objES.VALORMENOR;
+                ViewState["VALORMAYOR"] = objES.VALORMAYOR;
+                if (objES.FLAG_RANGOS == true)
+                {
+                    NotaTiempoRealRangos();
+                }
+                else
+                {
+                    NotaTiempoRealAbierta();
+                }
+
+                objWEB.LlenaGrilla(ref this.grdSecciones, objIE.SECCIONES.Cast<DomainObject>().ToList(), 100);
+                SeteaEscalaEnGrilla(objES);
+                objWEB.LlenaGrilla(ref this.grdCursos, objIE.CURSOS.Cast<DomainObject>().ToList(), 100);
+
+                //NotaTiempoRealRangos();
+                HabilitarBotones(objIE, objIN);
+                HabilitarPaneles(objIE);
             }
             catch (Exception ex)
             {
@@ -114,55 +152,10 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
             }
         }
 
-        protected void Cargar()
+        protected  void SeteaEscalaEnGrilla(EESCALA objES)
         {
             try
             {
-                BFINSTRUMENTOEMPLEADO objBFIE = new BFINSTRUMENTOEMPLEADO();
-                EINSTRUMENTOEMPLEADO objIE = objBFIE.GetINSTRUMENTOEMPLEADO(Utiles.ConvertToInt64(ViewState["CodInstrumentoEmpleado"]));
-
-                BFEMPLEADO objBFEM = new BFEMPLEADO();
-                EEMPLEADO objEM = objBFEM.GetEMPLEADO(objIE.RUTEMPLEADO);
-                this.txtRut.Text = objEM.RUTCOMPLETO;
-                this.txtNombreUsuario.Text = objEM.NOMBRECOMPLETO;
-                BFGERENCIA objBFGE = new BFGERENCIA();
-                this.txtGerencia.Text = objEM.NOMBRE_GERENCIA;
-                this.txtCargo.Text = objEM.NOMBRE_CARGO;
-                this.txtResultado.Text = Utiles.ConvertToString(objIE.RESULTADO);
-
-                lblNombreFormulario.Text = objIE.NOMINSTRUMENTOEMPLEADO;
-                hdfNombreFormulario.Value = objIE.NOMINSTRUMENTOEMPLEADO;
-                if (objIE.RESULTADO > 0)
-                {
-                    lblNombreFormulario.Text = lblNombreFormulario.Text + " - " + Utiles.ConvertToString(objIE.RESULTADO);
-                }
-                lblDescripcion.Text = objIE.DESCRIPCION;
-                lblObservacion.Text = objIE.OBSERVACION;
-                if ((lblDescripcion.Text.Trim() == "") && (lblObservacion.Text.Trim() == ""))
-                {
-                    divDescripcionObservacion.Style.Add("display", "none");
-                }
-                objWEB.LlenaGrilla(ref this.grdSecciones, objIE.SECCIONES.Cast<DomainObject>().ToList(), 100);
-                BFINSTRUMENTO objBFIN = new BFINSTRUMENTO();
-                EINSTRUMENTO objIN = objBFIN.GetINSTRUMENTO(Utiles.ConvertToInt64(objIE.CODINSTRUMENTO));
-                BFESCALA objBFES = new BFESCALA();
-                EESCALA objES = objBFES.GetESCALA(Utiles.ConvertToInt64(objIN.CODESCALA));
-                lblInstrucciones.Text = objES.INSTRUCCIONES;
-                if (lblInstrucciones.Text.Trim() == "")
-                {
-                    divDescripcionObservacion.Style.Add("divInstrucciones", "none");
-                }
-                ViewState["VALORMENOR"] = objES.VALORMENOR;
-                ViewState["VALORMAYOR"] = objES.VALORMAYOR;
-                hdfFlagRangos.Value = Utiles.ConvertToString(objES.FLAG_RANGOS);
-                if (objES.FLAG_RANGOS == true)
-                {
-                    NotaTiempoRealRangos();
-                }
-                else
-                {
-                    NotaTiempoRealAbierta();
-                }
                 foreach (GridViewRow grdRow in this.grdSecciones.Rows)
                 {
                     foreach (GridViewRow grdRowPR in ((GridView)grdRow.FindControl("grdPreguntas")).Rows)
@@ -187,7 +180,151 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                         ((GridView)grdRow.FindControl("grdPreguntas")).Columns[4].Visible = false;
                     }
                 }
-                
+            }
+            catch(Exception ex)
+            {
+                Log log = new Log();
+                log.EscribirLog(ex);
+                litCatchError.Visible = true;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
+            }
+        }
+
+        protected void HabilitarPaneles(EINSTRUMENTOEMPLEADO objIE)
+        {
+            /*
+                Solo las evaluaciones de jefatura a colaborador podrán agregar y evaluar objetivos.
+                Tanto las evaluaciones de jefatura a colaborador como las autoevaluaciones podrán sugerir cursos de capacitación.
+                La sección de objetivos actuales solo debe mostrarse en caso de existir objetivos.
+
+                Tipos de evaluacion:
+                    1- Jefaturas
+                    2- Colaboradores
+                    3- Pares
+                    4- Autoevaluación
+            */
+            try
+            {
+                switch (objIE.CODTIPOEVAL)
+                {
+                    case 1:
+                        if (objIE.OBJETIVOSACTUALES.Count > 0)
+                            pnlObjetivosActuales.Visible = true;
+                        else
+                            pnlObjetivosActuales.Visible = false; 
+                        pnlObjetivosProximos.Visible = true;
+                        pnlCapacitaciones.Visible = true;
+                        break;
+                    case 2:
+                        pnlObjetivosActuales.Visible = false;
+                        pnlObjetivosProximos.Visible = false;
+                        pnlCapacitaciones.Visible = false;
+                        break;                                                                                                                          
+                    case 3:
+                        pnlObjetivosActuales.Visible = false;
+                        pnlObjetivosProximos.Visible = false;
+                        pnlCapacitaciones.Visible = false;
+                        break;
+                    case 4:
+                        pnlObjetivosActuales.Visible = false;
+                        pnlObjetivosProximos.Visible = false;
+                        pnlCapacitaciones.Visible = true;
+                        break;
+                }
+                ExpandirCollapse();
+            }
+            catch(Exception ex)
+            {
+                Log log = new Log();
+                log.EscribirLog(ex);
+                litCatchError.Visible = true;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
+            }
+        }
+
+        protected void ExpandirCollapse()
+        {
+            try
+            {
+                if (this.pnlObjetivosActuales.Visible == true)
+                {
+                    lnkPnlOne.Attributes.Remove("aria-expanded");
+                    lnkPnlOne.Attributes.Add("aria-expanded", "true");
+                    lnkPnlOne.Attributes.Remove("class");
+                    lnkPnlOne.Attributes.Add("class", "");
+                    lnkPnlOne.Attributes.Remove("href");
+                    lnkPnlOne.Attributes.Add("href", "#" + collapseOne.ClientID); // "#ctl00_ContentPlaceHolder1_collapseOne");
+                    iconoPnlOne.Attributes.Remove("class");
+                    iconoPnlOne.Attributes.Add("class", "glyphicon glyphicon-minus");
+                    lnkPnlTwo.Attributes.Remove("aria-expanded");
+                    lnkPnlTwo.Attributes.Add("aria-expanded", "false");
+                    lnkPnlTwo.Attributes.Remove("class");
+                    lnkPnlTwo.Attributes.Add("class", "collapsed");
+                    lnkPnlTwo.Attributes.Remove("href");
+                    lnkPnlTwo.Attributes.Add("href", "#" + collapseTwo.ClientID); // "#ctl00_ContentPlaceHolder1_collapseTwo");
+                    iconoPnlTwo.Attributes.Remove("class");
+                    iconoPnlTwo.Attributes.Add("class", "glyphicon glyphicon-plus");
+                    collapseOne.Attributes.Remove("aria-expanded");
+                    collapseOne.Attributes.Add("aria-expanded", "true");
+                    collapseOne.Attributes.Remove("style");
+                    collapseOne.Attributes.Add("style", "");
+                    collapseOne.Attributes.Remove("class");
+                    collapseOne.Attributes.Add("class", "panel-collapse collapse in");
+                    collapseTwo.Attributes.Remove("aria-expanded");
+                    collapseTwo.Attributes.Add("aria-expanded", "false");
+                    collapseTwo.Attributes.Remove("style");
+                    collapseTwo.Attributes.Add("style", "height: 0px;");
+                    collapseTwo.Attributes.Remove("class");
+                    collapseTwo.Attributes.Add("class", "panel-collapse collapse");
+                    return;
+                }
+                else if (this.pnlFormularioEvaluacion.Visible == true)
+                {
+                    lnkPnlOne.Attributes.Remove("aria-expanded");
+                    lnkPnlOne.Attributes.Add("aria-expanded", "false");
+                    lnkPnlOne.Attributes.Remove("class");
+                    lnkPnlOne.Attributes.Add("class", "collapsed"); 
+                    lnkPnlOne.Attributes.Remove("href");
+                    lnkPnlOne.Attributes.Add("href", "#" + collapseOne.ClientID); // "#ctl00_ContentPlaceHolder1_collapseOne");
+                    iconoPnlOne.Attributes.Remove("class");
+                    iconoPnlOne.Attributes.Add("class", "glyphicon glyphicon-plus");
+                    lnkPnlTwo.Attributes.Remove("aria-expanded");
+                    lnkPnlTwo.Attributes.Add("aria-expanded", "true");
+                    lnkPnlTwo.Attributes.Remove("class");
+                    lnkPnlTwo.Attributes.Add("class", "");
+                    lnkPnlTwo.Attributes.Remove("href");
+                    lnkPnlTwo.Attributes.Add("href", "#" + collapseTwo.ClientID); // "#ctl00_ContentPlaceHolder1_collapseTwo");
+                    iconoPnlTwo.Attributes.Remove("class");
+                    iconoPnlTwo.Attributes.Add("class", "glyphicon glyphicon-minus");
+                    collapseOne.Attributes.Remove("aria-expanded");
+                    collapseOne.Attributes.Add("aria-expanded", "false");
+                    collapseOne.Attributes.Remove("style");
+                    collapseOne.Attributes.Add("style", "height: 0px;");
+                    collapseOne.Attributes.Remove("class");
+                    collapseOne.Attributes.Add("class", "panel-collapse collapse");
+                    collapseTwo.Attributes.Remove("aria-expanded");
+                    collapseTwo.Attributes.Add("aria-expanded", "true");
+                    collapseTwo.Attributes.Remove("style");
+                    collapseTwo.Attributes.Add("style", "");
+                    collapseTwo.Attributes.Remove("class");
+                    collapseTwo.Attributes.Add("class", "panel-collapse collapse in");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log log = new Log();
+                log.EscribirLog(ex);
+                litCatchError.Visible = true;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
+            }
+        }
+
+        protected void HabilitarBotones(EINSTRUMENTOEMPLEADO objIE, EINSTRUMENTO objIN)
+        {
+            try
+            {
+
                 switch (Utiles.ConvertToString(objIE.CODESTADOEVAL))
                 {
                     case "1":
@@ -198,7 +335,6 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                         btnApelar.Visible = false;
                         if (objIE.RUTEVALUADOR == objSession.RutUsuario)
                         {
-                            //btnInformar.Visible = true;
                             btnInformar.Visible = false;
                         }
                         else
@@ -214,7 +350,6 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                         btnApelar.Visible = false;
                         if (objIE.RUTEVALUADOR == objSession.RutUsuario)
                         {
-                            //btnInformar.Visible = true;
                             btnInformar.Visible = false;
                         }
                         else
@@ -234,7 +369,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                         else
                         {
                             btnInformar.Visible = false;
-                        }                        
+                        }
                         if ((objIN.FLAG_APELACION) && (objIE.RUTEMPLEADO == objSession.RutUsuario) && (objIE.RUTEVALUADOR != objSession.RutUsuario))
                         {
                             btnApelar.Visible = true;
@@ -253,6 +388,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                         }
                         break;
                 }
+
                 if ((objIE.COD_TIPO_INTRUMENTO == 2) && (objIE.RUTEMPLEADO == objSession.RutUsuario))
                 {
                     btnVerBitacora.Visible = false;
@@ -266,10 +402,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                 }
                 else if ((objIE.COD_TIPO_INTRUMENTO == 2) && (objIE.RUTEVALUADOR == objSession.RutUsuario))
                 {
-                    if (objIE.CODESTADOEVAL == 5)
-                    { 
-                    }
-                    else
+                    if (objIE.CODESTADOEVAL != 5)
                     {
                         btnVerBitacora.Visible = false;
                         btnComentario.Visible = false;
@@ -281,15 +414,61 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                         btnGuardarEvaluacion.Visible = true;
                     }
                 }
-                NotaTiempoRealRangos();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Log log = new Log();
                 log.EscribirLog(ex);
                 litCatchError.Visible = true;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
             }
+        }
+
+        protected void NotaTiempoRealRangos()
+        {
+            Double ResultadoFinal = 0.0;
+            foreach (GridViewRow grdRowSec in grdSecciones.Rows)
+            {
+                Double PondSeccion = Utiles.ConvertToDouble(((Label)grdRowSec.FindControl("lblPonderacionSeccion")).Text);
+                Double Resultado = 0.0;
+                foreach (GridViewRow grdRowPre in ((GridView)grdRowSec.FindControl("grdPreguntas")).Rows)
+                {
+                    Double PondPregunta = Utiles.ConvertToDouble(((Label)grdRowPre.FindControl("lblPonderacion")).Text);
+                    if (((RadioButtonList)grdRowPre.FindControl("rdlRangos")).SelectedIndex > -1)
+                    {
+                        Double valorAsignado = Utiles.ConvertToDouble(((RadioButtonList)grdRowPre.FindControl("rdlRangos")).SelectedValue);
+                        Resultado = Resultado + ((PondPregunta / 100) * valorAsignado);
+                    }
+                }
+                ((Label)grdRowSec.FindControl("lblResultadoSeccion")).Text = Utiles.ConvertToString(Math.Round(Resultado, 2));
+                ResultadoFinal = ResultadoFinal + ((PondSeccion / 100) * Resultado);
+            }
+            txtResultado.Text = Utiles.ConvertToString(Math.Round(ResultadoFinal, 2));
+            lblNombreFormulario.Text = hdfNombreFormulario.Value + " - " + Utiles.ConvertToString(Math.Round(ResultadoFinal, 2));
+            litNotaCalculada.Text = Utiles.ConvertToString(Math.Round(ResultadoFinal, 2));
+        }
+
+        protected void NotaTiempoRealAbierta()
+        {
+            Double ResultadoFinal = 0.0;
+            foreach (GridViewRow grdRowSec in grdSecciones.Rows)
+            {
+                Double PondSeccion = Utiles.ConvertToDouble(((Label)grdRowSec.FindControl("lblPonderacionSeccion")).Text);
+                Double Resultado = 0.0;
+                foreach (GridViewRow grdRowPre in ((GridView)grdRowSec.FindControl("grdPreguntas")).Rows)
+                {
+                    Double PondPregunta = Utiles.ConvertToDouble(((Label)grdRowPre.FindControl("lblPonderacion")).Text);
+                    if (((TextBox)grdRowPre.FindControl("txtResultado")).Text != "")
+                    {
+                        Double valorAsignado = Utiles.ConvertToDouble(((TextBox)grdRowPre.FindControl("txtResultado")).Text);
+                        Resultado = Resultado + ((PondPregunta / 100) * valorAsignado);
+                    }
+                }
+                ((Label)grdRowSec.FindControl("lblResultadoSeccion")).Text = Utiles.ConvertToString(Resultado);
+                ResultadoFinal = ResultadoFinal + ((PondSeccion / 100) * Resultado);
+            }
+            txtResultado.Text = Utiles.ConvertToString(ResultadoFinal);
+            lblNombreFormulario.Text = hdfNombreFormulario.Value + " - " + Utiles.ConvertToString(ResultadoFinal);
         }
 
         protected void imgVerDetalles_Click(object sender, ImageClickEventArgs e)
@@ -842,53 +1021,6 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
             NotaTiempoRealAbierta();
         }
 
-        protected void NotaTiempoRealRangos()
-        {
-            Double ResultadoFinal = 0.0;
-            foreach (GridViewRow grdRowSec in grdSecciones.Rows)
-            {
-                Double PondSeccion = Utiles.ConvertToDouble(((Label)grdRowSec.FindControl("lblPonderacionSeccion")).Text);
-                Double Resultado = 0.0;
-                foreach (GridViewRow grdRowPre in ((GridView)grdRowSec.FindControl("grdPreguntas")).Rows)
-                {
-                    Double PondPregunta = Utiles.ConvertToDouble(((Label)grdRowPre.FindControl("lblPonderacion")).Text);
-                    if (((RadioButtonList)grdRowPre.FindControl("rdlRangos")).SelectedIndex > -1)
-                    {
-                        Double valorAsignado = Utiles.ConvertToDouble(((RadioButtonList)grdRowPre.FindControl("rdlRangos")).SelectedValue);
-                        Resultado = Resultado + ((PondPregunta / 100) * valorAsignado);
-                    }
-                }
-                ((Label)grdRowSec.FindControl("lblResultadoSeccion")).Text = Utiles.ConvertToString(Math.Round(Resultado, 2));
-                ResultadoFinal = ResultadoFinal + ((PondSeccion / 100) * Resultado);
-            }
-            txtResultado.Text = Utiles.ConvertToString(Math.Round(ResultadoFinal, 2));
-            lblNombreFormulario.Text = hdfNombreFormulario.Value + " - " + Utiles.ConvertToString(Math.Round(ResultadoFinal, 2));
-            litNotaCalculada.Text = Utiles.ConvertToString(Math.Round(ResultadoFinal, 2));
-        }
-
-        protected void NotaTiempoRealAbierta()
-        {
-            Double ResultadoFinal = 0.0;
-            foreach (GridViewRow grdRowSec in grdSecciones.Rows)
-            {
-                Double PondSeccion = Utiles.ConvertToDouble(((Label)grdRowSec.FindControl("lblPonderacionSeccion")).Text);
-                Double Resultado = 0.0;
-                foreach (GridViewRow grdRowPre in ((GridView)grdRowSec.FindControl("grdPreguntas")).Rows)
-                {
-                    Double PondPregunta = Utiles.ConvertToDouble(((Label)grdRowPre.FindControl("lblPonderacion")).Text);
-                    if (((TextBox)grdRowPre.FindControl("txtResultado")).Text != "")
-                    {
-                        Double valorAsignado = Utiles.ConvertToDouble(((TextBox)grdRowPre.FindControl("txtResultado")).Text);
-                        Resultado = Resultado + ((PondPregunta / 100) * valorAsignado);
-                    }
-                }
-                ((Label)grdRowSec.FindControl("lblResultadoSeccion")).Text = Utiles.ConvertToString(Resultado);
-                ResultadoFinal = ResultadoFinal + ((PondSeccion / 100) * Resultado);
-            }
-            txtResultado.Text = Utiles.ConvertToString(ResultadoFinal);
-            lblNombreFormulario.Text = hdfNombreFormulario.Value + " - " + Utiles.ConvertToString(ResultadoFinal);
-        }
-
         protected void lnkVer_Click(object sender, EventArgs e)
         {
             try
@@ -1148,5 +1280,6 @@ namespace EvaluacionG5.WEB.modulos.evaluacion
                 log.EscribirLog(ex);
             }
         }
+
     }
 }

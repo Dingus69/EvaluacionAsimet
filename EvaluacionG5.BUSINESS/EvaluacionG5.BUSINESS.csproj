@@ -70,6 +70,8 @@
     <Compile Include="BFMODALIDAD.cs" />
     <Compile Include="BFNIVEL_EDUCACIONAL.cs" />
     <Compile Include="BFNIVEL_OCUPACIONAL.cs" />
+    <Compile Include="BFOBJETIVO_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="BFOBJETIVO_PROXIMO.cs" />
     <Compile Include="BFPARAMETROS_GENERALES.cs" />
     <Compile Include="BFPERFIL.cs" />
     <Compile Include="BFPERFIL_USUARIO.cs" />

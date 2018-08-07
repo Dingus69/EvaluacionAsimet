@@ -33,9 +33,11 @@ namespace EvaluacionG5.CLASES.DAO
 	    private System.Int64  _COSTO_PARTICIPANTE = 0;
         	
 	    private System.Int32  _MAX_PARTICIPANTES = 0;
-        	
-        
-	    public ECURSO() : base()
+
+        private System.Boolean _ASIGNADO = false;
+
+
+        public ECURSO() : base()
 	    {
 	    }
 	    
@@ -137,6 +139,19 @@ namespace EvaluacionG5.CLASES.DAO
             set
             {
                 _NOM_AREA_CURSO = value;
+            }
+        }
+
+        public bool ASIGNADO
+        {
+            get
+            {
+                return _ASIGNADO;
+            }
+
+            set
+            {
+                _ASIGNADO = value;
             }
         }
 

@@ -64,7 +64,7 @@ namespace EvaluacionG5.CLASES.DAL
 
         protected override IDbDataParameter[] GetInsertParameters(DomainObject obj, DB db)
         {
-            IDbDataParameter[] prms = db.GetArrayParameter(15);
+            IDbDataParameter[] prms = db.GetArrayParameter(14);
             EINSTRUMENTO objINSTRUMENTO = obj as EINSTRUMENTO;
 
             //Poner las rutinas del Tools que se necesiten
@@ -78,8 +78,8 @@ namespace EvaluacionG5.CLASES.DAL
             prms[1].ParameterName = "@CODESCALA";
             	
             prms[2] = db.GetParameter();
-            prms[2].Value = objINSTRUMENTO.CODGRADO;
-            prms[2].ParameterName = "@COD_GRADO";
+            prms[2].Value = objINSTRUMENTO.FLAGCALIBRACION;
+            prms[2].ParameterName = "@FLAG_CALIBRACION";
             	
             prms[3] = db.GetParameter();
             prms[3].Value = objINSTRUMENTO.NOMBREINSTRUMENTO;
@@ -106,16 +106,16 @@ namespace EvaluacionG5.CLASES.DAL
             prms[8].ParameterName = "@RUT_EMPRESA";
 
             prms[9] = db.GetParameter();
-            prms[9].Value = objINSTRUMENTO.FLAGCALIBRACION;
-            prms[9].ParameterName = "@FLAG_CALIBRACION";
+            prms[9].Value = objINSTRUMENTO.FLAGINGRESOOBJETIVOS;
+            prms[9].ParameterName = "@FLAG_INGRESO_OBJETIVOS"; 
 
             prms[10] = db.GetParameter();
-            prms[10].Value = objINSTRUMENTO.FLAGINGRESOOBJETIVOS;
-            prms[10].ParameterName = "@FLAG_INGRESO_OBJETIVOS";
+            prms[10].Value = objINSTRUMENTO.PONDAUTOEVALUACION;
+            prms[10].ParameterName = "@POND_AUTO_EVALUACION";
 
             prms[11] = db.GetParameter();
-            prms[11].Value = objINSTRUMENTO.PONDAUTOEVALUACION;
-            prms[11].ParameterName = "@POND_AUTO_EVALUACION";
+            prms[11].Value = objINSTRUMENTO.PONDPARES;
+            prms[11].ParameterName = "@POND_PARES";
 
             prms[12] = db.GetParameter();
             prms[12].Value = objINSTRUMENTO.PONDJEFATURAS;
@@ -125,16 +125,12 @@ namespace EvaluacionG5.CLASES.DAL
             prms[13].Value = objINSTRUMENTO.PONDCOLABORADORES;
             prms[13].ParameterName = "@POND_COLABORADORES";
 
-            prms[14] = db.GetParameter();
-            prms[14].Value = objINSTRUMENTO.PONDPARES;
-            prms[14].ParameterName = "@POND_PARES";
-
             return prms;
         }
 
         protected override IDbDataParameter[] GetUpdateParameters(DomainObject obj, DB db)
         {
-            IDbDataParameter[] prms = db.GetArrayParameter(16);
+            IDbDataParameter[] prms = db.GetArrayParameter(15);
             EINSTRUMENTO objINSTRUMENTO = obj as EINSTRUMENTO;
 
             //Poner las rutinas del Tools que se necesiten
@@ -148,8 +144,8 @@ namespace EvaluacionG5.CLASES.DAL
             prms[1].ParameterName = "@CODESCALA";
             	
             prms[2] = db.GetParameter();
-            prms[2].Value = objINSTRUMENTO.CODGRADO;
-            prms[2].ParameterName = "@COD_GRADO";
+            prms[2].Value = objINSTRUMENTO.FLAGCALIBRACION;
+            prms[2].ParameterName = "@FLAG_CALIBRACION";
             	
             prms[3] = db.GetParameter();
             prms[3].Value = objINSTRUMENTO.NOMBREINSTRUMENTO;
@@ -199,11 +195,7 @@ namespace EvaluacionG5.CLASES.DAL
 
             prms[14] = db.GetParameter();
             prms[14].Value = objINSTRUMENTO.PONDPARES;
-            prms[14].ParameterName = "@POND_PARES";
-
-            prms[15] = db.GetParameter();
-            prms[15].Value = objINSTRUMENTO.FLAGCALIBRACION;
-            prms[15].ParameterName = "@FLAG_CALIBRACION";
+            prms[14].ParameterName = "@POND_PARES"; 
 
             return prms;
         }
@@ -227,9 +219,7 @@ namespace EvaluacionG5.CLASES.DAL
             
             objINSTRUMENTO.CODINSTRUMENTO = Utiles.ConvertToDecimal(dr["COD_INSTRUMENTO"]);
             
-            objINSTRUMENTO.CODESCALA = Utiles.ConvertToDecimal(dr["CODESCALA"]);
-            
-            objINSTRUMENTO.CODGRADO = Utiles.ConvertToInt16(dr["COD_GRADO"]);
+            objINSTRUMENTO.CODESCALA = Utiles.ConvertToDecimal(dr["CODESCALA"]); 
             
             objINSTRUMENTO.NOMBREINSTRUMENTO = Utiles.ConvertToString(dr["NOMBRE_INSTRUMENTO"]);
             

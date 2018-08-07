@@ -53,6 +53,11 @@ namespace EvaluacionG5.BUSINESS
 			return _objDALList.SelectAll();
         }
 
+        public ECURSO GetCursoByCodigo(string Codigo)
+        {
+            return _objDALList.GetCursoByCodigo(Codigo);
+        }
+
         public List<ECURSO> GetCursosByNombreAndArea(string NombreCurso, Decimal CodArea)
         {
             return _objDALList.GetCursosByNombreAndArea(NombreCurso, CodArea);

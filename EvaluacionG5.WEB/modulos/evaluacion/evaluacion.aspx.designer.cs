@@ -49,31 +49,13 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         protected global::System.Web.UI.WebControls.HiddenField hdfNombreFormulario;
         
         /// <summary>
-        /// Literal12 control.
+        /// imgAvatar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal12;
-        
-        /// <summary>
-        /// txtRut control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRut;
-        
-        /// <summary>
-        /// Literal15 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal15;
+        protected global::System.Web.UI.WebControls.Image imgAvatar;
         
         /// <summary>
         /// txtNombreUsuario control.
@@ -82,16 +64,16 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreUsuario;
+        protected global::System.Web.UI.WebControls.Label txtNombreUsuario;
         
         /// <summary>
-        /// Literal25 control.
+        /// txtRut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal25;
+        protected global::System.Web.UI.WebControls.Label txtRut;
         
         /// <summary>
         /// txtGerencia control.
@@ -100,16 +82,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGerencia;
-        
-        /// <summary>
-        /// Literal16 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal16;
+        protected global::System.Web.UI.WebControls.Label txtGerencia;
         
         /// <summary>
         /// txtCargo control.
@@ -118,25 +91,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCargo;
-        
-        /// <summary>
-        /// divRelacion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divRelacion;
-        
-        /// <summary>
-        /// Literal23 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal23;
+        protected global::System.Web.UI.WebControls.Label txtCargo;
         
         /// <summary>
         /// txtRelacion control.
@@ -145,25 +100,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRelacion;
-        
-        /// <summary>
-        /// btnVerFicha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVerFicha;
-        
-        /// <summary>
-        /// Literal24 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal24;
+        protected global::System.Web.UI.WebControls.Label txtRelacion;
         
         /// <summary>
         /// txtResultado control.
@@ -172,7 +109,7 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtResultado;
+        protected global::System.Web.UI.WebControls.Label txtResultado;
         
         /// <summary>
         /// litNotaCalculada control.
@@ -182,6 +119,15 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litNotaCalculada;
+        
+        /// <summary>
+        /// btnVerFicha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVerFicha;
         
         /// <summary>
         /// divDescripcionObservacion control.
@@ -256,22 +202,94 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         protected global::System.Web.UI.WebControls.Label lblInstrucciones;
         
         /// <summary>
-        /// Literal6 control.
+        /// pnlObjetivosActuales control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal6;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlObjetivosActuales;
         
         /// <summary>
-        /// hdfFlagRangos control.
+        /// lnkPnlOne control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdfFlagRangos;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkPnlOne;
+        
+        /// <summary>
+        /// iconoPnlOne control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl iconoPnlOne;
+        
+        /// <summary>
+        /// Literal57 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Literal57;
+        
+        /// <summary>
+        /// collapseOne control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl collapseOne;
+        
+        /// <summary>
+        /// pnlFormularioEvaluacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlFormularioEvaluacion;
+        
+        /// <summary>
+        /// lnkPnlTwo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkPnlTwo;
+        
+        /// <summary>
+        /// iconoPnlTwo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl iconoPnlTwo;
+        
+        /// <summary>
+        /// Literal58 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Literal58;
+        
+        /// <summary>
+        /// collapseTwo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl collapseTwo;
         
         /// <summary>
         /// ValidationSummary1 control.
@@ -292,49 +310,148 @@ namespace EvaluacionG5.WEB.modulos.evaluacion {
         protected global::System.Web.UI.WebControls.GridView grdSecciones;
         
         /// <summary>
-        /// Literal41 control.
+        /// hdfFlagRangos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal41;
+        protected global::System.Web.UI.WebControls.HiddenField hdfFlagRangos;
         
         /// <summary>
-        /// TextBox1 control.
+        /// pnlCapacitaciones control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlCapacitaciones;
         
         /// <summary>
-        /// Literal40 control.
+        /// Literal59 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal40;
+        protected global::System.Web.UI.WebControls.Literal Literal59;
         
         /// <summary>
-        /// Label2 control.
+        /// grdCursos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.GridView grdCursos;
         
         /// <summary>
-        /// Label5 control.
+        /// txtComentariosCursos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.TextBox txtComentariosCursos;
+        
+        /// <summary>
+        /// pnlObjetivosProximos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlObjetivosProximos;
+        
+        /// <summary>
+        /// Literal60 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Literal60;
+        
+        /// <summary>
+        /// txtObjetivoProximo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtObjetivoProximo;
+        
+        /// <summary>
+        /// txtPondObjProx control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPondObjProx;
+        
+        /// <summary>
+        /// btnAgregarObjetivo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarObjetivo;
+        
+        /// <summary>
+        /// grdObjetivosProximos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdObjetivosProximos;
+        
+        /// <summary>
+        /// pnlObservacionesFinales control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlObservacionesFinales;
+        
+        /// <summary>
+        /// Literal61 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Literal61;
+        
+        /// <summary>
+        /// txtObservaciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtObservaciones;
+        
+        /// <summary>
+        /// txtPlan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlan;
+        
+        /// <summary>
+        /// txtObservacionesCompromisos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtObservacionesCompromisos;
         
         /// <summary>
         /// btnVolver control.

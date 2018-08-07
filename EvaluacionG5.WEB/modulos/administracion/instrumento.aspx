@@ -93,22 +93,22 @@
                 <div class="cbp-mc-10column">
                     <label>
                         <asp:Literal ID="Literal26" runat="server" Text="<%$ Resources: etiquetas,_etiPondEutoEvaluacion%>" /></label>
-                    <asp:TextBox ID="txtPondAutoEvaluacion" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPondAutoEvaluacion" runat="server" onkeypress="return numbersonly(event);" MaxLength="3"></asp:TextBox>
                 </div>
                 <div class="cbp-mc-10column">
                     <label>
                         <asp:Literal ID="Literal27" runat="server" Text="<%$ Resources: etiquetas,_etiPondJefaturas%>" /></label>
-                    <asp:TextBox ID="txtPondJefatura" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPondJefatura" runat="server" onkeypress="return numbersonly(event);" MaxLength="3"></asp:TextBox>
                 </div>
                 <div class="cbp-mc-10column">
                     <label>
                         <asp:Literal ID="Literal28" runat="server" Text="<%$ Resources: etiquetas,_etiPondColaboradores%>" /></label>
-                    <asp:TextBox ID="txtPondColaboradores" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPondColaboradores" runat="server" onkeypress="return numbersonly(event);" MaxLength="3"></asp:TextBox>
                 </div>
                 <div class="cbp-mc-10column">
                     <label>
                         <asp:Literal ID="Literal34" runat="server" Text="<%$ Resources: etiquetas,_etiPondPares%>" /></label>
-                    <asp:TextBox ID="txtPondPares" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPondPares" runat="server" onkeypress="return numbersonly(event);" MaxLength="3"></asp:TextBox>
                 </div>
             </div>
             <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">

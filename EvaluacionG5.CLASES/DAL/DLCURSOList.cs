@@ -33,6 +33,21 @@ namespace EvaluacionG5.CLASES.DAL
 
             return GetCollection(dr);
         }
+
+        public ECURSO GetCursoByCodigo(string Codigo)
+        {
+            DB db = DatabaseFactory.Instance.GetDatabase();
+            IDbDataParameter[] prms = db.GetArrayParameter(1);
+
+            prms[0] = db.GetParameter();
+            prms[0].Value = Codigo;
+            prms[0].ParameterName = "@CODIGO";
+
+            IDataReader dr = db.ExecuteReader(CommandType.StoredProcedure, "proc_select_CURSO_BY_CODIGO", prms);
+
+            return GetCollection(dr)[0];
+        }
+
         public List<ECURSO> GetCursosByNombreAndArea(string NombreCurso, Decimal CodArea)
         {
             DB db = DatabaseFactory.Instance.GetDatabase();
@@ -89,7 +104,7 @@ namespace EvaluacionG5.CLASES.DAL
         public List<ECURSO> GetCursosByInstrumento(Decimal CodInstrumento)
         {
             DB db = DatabaseFactory.Instance.GetDatabase();
-            IDbDataParameter[] prms = db.GetArrayParameter(2);
+            IDbDataParameter[] prms = db.GetArrayParameter(1);
 
             prms[0] = db.GetParameter();
             prms[0].Value = CodInstrumento;
@@ -99,6 +114,21 @@ namespace EvaluacionG5.CLASES.DAL
 
             return GetCollection(dr);
         }
+
+        public List<ECURSO> GetCursosByInstrumentoEmpleado(Decimal CodInstrumento)
+        {
+            DB db = DatabaseFactory.Instance.GetDatabase();
+            IDbDataParameter[] prms = db.GetArrayParameter(1);
+
+            prms[0] = db.GetParameter();
+            prms[0].Value = CodInstrumento;
+            prms[0].ParameterName = "@CODINSTRUMENTOEMPLEADO";
+
+            IDataReader dr = db.ExecuteReader(CommandType.StoredProcedure, "proc_select_CURSO_BY_INSTRUMENTO_EMPLEADO", prms);
+
+            return GetCollection(dr);
+        }
+
 
         #endregion
     }

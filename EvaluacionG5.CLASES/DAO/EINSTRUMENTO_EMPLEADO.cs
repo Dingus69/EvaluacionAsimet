@@ -26,8 +26,10 @@ namespace EvaluacionG5.CLASES.DAO
         private System.String _PLAN_DESARROLLO = String.Empty;
 
         private System.Int64  _RUT_EMPLEADO = 0;
-        	
-	    private System.Int64  _RUT_EVALUADOR = 0;
+
+        private System.Int64 _RUT_EMPRESA = 0;
+
+        private System.Int64  _RUT_EVALUADOR = 0;
         	
 	    private System.Int64  _RUT_VISADOR = 0;
         	
@@ -59,6 +61,8 @@ namespace EvaluacionG5.CLASES.DAO
 
         private System.String _DETALLE_APELACION = String.Empty;
 
+        private System.String _DETALLE_VIZACION = String.Empty;
+
         private System.Boolean _FLAG_APELACION = false;
 
         private System.String _MOTIVO_APELACION = String.Empty;
@@ -69,10 +73,24 @@ namespace EvaluacionG5.CLASES.DAO
 
         private System.String _COMENTARIO_FEEDBACK = String.Empty;
 
+        private System.String _PLAN_ACCION = String.Empty;
+
+        private System.String _COMPROMISO = String.Empty;
+
+        private System.String _COMENTARIOS_CURSO = String.Empty;
+
+        private System.Boolean _FLAG_ANULADA = false;
+
         private List<ESECCIONINSTRUMENTOEMPLEADO> _SECCIONES = new List<ESECCIONINSTRUMENTOEMPLEADO>();
-        	
-        
-	    public EINSTRUMENTOEMPLEADO() : base()
+
+        private List<ECURSO> _CURSOS = new List<ECURSO>();
+
+        private List<EOBJETIVOPROXIMO> _OBJETIVOSPROXIMOS = new List<EOBJETIVOPROXIMO>();
+
+        private List<EOBJETIVOPROXIMO> _OBJETIVOSACTUALES = new List<EOBJETIVOPROXIMO>();
+
+
+        public EINSTRUMENTOEMPLEADO() : base()
 	    {
 	    }
 	    
@@ -370,6 +388,123 @@ namespace EvaluacionG5.CLASES.DAO
             set
             {
                 _COMENTARIO_FEEDBACK = value;
+            }
+        }
+
+        public long RUT_EMPRESA
+        {
+            get
+            {
+                return _RUT_EMPRESA;
+            }
+
+            set
+            {
+                _RUT_EMPRESA = value;
+            }
+        }
+
+        public string PLAN_ACCION
+        {
+            get
+            {
+                return _PLAN_ACCION;
+            }
+
+            set
+            {
+                _PLAN_ACCION = value;
+            }
+        }
+
+        public string COMPROMISO
+        {
+            get
+            {
+                return _COMPROMISO;
+            }
+
+            set
+            {
+                _COMPROMISO = value;
+            }
+        }
+
+        public string COMENTARIOS_CURSO
+        {
+            get
+            {
+                return _COMENTARIOS_CURSO;
+            }
+
+            set
+            {
+                _COMENTARIOS_CURSO = value;
+            }
+        }
+
+        public string DETALLE_VIZACION
+        {
+            get
+            {
+                return _DETALLE_VIZACION;
+            }
+
+            set
+            {
+                _DETALLE_VIZACION = value;
+            }
+        }
+
+        public bool FLAG_ANULADA
+        {
+            get
+            {
+                return _FLAG_ANULADA;
+            }
+
+            set
+            {
+                _FLAG_ANULADA = value;
+            }
+        }
+
+        public List<ECURSO> CURSOS
+        {
+            get
+            {
+                return _CURSOS;
+            }
+
+            set
+            {
+                _CURSOS = value;
+            }
+        }
+
+        public List<EOBJETIVOPROXIMO> OBJETIVOSPROXIMOS
+        {
+            get
+            {
+                return _OBJETIVOSPROXIMOS;
+            }
+
+            set
+            {
+                _OBJETIVOSPROXIMOS = value;
+            }
+        }
+
+        public List<EOBJETIVOPROXIMO> OBJETIVOSACTUALES
+        {
+            get
+            {
+                return _OBJETIVOSACTUALES;
+            }
+
+            set
+            {
+                _OBJETIVOSACTUALES = value;
             }
         }
 

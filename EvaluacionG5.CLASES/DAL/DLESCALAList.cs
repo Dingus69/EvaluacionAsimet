@@ -46,6 +46,23 @@ namespace EvaluacionG5.CLASES.DAL
 
             return GetCollection(dr);
         }
+        public EESCALA GetESCALAINSTRUMENTOEMPRESA(Int64 RutEmpresa, Int16 CodEscala)
+        {
+            DB db = DatabaseFactory.Instance.GetDatabase();
+            IDbDataParameter[] prms = db.GetArrayParameter(2);
+
+            prms[0] = db.GetParameter();
+            prms[0].Value = RutEmpresa;
+            prms[0].ParameterName = "@RUT_EMPRESA";
+
+            prms[1] = db.GetParameter();
+            prms[1].Value = CodEscala;
+            prms[1].ParameterName = "@COD_ESCALA";
+
+            IDataReader dr = db.ExecuteReader(CommandType.StoredProcedure, "proc_select_ESCALA_INSTRUMENTO_EMPRESA", prms);
+
+            return GetCollection(dr)[0];
+        }
 
         public Int16 Serial()
         {

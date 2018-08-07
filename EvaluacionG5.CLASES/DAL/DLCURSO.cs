@@ -201,7 +201,9 @@ namespace EvaluacionG5.CLASES.DAL
             objCURSO.COSTOPARTICIPANTE = Utiles.ConvertToInt64(dr["COSTO_PARTICIPANTE"]);
             
             objCURSO.MAXPARTICIPANTES = Utiles.ConvertToInt32(dr["MAX_PARTICIPANTES"]);
-            
+
+            objCURSO.ASIGNADO = Utiles.ConvertToBoolean(dr["ASIGNADO"]);
+
         }
 
         #endregion

@@ -46,6 +46,7 @@ namespace EvaluacionG5.CLASES.DAL
 
             return GetCollection(dr);
         }
+
         public EINSTRUMENTO GetINSTRUMENTOEMPRESA(Int64 CodInstrumento, Int64 RutEmpresa)
         {
             DB db = DatabaseFactory.Instance.GetDatabase();
@@ -64,13 +65,12 @@ namespace EvaluacionG5.CLASES.DAL
             EINSTRUMENTO objINSTRUMENTO = new EINSTRUMENTO();
 
             while (dr.Read())
-            { 
+            {
+
 
                 objINSTRUMENTO.CODINSTRUMENTO = Utiles.ConvertToDecimal(dr["COD_INSTRUMENTO"]);
 
                 objINSTRUMENTO.CODESCALA = Utiles.ConvertToDecimal(dr["CODESCALA"]);
-
-                objINSTRUMENTO.CODGRADO = Utiles.ConvertToInt16(dr["COD_GRADO"]);
 
                 objINSTRUMENTO.NOMBREINSTRUMENTO = Utiles.ConvertToString(dr["NOMBRE_INSTRUMENTO"]);
 
@@ -86,6 +86,20 @@ namespace EvaluacionG5.CLASES.DAL
 
                 objINSTRUMENTO.RUT_EMPRESA = Utiles.ConvertToInt64(dr["RUT_EMPRESA"]);
 
+                objINSTRUMENTO.FLAGCALIBRACION = Utiles.ConvertToBoolean(dr["FLAG_CALIBRACION"]);
+
+                objINSTRUMENTO.FLAGINGRESOOBJETIVOS = Utiles.ConvertToBoolean(dr["FLAG_INGRESO_OBJETIVOS"]);
+
+                objINSTRUMENTO.PONDAUTOEVALUACION = Utiles.ConvertToDouble(dr["POND_AUTO_EVALUACION"]);
+
+                objINSTRUMENTO.PONDJEFATURAS = Utiles.ConvertToDouble(dr["POND_JEFATURAS"]);
+
+                objINSTRUMENTO.PONDCOLABORADORES = Utiles.ConvertToDouble(dr["POND_COLABORADORES"]);
+
+                objINSTRUMENTO.PONDPARES = Utiles.ConvertToDouble(dr["POND_PARES"]);
+
+
+
                 DLSECCIONList objDLSE = new DLSECCIONList();
                 List<ESECCION> lstSE = objDLSE.GetSeccionesInstrumento(objINSTRUMENTO.CODINSTRUMENTO);
                 if (lstSE.Count > 0)
@@ -96,6 +110,17 @@ namespace EvaluacionG5.CLASES.DAL
                 {
                     ESECCION objSE = new ESECCION();
                     objINSTRUMENTO.SECCIONES.Add(objSE);
+                }
+                DLCURSOList objDLCU = new DLCURSOList();
+                List<ECURSO> lstCU = objDLCU.GetCursosByInstrumento(objINSTRUMENTO.CODINSTRUMENTO);
+                if (lstCU.Count > 0)
+                {
+                    objINSTRUMENTO.CURSOS = lstCU;
+                }
+                else
+                {
+                    ECURSO objCU = new ECURSO();
+                    objINSTRUMENTO.CURSOS.Add(objCU);
                 }
             }
 

@@ -115,7 +115,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plantilla de Evaluación.
+        ///   Looks up a localized string similar to Configuración de Evaluación.
         /// </summary>
         internal static string _menuAdmEvaluacion {
             get {

@@ -142,7 +142,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Administración de Plantilla de Evaluación.
+        ///   Looks up a localized string similar to Administración de Configuración de Evaluaciones.
         /// </summary>
         internal static string _titAdmInstrumentos {
             get {
@@ -331,6 +331,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cursos de capacitación.
+        /// </summary>
+        internal static string _titCapacitaciones {
+            get {
+                return ResourceManager.GetString("_titCapacitaciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Carga Nomina de Personal.
         /// </summary>
         internal static string _titCargaNomina {
@@ -430,6 +439,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Formulario de evaluación.
+        /// </summary>
+        internal static string _titFormularioEvaluacion {
+            get {
+                return ResourceManager.GetString("_titFormularioEvaluacion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reporte Consolidado.
         /// </summary>
         internal static string _titGestionConsolidado {
@@ -507,6 +525,33 @@ namespace Resources {
         internal static string _titNotificaciones {
             get {
                 return ResourceManager.GetString("_titNotificaciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objetivos.
+        /// </summary>
+        internal static string _titObjetivosActuales {
+            get {
+                return ResourceManager.GetString("_titObjetivosActuales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objetivos proximo periodo.
+        /// </summary>
+        internal static string _titObjetivosProximos {
+            get {
+                return ResourceManager.GetString("_titObjetivosProximos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Observaciones finales.
+        /// </summary>
+        internal static string _titObservacionesFinales {
+            get {
+                return ResourceManager.GetString("_titObservacionesFinales", resourceCulture);
             }
         }
         

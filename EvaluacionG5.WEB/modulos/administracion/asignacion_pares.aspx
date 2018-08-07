@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/principal.Master" AutoEventWireup="true" CodeBehind="asignacion_pares.aspx.cs" Inherits="EvaluacionG5.WEB.modulos.administracion.asignacion_pares" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -61,7 +62,7 @@
         });
     </script>
 
-    
+
 
 
     <div class="container">
@@ -83,7 +84,7 @@
                     <label>
                         <asp:Literal ID="Literal7" runat="server" Text="<%$ Resources: etiquetas,_etiNombre%>" /></label>
                     <asp:TextBox ID="txtNombre" runat="server" MaxLength="256"></asp:TextBox>
-                </div> 
+                </div>
                 <div class="cbp-mc-10column double10">
                     <label>
                         <asp:Literal ID="Literal2" runat="server" Text="<%$ Resources: etiquetas,_etiTipoAsignacion%>" /></label>
@@ -102,7 +103,7 @@
             </div>
 
             <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
-                <div class="cbp-mc-10column triple10 divfileUpload"> 
+                <div class="cbp-mc-10column triple10 divfileUpload">
                     <div class="btn btn-default btn-file" style="text-align: left; margin-top: 5px;">
                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources: etiquetas,_etiParesXLSFUL%>"></asp:Label>
                         <asp:FileUpload ID="fulAsignaciones" runat="server" CssClass="upload" placeholder="<%$ Resources: etiquetas,_etiParesXLSFUL%>" />
@@ -120,7 +121,7 @@
                         <Columns>
                             <asp:TemplateField ItemStyle-Width="50" HeaderText="<%$ Resources: cabeceras,_cabAccion%>">
                                 <ItemTemplate>
-                                    <asp:CheckBox ID="chkSeleccionar" runat="server" />
+                                    <asp:CheckBox ID="chkSeleccionar" runat="server" Checked="true" />
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabRut%>">
@@ -164,7 +165,7 @@
                 </div>
             </div>
 
-            <div id="divActualizacion" runat="server" visible="false" >
+            <div id="divActualizacion" runat="server" visible="false">
                 <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
                     <div class="cbp-mc-1column">
                         <h2>
@@ -182,10 +183,15 @@
                             <asp:Literal ID="Literal24" runat="server" Text="<%$ Resources: etiquetas,_etiFin%>" /></label>
                         <asp:TextBox ID="txtActFin" runat="server"></asp:TextBox>
                     </div>
-                    <div class="cbp-mc-10column octuple10">
+                    <div class="cbp-mc-10column double10">
+                        <label>
+                            <asp:Literal ID="Literal5" runat="server" Text="Evaluadores" /></label>
+                        <asp:DropDownList ID="ddlEvaluadores" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlEvaluadores_SelectedIndexChanged"></asp:DropDownList>
+                    </div>
+                    <div class="cbp-mc-10column sextuple10">
                         <asp:Button ID="btnAplicarFechas" runat="server" CssClass="cbp-mc-submit" Text="<%$ Resources: etiquetas,_etiAplicarFechas%>" OnClick="btnAplicarFechas_Click" />
                         <asp:Button ID="btnSeleccionTodos" runat="server" CssClass="cbp-mc-submit" Text="<%$ Resources: etiquetas,_etiSelecTodos%>" OnClick="btnSeleccionTodos_Click" />
-                    <asp:Button ID="btnDeseleccionarTodas" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiDeselecTodos%>" OnClick="btnDeseleccionarTodas_Click" />
+                        <asp:Button ID="btnDeseleccionarTodas" runat="server" CssClass="cbp-mc-submit" Text="<%$ Resources: etiquetas,_etiDeselecTodos%>" OnClick="btnDeseleccionarTodas_Click" />
                         <asp:Button ID="btnActualizar" runat="server" CssClass="cbp-mc-submit" Text="<%$ Resources: etiquetas,_etiActualizar%>" OnClick="btnActualizar_Click" />
                     </div>
                 </div>
@@ -197,12 +203,12 @@
                         <Columns>
                             <asp:TemplateField ItemStyle-Width="50" HeaderText="<%$ Resources: cabeceras,_cabAccion%>">
                                 <ItemTemplate>
-                                    <asp:CheckBox ID="chkSeleccionar" runat="server" />
+                                    <asp:CheckBox ID="chkSeleccionar" runat="server" Checked="true" />
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField ItemStyle-HorizontalAlign="Center" HeaderText="<%$ Resources: cabeceras,_cabEvaluar%>">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lnkEvaluar" runat="server" data-toggle="tooltip" OnClick="lnkEvaluar_Click" title="<%$ Resources: etiquetas,_etiEvaluar%>"><span class="glyphicon glyphicon-list-alt" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton> 
+                                    <asp:LinkButton ID="lnkEvaluar" runat="server" data-toggle="tooltip" OnClick="lnkEvaluar_Click" title="<%$ Resources: etiquetas,_etiEvaluar%>"><span class="glyphicon glyphicon-list-alt" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabRut%>">
@@ -249,12 +255,12 @@
 
             <div class="cbp-mc-form" style="width: 95%; margin: 0 auto;">
                 <div class="cbp-mc-1column">
-                    <asp:Button ID="btnVolver" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiVolver%>" OnClick="btnVolver_Click" /> 
+                    <asp:Button ID="btnVolver" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiVolver%>" OnClick="btnVolver_Click" />
                     <asp:Button ID="btnGuardar" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiGuardar%>" OnClick="btnGuardar_Click" />
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
     <div class="modal modal-warning fade" id="modal-warning">
         <div class="modal-dialog">

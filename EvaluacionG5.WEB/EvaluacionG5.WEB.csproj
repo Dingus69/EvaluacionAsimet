@@ -71,6 +71,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="include\avatars\avatar-usuario-generico.png" />
     <Content Include="include\bootstrap\css\bg-header.jpg" />
     <Content Include="include\bootstrap\css\bg-login.jpg" />
     <Content Include="include\bootstrap\css\bootstrap-theme.css" />
@@ -235,6 +236,7 @@
     <Content Include="modulos\administracion\mantenedor_parametros.aspx" />
     <Content Include="modulos\administracion\mantenedor_tipo_seccion.aspx" />
     <Content Include="modulos\administracion\mantenedor_usuarios.aspx" />
+    <Content Include="modulos\administracion\test.aspx" />
     <Content Include="modulos\evaluacion\consola.aspx" />
     <Content Include="modulos\evaluacion\dashboard.aspx" />
     <Content Include="modulos\evaluacion\editar_evaluacion.aspx" />
@@ -570,6 +572,13 @@
     </Compile>
     <Compile Include="modulos\administracion\mantenedor_usuarios.aspx.designer.cs">
       <DependentUpon>mantenedor_usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\administracion\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\administracion\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="modulos\evaluacion\consola.aspx.cs">
       <DependentUpon>consola.aspx</DependentUpon>

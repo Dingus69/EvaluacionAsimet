@@ -86,7 +86,7 @@ namespace EvaluacionG5.WEB.modulos.administracion
             try
             {
                 BFINSTRUMENTO objBFIN = new BFINSTRUMENTO();
-                EINSTRUMENTO obj = objBFIN.GetINSTRUMENTO(Utiles.ConvertToInt64(Request["CodInstrumento"].ToString()));
+                EINSTRUMENTO obj = objBFIN.GetINSTRUMENTOEMPRESA(Utiles.ConvertToInt64(Request["CodInstrumento"].ToString()), objSession.RutEmpresa);
                 this.hdfCodInstrumento.Value = Request["CodInstrumento"];
                 this.txtNombreInstrumento.Text = obj.NOMBREINSTRUMENTO;
                 this.txtDescripcion.Text = obj.DESCRIPCION;
@@ -341,6 +341,27 @@ namespace EvaluacionG5.WEB.modulos.administracion
                         lstSE.Add(objSE);
                     }
                     objIN.SECCIONES = lstSE;
+
+
+                    // Obtencion de cursos seleccionados
+                    BFCURSO objBFCU = new BFCURSO();
+                    List<ECURSO> lstCursos = new List<ECURSO>();
+                    ListBox lst;
+                    for (int i = 1; i <= 9; i++)
+                    {
+                        lst = (ListBox)pnlCursos.FindControl("lstCurAsigArea" + Utiles.ConvertToString(i));
+                        foreach (ListItem item in lst.Items)
+                        {
+                            lstCursos.Add(objBFCU.GetCursoByCodigo(Utiles.ConvertToString(item.Value)));
+                        }
+                    }
+
+                    objIN.CURSOS = lstCursos;
+
+
+
+
+
                     if (Utiles.ConvertToString(ViewState["Modo"]) == "Editar")
                     {
                         objIN.IsPersisted = true;
@@ -365,6 +386,20 @@ namespace EvaluacionG5.WEB.modulos.administracion
             Boolean Resultado = false;
             try
             {
+                double SumaPondEvaluaciones = 0.0;
+                if (txtPondAutoEvaluacion.Text.Trim() == "")
+                    txtPondAutoEvaluacion.Text = "0";
+                if (txtPondJefatura.Text.Trim() == "")
+                    txtPondJefatura.Text = "0";
+                if (txtPondColaboradores.Text.Trim() == "")
+                    txtPondColaboradores.Text = "0";
+                if (txtPondPares.Text.Trim() == "")
+                    txtPondPares.Text = "0";
+                SumaPondEvaluaciones = Utiles.ConvertToDouble(txtPondAutoEvaluacion.Text.Trim()) + Utiles.ConvertToDouble(txtPondJefatura.Text.Trim()) + Utiles.ConvertToDouble(txtPondColaboradores.Text.Trim()) + Utiles.ConvertToDouble(txtPondPares.Text.Trim());
+                if (SumaPondEvaluaciones != 100)
+                {
+                    return false;
+                }
                 double SumaPondSeccion = 0.0;
                 foreach (GridViewRow grdRowSE in this.grdSecciones.Rows)
                 {
@@ -771,12 +806,6 @@ namespace EvaluacionG5.WEB.modulos.administracion
                         }
                     }
                 }
-                foreach (ListItem item in origen.Items)
-                {
-                    if (item.Selected)
-                        origen.Items.Remove(item);
-                }
-
             }
             catch(Exception ex)
             {

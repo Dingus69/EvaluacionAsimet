@@ -108,7 +108,8 @@ namespace EvaluacionG5.WEB.modulos.administracion
 
                 BFINSTRUMENTOEMPLEADO objBFIE = new BFINSTRUMENTOEMPLEADO();
                 List<EINSTRUMENTOEMPLEADO> lstAsg = objBFIE.GetAsignaciones(ddlInstrumentos.SelectedValue, this.txtNombre.Text, Utiles.ConvertToDateTime(txtInicio.Text), Utiles.ConvertToDateTime(txtFin.Text), Utiles.ConvertToInt16(ddlTipoEvaluacion.SelectedValue));
-
+                ViewState["Colaboradores"] = lstAsg;
+                CargaJefes();
                 objWEB.LlenaGrilla(ref this.grdAsignaciones, lstAsg.Cast<DomainObject>().ToList(), 1000);
                 ViewState["Modo"] = "Actualizar";
 
@@ -116,9 +117,72 @@ namespace EvaluacionG5.WEB.modulos.administracion
                 {
                     divActualizacion.Visible = true;
                 }
+
+
+                CargaAsignacionesEvaluador();
             }
             catch (Exception ex)
             {
+                Log log = new Log();
+                log.EscribirLog(ex);
+                litCatchError.Visible = true;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
+            }
+        }
+
+
+        protected void ddlEvaluadores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargaAsignacionesEvaluador();
+        }
+
+        protected void CargaJefes()
+        {
+            try
+            {
+                List<EINSTRUMENTOEMPLEADO> lstAsg = (List<EINSTRUMENTOEMPLEADO>)ViewState["Colaboradores"];  
+                List<EINSTRUMENTOEMPLEADO> distinctPeople = lstAsg
+                          .GroupBy(p => p.RUTEVALUADOR)
+                          .Select(g => g.First())
+                          .ToList();
+                objWEB.LlenaDDL(ref ddlEvaluadores, distinctPeople.Cast<DomainObject>().ToList(), "RUTEVALUADOR", "NOMBRE_EVALUADOR");
+
+                objWEB.AgregaValorDDL(ref this.ddlEvaluadores, "-", "Todos");
+                this.ddlEvaluadores.SelectedValue = "-";
+
+            }
+            catch (Exception ex)
+            {
+                Log log = new Log();
+                log.EscribirLog(ex);
+                litCatchError.Visible = true;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('0');", true);
+            }
+        }
+
+        protected void CargaAsignacionesEvaluador()
+        {
+            try
+            {
+                List<EINSTRUMENTOEMPLEADO> lstAsg = (List<EINSTRUMENTOEMPLEADO>)ViewState["Colaboradores"];
+                if(this.ddlEvaluadores.SelectedValue == "-")
+                {
+                    objWEB.LlenaGrilla(ref this.grdAsignaciones, lstAsg.Cast<DomainObject>().ToList(), 1000);
+                }
+                else
+                { 
+                    var query = from i in lstAsg
+                                where i.RUTEVALUADOR == Utiles.ConvertToInt64(ddlEvaluadores.SelectedValue)
+                                orderby i.NOMBRE_EVALUADO
+                                select i;
+                 
+                    List<EINSTRUMENTOEMPLEADO> tmp = query.Cast<EINSTRUMENTOEMPLEADO>().ToList();
+
+                    objWEB.LlenaGrilla(ref this.grdAsignaciones, tmp.Cast<DomainObject>().ToList(), 1000);
+                }
+            }
+            catch(Exception ex)
+            {   
                 Log log = new Log();
                 log.EscribirLog(ex);
                 litCatchError.Visible = true;
@@ -204,7 +268,7 @@ namespace EvaluacionG5.WEB.modulos.administracion
         {
             try
             {
-
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "document.location.href = 'lista_asignaciones_partners.aspx';", true);
             }
             catch (Exception ex)
             {
@@ -283,13 +347,16 @@ namespace EvaluacionG5.WEB.modulos.administracion
                 EEMPLEADO objEM;
                 foreach (GridViewRow grdRow in this.grdColaboradores.Rows)
                 {
-                    objEM = objBFEM.GetEMPLEADO(Utiles.RutUsrALng(((Label)grdRow.FindControl("lblRut")).Text));
-                    objEM.RUTJEFE = Utiles.RutUsrALng(((HiddenField)grdRow.FindControl("hdfRutEvaluador")).Value);
-                    lst.Add(objEM);
+                    if (((CheckBox)grdRow.FindControl("chkSeleccionar")).Checked)
+                    {
+                        objEM = objBFEM.GetEMPLEADO(Utiles.RutUsrALng(((Label)grdRow.FindControl("lblRut")).Text));
+                        objEM.RUTJEFE = Utiles.RutUsrALng(((HiddenField)grdRow.FindControl("hdfRutEvaluador")).Value);
+                        lst.Add(objEM);
+                    }
                 }
 
                 BFINSTRUMENTOEMPLEADO objBFIE = new BFINSTRUMENTOEMPLEADO();
-                objBFIE.AsignarPorTipo(objIN, lst, this.txtNombre.Text, Utiles.ConvertToDateTime(this.txtInicio.Text), Utiles.ConvertToDateTime(this.txtFin.Text), Utiles.ConvertToInt16(ddlTipoEvaluacion.SelectedValue));
+                objBFIE.AsignarPorTipo(objIN, lst, this.txtNombre.Text, Utiles.ConvertToDateTime(this.txtInicio.Text), Utiles.ConvertToDateTime(this.txtFin.Text), objSession.RutEmpresa, Utiles.ConvertToInt16(ddlTipoEvaluacion.SelectedValue));
 
 
                 List<EINSTRUMENTOEMPLEADO> lstAsg = objBFIE.GetAsignaciones(ddlInstrumentos.SelectedValue, this.txtNombre.Text, Utiles.ConvertToDateTime(txtInicio.Text), Utiles.ConvertToDateTime(txtFin.Text), Utiles.ConvertToInt16(ddlTipoEvaluacion.SelectedValue));
@@ -300,6 +367,9 @@ namespace EvaluacionG5.WEB.modulos.administracion
                 {
                     divActualizacion.Visible = true;
                 }
+
+                CargaJefes();
+                CargaAsignacionesEvaluador();
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "modal", "Menu('4');", true); 
             }

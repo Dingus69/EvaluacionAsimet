@@ -63,7 +63,15 @@ namespace EvaluacionG5.BUSINESS
                         objPS.Save();
                     }
                 }
-				return true;
+                BFINSTRUMENTOCURSO objBFIC = new BFINSTRUMENTOCURSO();
+                foreach (ECURSO objCU in objINSTRUMENTO.CURSOS)
+                {
+                    EINSTRUMENTOCURSO objIE = new EINSTRUMENTOCURSO();
+                    objIE.CODINSTRUMENTO = objINSTRUMENTO.CODINSTRUMENTO;
+                    objIE.CODCURSO = objCU.CODCURSO;
+                    objBFIC.Save(objIE); 
+                }
+                return true;
 			}
 			catch (Exception ex)
 			{

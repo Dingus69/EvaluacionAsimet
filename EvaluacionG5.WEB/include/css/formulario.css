@@ -445,7 +445,7 @@ input, select, option, textarea, label, ul, li, span, td span, a
 .cbp-mc-5column input[type=submit], .cbp-mc-5column input[type=buttom],
 .cbp-mc-10column input[type=submit], .cbp-mc-10column input[type=buttom]
 {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 
@@ -903,4 +903,16 @@ input, select, option, textarea, label, ul, li, span, td span, a
     padding: 10px;
     border-radius: 10px;
 }
-
+.TextCalificar
+{
+    margin: 0px !important; 
+    padding: 0px 5px !important; 
+    width: 80% !important;
+    float: right;
+    text-align: right
+}
+.RangValidatorCalificar
+{  
+    float: right;
+    width: 10% !important;
+}

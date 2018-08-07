@@ -92,9 +92,6 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script type="text/javascript">
-
-
-
         $(function () {
             $('#containerFicha').highcharts({
                 chart: { type: 'line' },
@@ -118,43 +115,71 @@
                 }, {
                     name: 'Pares',
                     data: [<%= hdfResumenParesGraf01.Value%>]
-                        }, {
-                            name: 'Auto evaluación',
-                            data: [<%= hdfResumenAutoevGraf01.Value%>]
-                        }],
+                }, {
+                    name: 'Auto evaluación',
+                    data: [<%= hdfResumenAutoevGraf01.Value%>]
+                }],
             });
         });
 
-                $(function () {
-                    $('#containerFichaPares').highcharts({
-                        chart: { type: 'line' },
-                        title: { text: '<%= hdfNombreFormulario.Value%> - Colaboradores' },
-                        xAxis: { categories: [<%= hdfResumenTextoGraf02.Value%>], crosshair: true },
-                        yAxis: { title: { text: 'Resultado' } },
-                        legend: { enabled: false },
-                        plotOptions: { series: { borderWidth: 0, dataLabels: { enabled: true, format: '{point.y:.0f}' } } },
-                        tooltip: { headerFormat: '<span style="font-size:11px">{series.name}</span><br>', pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>' },
+        $(function () {
+            $('#containerFichaPares').highcharts({
+                chart: { type: 'line' },
+                title: { text: '<%= hdfNombreFormulario.Value%> - Colaboradores' },
+                xAxis: { categories: [<%= hdfResumenTextoGraf02.Value%>], crosshair: true },
+                yAxis: { title: { text: 'Resultado' } },
+                legend: { enabled: false },
+                plotOptions: { series: { borderWidth: 0, dataLabels: { enabled: true, format: '{point.y:.0f}' } } },
+                tooltip: { headerFormat: '<span style="font-size:11px">{series.name}</span><br>', pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>' },
 
-                        series: [<%= hdfResumenDataGraf02.Value%>],
-                    });
-                });
+                series: [<%= hdfResumenDataGraf02.Value%>],
+            });
+        });
 
-                $(function () {
-                    $('#containerFichaColaboradores').highcharts({
-                        chart: { type: 'line' },
-                        title: { text: '<%= hdfNombreFormulario.Value%> - Pares' },
-                            xAxis: { categories: [<%= hdfResumenTextoGraf03.Value%>], crosshair: true },
-                            yAxis: { title: { text: 'Resultado' } },
-                            legend: { enabled: false },
-                            plotOptions: { series: { borderWidth: 0, dataLabels: { enabled: true, format: '{point.y:.0f}' } } },
-                            tooltip: { headerFormat: '<span style="font-size:11px">{series.name}</span><br>', pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>' },
+        $(function () {
+            $('#containerFichaColaboradores').highcharts({
+                chart: { type: 'line' },
+                title: { text: '<%= hdfNombreFormulario.Value%> - Pares' },
+                xAxis: { categories: [<%= hdfResumenTextoGraf03.Value%>], crosshair: true },
+                yAxis: { title: { text: 'Resultado' } },
+                legend: { enabled: false },
+                plotOptions: { series: { borderWidth: 0, dataLabels: { enabled: true, format: '{point.y:.0f}' } } },
+                tooltip: { headerFormat: '<span style="font-size:11px">{series.name}</span><br>', pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>' },
 
-                            series: [<%= hdfResumenDataGraf03.Value%>],
-                        });
-                    });
-
-
+                series: [<%= hdfResumenDataGraf03.Value%>],
+            });
+        });
     </script>
+
+
+
+
+    <style type="text/css">
+        .bs-example {
+            margin: 20px;
+        }
+
+        .panel-title .glyphicon {
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            // Add minus icon for collapse element which is open by default
+            $(".collapse.in").each(function () {
+                $(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
+            });
+
+            // Toggle plus minus icon on show hide of collapse element
+            $(".collapse").on('show.bs.collapse', function () {
+                $(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+            }).on('hide.bs.collapse', function () {
+                $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+            });
+        });
+    </script>
+
+
 
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
@@ -167,261 +192,377 @@
                 <script src="<%= Page.ResolveUrl("~/include/chart/js/modules/data.js")%>"></script>
                 <script src="<%= Page.ResolveUrl("~/include/chart/js/modules/drilldown.js")%>"></script>
                 <div class="main" style="width: 100% !important;">
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" visible="false">
-                        <div class="cbp-mc-1column">
-                            <h2>
-                                <asp:Label ID="lblNombreFormulario" runat="server" Text="Label"></asp:Label>
-                                <asp:HiddenField ID="hdfNombreFormulario" runat="server" />
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" visible="false">
-                        <div class="cbp-mc-10column">
-                            <label>
-                                <asp:Literal ID="Literal12" runat="server" Text="<%$ Resources: etiquetas,_etiRut%>" /></label>
-                            <asp:TextBox ID="txtRut" runat="server" ReadOnly="true"></asp:TextBox>
-                        </div>
-                        <div class="cbp-mc-10column double10">
-                            <label>
-                                <asp:Literal ID="Literal15" runat="server" Text="<%$ Resources: etiquetas,_etiNombre%>" /></label>
-                            <asp:TextBox ID="txtNombreUsuario" runat="server" ReadOnly="true"></asp:TextBox>
-                        </div>
-                        <div class="cbp-mc-10column double10">
-                            <label>
-                                <asp:Literal ID="Literal25" runat="server" Text="<%$ Resources: etiquetas,_etiGerencia%>" /></label>
-                            <asp:TextBox ID="txtGerencia" runat="server" ReadOnly="true"></asp:TextBox>
-                        </div>
-                        <div class="cbp-mc-10column double10">
-                            <label>
-                                <asp:Literal ID="Literal16" runat="server" Text="<%$ Resources: etiquetas,_etiCargo%>" /></label>
-                            <asp:TextBox ID="txtCargo" runat="server" ReadOnly="true"></asp:TextBox>
-                        </div>
-                        <div class="cbp-mc-10column" id="divRelacion" runat="server">
-                            <label>
-                                <asp:Literal ID="Literal23" runat="server" Text="<%$ Resources: etiquetas,_etiRelacion%>" /></label>
-                            <asp:TextBox ID="txtRelacion" runat="server" ReadOnly="true"></asp:TextBox>
-                        </div>
-                        <div class="cbp-mc-10column" style="margin-top: -10px;">
-                            <asp:Button ID="btnVerFicha" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiVerFicha%>" OnClick="btnVerFicha_Click" />
-                        </div>
-                        <div class="cbp-mc-10column">
-                            <label style="display: none;">
-                                <asp:Literal ID="Literal24" runat="server" Text="<%$ Resources: etiquetas,_etiResultado%>" /></label>
-                            <asp:TextBox ID="txtResultado" runat="server" ReadOnly="true" Visible="false"></asp:TextBox>
-                            <div id="column-left" class="column-left fix">
-                                <span>Resultado</span>
-                                <p>
-                                    <asp:Literal ID="litNotaCalculada" runat="server"></asp:Literal>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto; display: none;" visible="false">
-                        <div class="cbp-mc-1column">
-                        </div>
-                    </div>
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" id="divDescripcionObservacion" runat="server" visible="false">
-                        <div class="cbp-mc-10column quintuple10">
-                            <h2>
-                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources: etiquetas,_etiDescripcion%>"></asp:Label></h2>
-                            <asp:Label ID="lblDescripcion" runat="server" Text="Label"></asp:Label>
-                        </div>
-                        <div class="cbp-mc-10column quintuple10">
-                            <h2>
-                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources: etiquetas,_etiObservacion%>"></asp:Label></h2>
-                            <asp:Label ID="lblObservacion" runat="server" Text="Label"></asp:Label>
-                        </div>
-                    </div>
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" id="divInstrucciones" runat="server" visible="false">
-                        <div class="cbp-mc-1column">
-                            <h2>
-                                <asp:Label ID="Label1" runat="server" Text="<%$ Resources: etiquetas,_etiInstrucciones%>"></asp:Label></h2>
-                            <asp:Label ID="lblInstrucciones" runat="server" Text=""></asp:Label>
-                        </div>
-                    </div>
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                        <div class="cbp-mc-1column">
-                            <h2>
-                                <asp:Literal ID="Literal6" runat="server" Text="<%$ Resources: titulos,_titAdmInstrumentosSecciones%>" />
-                            </h2>
-                        </div>
-                    </div>
-                    <asp:HiddenField ID="hdfFlagRangos" runat="server" Value="0" />
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                        <div class="cbp-mc-1column">
-                            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Validar" DisplayMode="List" />
-                        </div>
-                    </div>
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                        <div class="table-wrapper_9 cbp-mc-1column">
-                            <asp:GridView ID="grdSecciones" runat="server" ShowHeader="false" AutoGenerateColumns="false">
-                                <Columns>
-                                    <asp:TemplateField>
-                                        <ItemTemplate>
-                                            <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                <div class="cbp-mc-10column nonuple10">
-                                                    <div>
-                                                        <asp:Label ID="lblNombreSeccion" runat="server" Text='<%# Bind("NOMBRE") %>'></asp:Label>
-                                                    </div>
-                                                    <asp:HiddenField ID="hdfPreguntasNuevas" runat="server" />
-                                                    <asp:HiddenField ID="hdfCodSeccion" runat="server" Value='<%# Bind("CODSECCIONINSTRUMENTO") %>' />
-                                                </div>
-                                                <div class="cbp-mc-10column">
-                                                    <div style="text-align: center;">
-                                                        <asp:Literal ID="Literal12" runat="server" Text="<%$ Resources: etiquetas,_etiPonderacionSeccion%>" Visible="false" />
-                                                    </div>
 
+                    <section id="secCabecera">
+                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" visible="false">
+                            <div class="cbp-mc-1column">
+                                <h2>
+                                    <asp:Label ID="lblNombreFormulario" runat="server" Text="Label"></asp:Label>
+                                    <asp:HiddenField ID="hdfNombreFormulario" runat="server" />
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" visible="false">
+                            <table class="TableEvaluacionesInterna">
+                                <tbody>
+                                    <tr>
+                                        <td class="tdAvatar">
+                                            <asp:Image ID="imgAvatar" runat="server" Width="70" Height="70" ImageUrl="~/include/avatars/avatar-usuario-generico.png"></asp:Image>
+                                        </td>
+                                        <td class="tdDatos1">
+                                            <span class="Dato DatoResaltado">Nombre</span>: 
+                                	    <asp:Label ID="txtNombreUsuario" runat="server" Text="" CssClass="DatoResaltado"></asp:Label>
+                                            <br>
+                                            <span class="Dato">Rut</span>: 
+                                	    <asp:Label ID="txtRut" runat="server" Text="Label"></asp:Label>
+                                            <br>
+                                            <span class="Dato">Gerencia</span>:
+                                	    <asp:Label ID="txtGerencia" runat="server" Text="Label"></asp:Label>
+                                            <br>
+                                            <span class="Dato">Cargo</span>:
+                                	    <asp:Label ID="txtCargo" runat="server" Text="Label"></asp:Label>
+                                        </td>
+                                        <td class="tdDatos2">
+                                            <span class="Dato">Relacion</span>:
+                                	<asp:Label ID="txtRelacion" runat="server" Text="Label"></asp:Label>
+                                            <br>
+                                            <span class="Dato">Inicio</span>:
+                                        <span id="ctl00_ContentPlaceHolder1_repEvaluaciones_ctl00_Label13">21/11/2017</span>
+                                            <br>
+                                            <span class="Dato">Fin</span>:
+                                        <span id="ctl00_ContentPlaceHolder1_repEvaluaciones_ctl00_Label15">31/12/2017</span>
+                                        </td>
+                                        <td class="tdResultado">
+                                            <div class="cbp-mc-10column">
+                                                <label style="display: none;">
+                                                    Resultado</label>
+                                                <asp:Label ID="txtResultado" runat="server" Text="" Visible="false"></asp:Label>
+                                                <div id="column-left_" class="column-left">
+                                                    <span>Resultado</span>
+                                                    <p>
+                                                        <asp:Literal ID="litNotaCalculada" runat="server"></asp:Literal>
+                                                    </p>
                                                 </div>
-                                            </div>
-                                            <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                <div class="cbp-mc-10column nonuple10">
-                                                    <div>
-                                                        <asp:Literal ID="Literal9" runat="server" Text="<%$ Resources: etiquetas,_etiDescripcionSeccion%>" />
-                                                    </div>
-                                                    <div>
-                                                        <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("DESCRIPCION") %>' />
-                                                    </div>
-                                                </div>
-                                                <div class="cbp-mc-10column">
-                                                    <div class="ponderacion">
-                                                        <asp:Label ID="lblPonderacionSeccion" runat="server" Text='<%# Bind("PONDERACION") %>' Visible="false"></asp:Label>
-                                                        <asp:Label ID="lblResultadoSeccion" runat="server" Text='0'></asp:Label>%
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" id="divAgregarPregunta" runat="server" visible="false">
-                                                <div class="cbp-mc-1column">
-                                                    <h2>
-                                                        <asp:Literal ID="Literal13" runat="server" Text="<%$ Resources: titulos,_titAdmInstrumentosSeccionPreguntas%>" />
-                                                    </h2>
-                                                </div>
-                                            </div>
-                                            <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                <div class="table-wrapper_9 cbp-mc-1column">
-                                                    <asp:GridView ID="grdPreguntas" runat="server" AutoGenerateColumns="false" CssClass="GridAnidado" DataSource='<%# Bind("PREGUNTAS") %>'>
-                                                        <Columns>
-                                                            <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabPregunta%>" HeaderStyle-Width="80%" ItemStyle-CssClass="align-middle">
-                                                                <ItemTemplate>
-                                                                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                                        <div class="cbp-mc-1column">
-                                                                            <asp:LinkButton ID="lnkVerDetalles" runat="server" data-toggle="tooltip" OnClick="lnkVerDetalles_Click" title="<%$ Resources: etiquetas,_etiVerDetalle%>" Visible="false"><span class="glyphicon glyphicon-eye-open" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>
-                                                                            <asp:Label ID="lblPregunta" runat="server" Text='<%# Bind("TEXTO") %>'></asp:Label>
-                                                                            <asp:HiddenField ID="hdfCodPregunta" runat="server" Value='<%# Bind("CODPREGUNTAEMPLEADO") %>' />
-                                                                            <asp:HiddenField ID="hdfDescripcion" runat="server" Value='<%# Bind("DESCRIPCION") %>' />
-                                                                            <asp:HiddenField ID="hdfAccion" runat="server" Value='<%# Bind("ACCION") %>' />
-                                                                            <asp:HiddenField ID="hdfCompromiso" runat="server" Value='<%# Bind("COMPROMISO") %>' />
-                                                                            <asp:HiddenField ID="hdfIndicador" runat="server" Value='<%# Bind("INDICADOR") %>' />
-                                                                            <asp:HiddenField ID="hdfComentario" runat="server" Value='<%# Bind("COMENTARIO") %>' />
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                                        <div class="cbp-mc-1column DescrpcionPregunta">
-                                                                            <asp:Label ID="lblDescripcion" runat="server" Text='<%# Bind("DESCRIPCION") %>'></asp:Label>
-                                                                        </div>
-                                                                    </div>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabPonderacion%>" HeaderStyle-Width="10%" ItemStyle-CssClass="align-middle" Visible="false">
-                                                                <ItemTemplate>
-                                                                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                                        <div class="cbp-mc-1column">
-                                                                            <asp:Label ID="lblPonderacion" runat="server" Text='<%# Bind("PONDERACION") %>'></asp:Label><span>%</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabComentario%>" HeaderStyle-Width="10%" ItemStyle-CssClass="align-middle">
-                                                                <ItemTemplate>
-                                                                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                                        <div class="cbp-mc-1column imgBotton text-center">
-                                                                            <asp:LinkButton ID="lnkAgregarComentario" runat="server" data-toggle="tooltip" OnClick="lnkAgregarComentario_Click" title="<%$ Resources: etiquetas,_etiAgregarComentario%>"><span class="glyphicon glyphicon-comment" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>
-                                                                            <%--<asp:ImageButton ID="imgVerDetalles" runat="server" ImageUrl="~/include/images/css/EDITAR.png" Width="30" Height="30" OnClick="imgVerDetalles_Click" />--%>
-                                                                        </div>
-                                                                    </div>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabCalificar%>" HeaderStyle-Width="10%">
-                                                                <ItemTemplate>
-                                                                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                                        <div class="cbp-mc-1column">
-                                                                            <asp:TextBox ID="txtResultado" runat="server" onkeypress="return numbersonly(event);" Text='<%# Bind("RESULTADO") %>' OnTextChanged="txtResultado_TextChanged" AutoPostBack="true"></asp:TextBox>
-                                                                            <asp:RangeValidator ID="rvEscala" runat="server" ControlToValidate="txtResultado" Text="*" ErrorMessage="El valor ingresado no se encuentra dentro del rango aceptado." ValidationGroup="Validar" MinimumValue="0" MaximumValue="100" Type="Double"></asp:RangeValidator>
-                                                                        </div>
-                                                                    </div>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabCalificar%>" HeaderStyle-Width="10%">
-                                                                <ItemTemplate>
-                                                                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                                                                        <div class="cbp-mc-1column">
-                                                                            <asp:RadioButtonList ID="rdlRangos" runat="server" CssClass="radioAlternativas" RepeatDirection="Horizontal" BorderWidth="0" TextAlign="Left" OnSelectedIndexChanged="rdlRangos_SelectedIndexChanged" AutoPostBack="true"></asp:RadioButtonList>
-                                                                        </div>
-                                                                    </div>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                        </Columns>
-                                                    </asp:GridView>
-                                                </div>
-                                            </div>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                </Columns>
-                            </asp:GridView>
+                                                <%--</div>--%>
+                                        </td>
+                                        <td class="tdAcciones">
+                                            <asp:Button ID="btnVerFicha" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiVerFicha%>" OnClick="btnVerFicha_Click" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" id="divDescripcionObservacion" runat="server" visible="false">
+                            <div class="cbp-mc-10column quintuple10">
+                                <h2>
+                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources: etiquetas,_etiDescripcion%>"></asp:Label></h2>
+                                <asp:Label ID="lblDescripcion" runat="server" Text="Label"></asp:Label>
+                            </div>
+                            <div class="cbp-mc-10column quintuple10">
+                                <h2>
+                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources: etiquetas,_etiObservacion%>"></asp:Label></h2>
+                                <asp:Label ID="lblObservacion" runat="server" Text="Label"></asp:Label>
+                            </div>
+                        </div>
+                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" id="divInstrucciones" runat="server" visible="false">
+                            <div class="cbp-mc-1column">
+                                <h2>
+                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources: etiquetas,_etiInstrucciones%>"></asp:Label></h2>
+                                <asp:Label ID="lblInstrucciones" runat="server" Text=""></asp:Label>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default" id="pnlObjetivosActuales" runat="server">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" id="lnkPnlOne" runat="server" data-parent="#accordion" href="#collapseOne"><span id="iconoPnlOne" runat="server" class="glyphicon glyphicon-plus"></span>
+                                    <asp:Literal ID="Literal57" runat="server" Text="<%$ Resources: titulos,_titObjetivosActuales%>" /></a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" runat="server" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                            </div>
                         </div>
                     </div>
-
-                    <div style="display: none;">
-                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                            <div class="cbp-mc-1column">
-                                <label>
-                                    <asp:Literal ID="Literal41" runat="server" Text="<%$ Resources: etiquetas,_etiCompromiso%>" /></label>
-                                <asp:TextBox ID="TextBox1" runat="server" MaxLength="4000" TextMode="MultiLine" Rows="5"
-                                    Text="En plazo no mayor a 3 meses, aumentar al menos un 25% su promedio de ventas"></asp:TextBox>
+                    <div class="panel panel-default" id="pnlFormularioEvaluacion" runat="server">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" id="lnkPnlTwo" runat="server" data-parent="#accordion" href="#collapseTwo"><span id="iconoPnlTwo" runat="server" class="glyphicon glyphicon-plus"></span>
+                                    <asp:Literal ID="Literal58" runat="server" Text="<%$ Resources: titulos,_titFormularioEvaluacion%>" /></a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" runat="server" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="cbp-mc-1column">
+                                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Validar" DisplayMode="List" />
+                                    </div>
+                                </div>
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="table-wrapper_0 cbp-mc-1column">
+                                        <asp:GridView ID="grdSecciones" runat="server" ShowHeader="false" AutoGenerateColumns="false">
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                                            <div class="cbp-mc-10column octuple10">
+                                                                <div>
+                                                                    <asp:Label ID="lblNombreSeccion" runat="server" Text='<%# Bind("NOMBRE") %>'></asp:Label>
+                                                                </div>
+                                                                <asp:HiddenField ID="hdfPreguntasNuevas" runat="server" />
+                                                                <asp:HiddenField ID="hdfCodSeccion" runat="server" Value='<%# Bind("CODSECCIONINSTRUMENTO") %>' />
+                                                            </div>
+                                                            <div class="cbp-mc-10column double10">
+                                                                <div style="text-align: center;">
+                                                                    <asp:Literal ID="Literal12" runat="server" Text="<%$ Resources: etiquetas,_etiResultado%>" />
+                                                                    <asp:Label ID="lblResultadoSeccion" runat="server" Text='0'></asp:Label>%
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" id="divDescripcionSeccion" runat="server" visible="false">
+                                                            <div class="cbp-mc-10column nonuple10">
+                                                                <div>
+                                                                    <asp:Literal ID="Literal9" runat="server" Text="<%$ Resources: etiquetas,_etiDescripcionSeccion%>" />
+                                                                </div>
+                                                                <div>
+                                                                    <asp:Literal ID="litDescripcionSeccion" runat="server" Text='<%# Bind("DESCRIPCION") %>' />
+                                                                </div>
+                                                            </div>
+                                                            <div class="cbp-mc-10column">
+                                                                <div class="ponderacion">
+                                                                    <asp:Label ID="lblPonderacionSeccion" runat="server" Text='<%# Bind("PONDERACION") %>' Visible="false"></asp:Label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;" id="divAgregarPregunta" runat="server" visible="false">
+                                                            <div class="cbp-mc-1column">
+                                                                <h2>
+                                                                    <asp:Literal ID="Literal13" runat="server" Text="<%$ Resources: titulos,_titAdmInstrumentosSeccionPreguntas%>" />
+                                                                </h2>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                                            <div class="table-wrapper_0 cbp-mc-1column">
+                                                                <asp:GridView ID="grdPreguntas" runat="server" AutoGenerateColumns="false" CssClass="GridAnidado" DataSource='<%# Bind("PREGUNTAS") %>'>
+                                                                    <Columns>
+                                                                        <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabPregunta%>" HeaderStyle-Width="80%" >
+                                                                            <ItemTemplate>
+                                                                                <%--<div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                                                                    <div class="cbp-mc-1column">--%>
+                                                                                <asp:LinkButton ID="lnkVerDetalles" runat="server" data-toggle="tooltip" OnClick="lnkVerDetalles_Click" title="<%$ Resources: etiquetas,_etiVerDetalle%>" Visible="false"><span class="glyphicon glyphicon-eye-open" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>
+                                                                                <asp:Label ID="lblPregunta" runat="server" Text='<%# Bind("TEXTO") %>'></asp:Label>
+                                                                                <asp:HiddenField ID="hdfCodPregunta" runat="server" Value='<%# Bind("CODPREGUNTAEMPLEADO") %>' />
+                                                                                <asp:HiddenField ID="hdfDescripcion" runat="server" Value='<%# Bind("DESCRIPCION") %>' />
+                                                                                <asp:HiddenField ID="hdfAccion" runat="server" Value='<%# Bind("ACCION") %>' />
+                                                                                <asp:HiddenField ID="hdfCompromiso" runat="server" Value='<%# Bind("COMPROMISO") %>' />
+                                                                                <asp:HiddenField ID="hdfIndicador" runat="server" Value='<%# Bind("INDICADOR") %>' />
+                                                                                <asp:HiddenField ID="hdfComentario" runat="server" Value='<%# Bind("COMENTARIO") %>' />
+                                                                                <%--</div>
+                                                                                </div>
+                                                                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                                                                    <div class="cbp-mc-1column DescrpcionPregunta">--%>
+                                                                                         
+                                                                                    <%--</div>
+                                                                                </div>--%>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabPonderacion%>" HeaderStyle-Width="10%" Visible="false">
+                                                                            <ItemTemplate>
+                                                                                <%--<div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                                                                    <div class="cbp-mc-1column">--%>
+                                                                                        <asp:Label ID="lblPonderacion" runat="server" Text='<%# Bind("PONDERACION") %>'></asp:Label><span>%</span>
+                                                                                    <%--</div>
+                                                                                </div>--%>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabComentario%>" HeaderStyle-Width="10%" >
+                                                                            <ItemTemplate>
+                                                                                <%--<div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                                                                    <div class="cbp-mc-1column imgBotton text-center">--%>
+                                                                                        <asp:LinkButton ID="lnkAgregarComentario" runat="server" data-toggle="tooltip" OnClick="lnkAgregarComentario_Click" title="<%$ Resources: etiquetas,_etiAgregarComentario%>"><span class="glyphicon glyphicon-comment" style="border-radius: 100%; width:23px; height: 23px; background-color: #fff; text-align: center; line-height: 2em; font-size: 12px !important; color: #4a4f60 !important;" ></span></asp:LinkButton>
+                                                                                        <%--<asp:ImageButton ID="imgVerDetalles" runat="server" ImageUrl="~/include/images/css/EDITAR.png" Width="30" Height="30" OnClick="imgVerDetalles_Click" />--%>
+                                                                                    <%--</div>
+                                                                                </div>--%>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabCalificar%>" HeaderStyle-Width="10%">
+                                                                            <ItemTemplate>
+                                                                                <%--<div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                                                                    <div class="cbp-mc-1column">--%>
+                                                                                        <asp:TextBox ID="txtResultado" runat="server" onkeypress="return numbersonly(event);" CssClass="TextCalificar" Text='<%# Bind("RESULTADO") %>' OnTextChanged="txtResultado_TextChanged" AutoPostBack="true"></asp:TextBox>
+                                                                                        <asp:RangeValidator ID="rvEscala" runat="server" ControlToValidate="txtResultado" Text="*" ErrorMessage="El valor ingresado no se encuentra dentro del rango aceptado." ValidationGroup="Validar" MinimumValue="0" MaximumValue="100" Type="Double" CssClass="RangValidatorCalificar"></asp:RangeValidator>
+                                                                                    <%--</div>
+                                                                                </div>--%>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="<%$ Resources: cabeceras,_cabCalificar%>" HeaderStyle-Width="10%">
+                                                                            <ItemTemplate>
+                                                                                <%--<div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                                                                    <div class="cbp-mc-1column">--%>
+                                                                                        <asp:RadioButtonList ID="rdlRangos" runat="server" CssClass="radioAlternativas" RepeatDirection="Horizontal" BorderWidth="0" TextAlign="Left" OnSelectedIndexChanged="rdlRangos_SelectedIndexChanged" AutoPostBack="true"></asp:RadioButtonList>
+                                                                                    <%--</div>
+                                                                                </div>--%>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                    </Columns>
+                                                                </asp:GridView>
+                                                            </div>
+                                                        </div>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                    </div>
+                                </div>
+                                <asp:HiddenField ID="hdfFlagRangos" runat="server" Value="0" />
                             </div>
                         </div>
-                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                            <div class="cbp-mc-1column">
-                                <p>
-                                    <asp:Literal ID="Literal40" runat="server" Text="<%$ Resources: etiquetas,_etiDeclaracion%>" />
-                                </p>
-                            </div>
+                    </div>
+                    <div class="panel panel-default" id="pnlCapacitaciones" runat="server">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-plus"></span>
+                                    <asp:Literal ID="Literal59" runat="server" Text="<%$ Resources: titulos,_titCapacitaciones%>" /></a>
+                            </h4>
                         </div>
-                        <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                            <div class="cbp-mc-1column text-center divAcuerdo">
-                                <span id="checkAcuerdo2" class="checkAcuerdo" onclick="CheckAcuerdo();"></span>
-                                <div class="TextAcuerdo">
-                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources: etiquetas,_etiAcuerdoEvaluado%>" />
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="table-wrapper_0 cbp-mc-1column">
+                                        <asp:GridView ID="grdCursos" runat="server" AutoGenerateColumns="false">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="Selec.">
+                                                    <ItemTemplate>
+                                                        <asp:CheckBox ID="chkSeleccionar" runat="server" Checked='<%# Bind("ASIGNADO") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Área">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblArea" runat="server" Text='<%# Bind("NOMAREACURSO") %>'></asp:Label>
+                                                        <asp:HiddenField ID="hdfCodCurso" runat="server" Value='<%# Bind("CODCURSO") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Curso">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblCurso" runat="server" Text='<%# Bind("NOMBRECURSO") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                    </div>
+                                </div>
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="cbp-mc-1column">
+                                        <label>Comentarios</label>
+                                        <asp:TextBox ID="txtComentariosCursos" runat="server" TextMode="MultiLine" Rows="3" MaxLength="4000"></asp:TextBox>
+                                    </div>
                                 </div>
                             </div>
-                            <%--</div>
-            <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">--%>
-                            <div class="cbp-mc-1column text-center divAcuerdo">
-                                <span id="checkAcuerdo3" class="checkAcuerdo" onclick="CheckAcuerdo();"></span>
-                                <div class="TextAcuerdo">
-                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources: etiquetas,_etiAcuerdoEvaluador%>" />
+                        </div>
+                    </div>
+                    <div class="panel panel-default" id="pnlObjetivosProximos" runat="server">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-plus"></span>
+                                    <asp:Literal ID="Literal60" runat="server" Text="<%$ Resources: titulos,_titObjetivosProximos%>" /></a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="cbp-mc-10column octuple10">
+                                        <label>Objetivo</label>
+                                        <asp:TextBox ID="txtObjetivoProximo" runat="server" MaxLength="256"></asp:TextBox>
+                                    </div>
+                                    <div class="cbp-mc-10column">
+                                        <label>Ponderación</label>
+                                        <asp:TextBox ID="txtPondObjProx" runat="server" MaxLength="3"></asp:TextBox>
+                                    </div>
+                                    <div class="cbp-mc-10column">
+                                        <asp:Button ID="btnAgregarObjetivo" runat="server" CssClass="btn btn-primary" Text="Agregar" />
+                                    </div>
+                                </div>
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="table-wrapper_0 cbp-mc-1column">
+                                        <asp:GridView ID="grdObjetivosProximos" runat="server" AutoGenerateColumns="false">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="Área">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblObjetivo" runat="server"></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Ponderación">
+                                                    <ItemTemplate>
+                                                        <asp:TextBox ID="txtpondObjProx" runat="server"></asp:TextBox>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Eliminar">
+                                                    <ItemTemplate>
+                                                        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-primary" />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
-                        <div class="cbp-mc-10column septuple10 text-left">
-                            <asp:Button ID="btnVolver" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiVolver%>" OnClick="btnVolver_Click" />
-                            <asp:Button ID="btnVerBitacora" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiBitacora%>" OnClick="btnVerBitacora_Click" />
-                            <asp:Button ID="btnComentario" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiAgregarComentario%>" OnClick="btnComentario_Click" />
-                            <asp:Button ID="btnBorrador" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiBorrador%>" OnClick="btnBorrador_Click" ValidationGroup="Validar" />
-                            <asp:Button ID="btnInformar" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiNotificar%>" OnClick="btnInformar_Click" />
-                            <asp:Button ID="btnTomarConocimiento" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiTomarConocimiento%>" OnClick="btnTomarConocimiento_Click" Visible="false" />
+                    <div class="panel panel-default" id="pnlObservacionesFinales" runat="server">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-plus"></span>
+                                    <asp:Literal ID="Literal61" runat="server" Text="<%$ Resources: titulos,_titObservacionesFinales%>" /></a>
+                            </h4>
                         </div>
-                        <div class="cbp-mc-10column triple10 text-right">
-                            <asp:Button ID="btnVisar" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiVisar%>" OnClick="btnVisar_Click" />
-                            <asp:Button ID="btnApelar" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiApelar%>" OnClick="btnApelar_Click" />
-                            <asp:Button ID="btnGuardarEvaluacion" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiCerrarEvaluacion%>" OnClick="btnGuardarEvaluacion_Click" ValidationGroup="Validar" />
+                        <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="cbp-mc-1column">
+                                        <label>Observaciones detectadas en su desempeño y plan de mejoras para el próximo periodo</label>
+                                        <asp:TextBox ID="txtObservaciones" runat="server" TextMode="MultiLine" Rows="3" MaxLength="4000"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="cbp-mc-1column">
+                                        <label>Plan resultante para el próximo periodo</label>
+                                        <asp:TextBox ID="txtPlan" runat="server" TextMode="MultiLine" Rows="3" MaxLength="4000"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                                    <div class="cbp-mc-1column">
+                                        <label>Observaciones y compromisos trabajador evaluado</label>
+                                        <asp:TextBox ID="txtObservacionesCompromisos" runat="server" TextMode="MultiLine" Rows="3" MaxLength="4000"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="cbp-mc-form" style="width: 100%; margin: 0 auto;">
+                    <div class="cbp-mc-10column septuple10 text-left">
+                        <asp:Button ID="btnVolver" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiVolver%>" OnClick="btnVolver_Click" />
+                        <asp:Button ID="btnVerBitacora" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiBitacora%>" OnClick="btnVerBitacora_Click" />
+                        <asp:Button ID="btnComentario" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiAgregarComentario%>" OnClick="btnComentario_Click" />
+                        <asp:Button ID="btnBorrador" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiBorrador%>" OnClick="btnBorrador_Click" ValidationGroup="Validar" />
+                        <asp:Button ID="btnInformar" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiNotificar%>" OnClick="btnInformar_Click" />
+                        <asp:Button ID="btnTomarConocimiento" runat="server" CssClass="btn btn-primary" Text="<%$ Resources: etiquetas,_etiTomarConocimiento%>" OnClick="btnTomarConocimiento_Click" Visible="false" />
+                    </div>
+                    <div class="cbp-mc-10column triple10 text-right">
+                        <asp:Button ID="btnVisar" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiVisar%>" OnClick="btnVisar_Click" />
+                        <asp:Button ID="btnApelar" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiApelar%>" OnClick="btnApelar_Click" />
+                        <asp:Button ID="btnGuardarEvaluacion" runat="server" CssClass="btn btn-success" Text="<%$ Resources: etiquetas,_etiCerrarEvaluacion%>" OnClick="btnGuardarEvaluacion_Click" ValidationGroup="Validar" />
+                    </div>
+                </div>
+
+            </div>
 
 
             <div id="modVerBitacora" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -770,7 +911,6 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
-
 
         </ContentTemplate>
     </asp:UpdatePanel>

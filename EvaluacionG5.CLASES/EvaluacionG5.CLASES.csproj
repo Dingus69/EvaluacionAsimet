@@ -102,6 +102,10 @@
     <Compile Include="DAL\DLNIVEL_EDUCACIONALList.cs" />
     <Compile Include="DAL\DLNIVEL_OCUPACIONAL.cs" />
     <Compile Include="DAL\DLNIVEL_OCUPACIONALList.cs" />
+    <Compile Include="DAL\DLOBJETIVO_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="DAL\DLOBJETIVO_INSTRUMENTO_EMPLEADOList.cs" />
+    <Compile Include="DAL\DLOBJETIVO_PROXIMO.cs" />
+    <Compile Include="DAL\DLOBJETIVO_PROXIMOList.cs" />
     <Compile Include="DAL\DLPARAMETROS_GENERALES.cs" />
     <Compile Include="DAL\DLPARAMETROS_GENERALESList.cs" />
     <Compile Include="DAL\DLPERFIL.cs" />
@@ -172,6 +176,8 @@
     <Compile Include="DAO\EMODALIDAD.cs" />
     <Compile Include="DAO\ENIVEL_EDUCACIONAL.cs" />
     <Compile Include="DAO\ENIVEL_OCUPACIONAL.cs" />
+    <Compile Include="DAO\EOBJETIVO_INSTRUMENTO_EMPLEADO.cs" />
+    <Compile Include="DAO\EOBJETIVO_PROXIMO.cs" />
     <Compile Include="DAO\EPARAMETROS_GENERALES.cs" />
     <Compile Include="DAO\EPERFIL.cs" />
     <Compile Include="DAO\EPERFIL_USUARIO.cs" />
